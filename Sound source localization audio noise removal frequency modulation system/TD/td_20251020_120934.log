@@ -1,0 +1,180 @@
+============================================================
+   Tang Dynasty, V5.6.71036
+      Copyright (c) 2012-2023 Anlogic Inc.
+   Executable = D:/TD/bin/td.exe
+   Built at =   20:34:38 Mar 21 2023
+   Run by =     lyw15
+   Run Date =   Mon Oct 20 12:09:34 2025
+
+   Run on =     -001
+============================================================
+RUN-001 : GUI based run...
+RUN-1002 : start command "import_device eagle_s20.db -package EG4S20BG256 -basic"
+ARC-1001 : Device Initialization.
+ARC-1001 : ------------------------------------------------------------------
+ARC-1001 :            OPTION            |          IO          |   SETTING   
+ARC-1001 : ------------------------------------------------------------------
+ARC-1001 :   cso_b/cclk/mosi/miso/dout  |  T3/R11/T10/P10/S11  |    gpio    
+ARC-1001 :             done             |         P13          |    gpio    
+ARC-1001 :           program_b          |          T2          |  dedicate  
+ARC-1001 :        tdi/tms/tck/tdo       |   C12/A15/C14/E14    |  dedicate  
+ARC-1001 : ------------------------------------------------------------------
+ARC-1004 : Device setting, marked 5 dedicate IOs in total.
+RUN-1002 : start command "set_param flow syn_ip_flow ip"
+RUN-1002 : start command "set_param rtl keep_hierarchy flatten"
+RUN-1002 : start command "read_verilog -file FFT.v -top FFT"
+HDL-1007 : analyze verilog file FFT.v
+Copyright (c) 1998-2019 The OpenSSL Project.  All rights reserved.
+This product includes software developed by the OpenSSL Project
+for use in the OpenSSL Toolkit (http://www.openssl.org/)
+Copyright (C) 1995-1998 Eric Young (eay@cryptsoft.com)
+All rights reserved.
+This product includes cryptographic software written by Eric Young (eay@cryptsoft.com)
+HDL-1007 : back to file 'FFT.v' in FFT.v(165)
+HDL-1007 : back to file 'FFT.v' in FFT.v(314)
+HDL-1007 : back to file 'FFT.v' in FFT.v(502)
+HDL-1007 : back to file 'FFT.v' in FFT.v(604)
+HDL-1007 : back to file 'FFT.v' in FFT.v(756)
+HDL-1007 : elaborate module FFT in FFT.v(13)
+HDL-1007 : elaborate module sd_init(DEVICE="EG4") in FFT.v(167)
+HDL-1007 : elaborate module ehdl_sd_init(DEVICE="EG4") in FFT.v(323)
+HDL-1007 : elaborate module EG_LOGIC_DRAM(DATA_WIDTH_W=6,DATA_WIDTH_R=6,ADDR_WIDTH_W=6,ADDR_WIDTH_R=6,DATA_DEPTH_W=61,DATA_DEPTH_R=61,INIT_FILE="rom.mif") in D:/TD/arch/eagle_macro.v(176)
+HDL-5007 WARNING: actual bit length ** differs from formal bit length ** for port '**' in encrypted_text(0)
+HDL-1007 : elaborate module sd_read in FFT.v(504)
+HDL-1007 : elaborate module sd_write in FFT.v(606)
+HDL-1200 : Current top model is FFT
+HDL-1100 : Inferred 0 RAMs.
+RUN-1002 : start command "optimize_rtl"
+RUN-1001 : Open license file D:/TD/license/Anlogic.lic
+RUN-1001 : Print Global Property
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  |  Note  
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     |        
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        |        
+RUN-1001 :        qor_monitor       |    off     |       off        |        
+RUN-1001 :        syn_ip_flow       |     ip     |       off        |   *    
+RUN-1001 :          thread          |    auto    |       auto       |        
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 : Print Rtl Property
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :       compress_add      |   ripple   |      ripple      |        
+RUN-1001 :        elf_sload        |    off     |       off        |        
+RUN-1001 :       fix_undriven      |     0      |        0         |        
+RUN-1001 :         flatten         |    off     |       off        |        
+RUN-1001 :       gate_sharing      |     on     |        on        |        
+RUN-1001 :    hdl_warning_level    |   normal   |      normal      |        
+RUN-1001 :   impl_internal_tribuf  |     on     |        on        |        
+RUN-1001 :      impl_set_reset     |     on     |        on        |        
+RUN-1001 :        infer_gsr        |    off     |       off        |        
+RUN-1001 :      keep_hierarchy     |  flatten   |       auto       |   *    
+RUN-1001 :        max_fanout       |    9999    |       9999       |        
+RUN-1001 :      max_oh2bin_len     |     10     |        10        |        
+RUN-1001 :       merge_equal       |     on     |        on        |        
+RUN-1001 :       merge_equiv       |     on     |        on        |        
+RUN-1001 :        merge_mux        |    off     |       off        |        
+RUN-1001 :     min_control_set     |     8      |        8         |        
+RUN-1001 :      min_ripple_len     |    auto    |       auto       |        
+RUN-1001 :       oh2bin_ratio      |    0.08    |       0.08       |        
+RUN-1001 :     opt_adder_fanout    |     on     |        on        |        
+RUN-1001 :        opt_arith        |     on     |        on        |        
+RUN-1001 :       opt_big_gate      |    off     |       off        |        
+RUN-1001 :        opt_const        |     on     |        on        |        
+RUN-1001 :      opt_const_mult     |     on     |        on        |        
+RUN-1001 :       opt_lessthan      |     on     |        on        |        
+RUN-1001 :         opt_mux         |    off     |       off        |        
+RUN-1001 :         opt_ram         |    high    |       high       |        
+RUN-1001 :      rtl_sim_model      |    off     |       off        |        
+RUN-1001 :         seq_syn         |     on     |        on        |        
+RUN-1001 : --------------------------------------------------------------
+SYN-1012 : SanityCheck: Model "FFT"
+SYN-1012 : SanityCheck: Model "sd_init(DEVICE="EG4")"
+SYN-1012 : SanityCheck: Model "ehdl_sd_init(DEVICE="EG4")"
+SYN-1012 : SanityCheck: Model "sd_read"
+SYN-1012 : SanityCheck: Model "sd_write"
+SYN-1011 : Flatten model FFT
+SYN-1032 : 2078/62 useful/useless nets, 504/0 useful/useless insts
+SYN-1016 : Merged 27 instances.
+SYN-1032 : 1491/621 useful/useless nets, 441/36 useful/useless insts
+SYN-1016 : Merged 26 instances.
+SYN-1032 : 1468/0 useful/useless nets, 1338/30 useful/useless insts
+SYN-1014 : Optimize round 1
+SYN-1021 : Optimized 52 onehot mux instances.
+SYN-1020 : Optimized 33 distributor mux.
+SYN-1001 : Optimize 1 less-than instances
+SYN-1016 : Merged 55 instances.
+SYN-1015 : Optimize round 1, 562 better
+SYN-1014 : Optimize round 2
+SYN-1032 : 1181/4 useful/useless nets, 1051/142 useful/useless insts
+SYN-1015 : Optimize round 2, 175 better
+SYN-1032 : 1133/15 useful/useless nets, 1003/31 useful/useless insts
+SYN-1014 : Optimize round 1
+SYN-1016 : Merged 2 instances.
+SYN-1015 : Optimize round 1, 21 better
+SYN-1014 : Optimize round 2
+SYN-1015 : Optimize round 2, 0 better
+RUN-1002 : start command "optimize_gate -release FFT_gate.v"
+RUN-1001 : Open license file D:/TD/license/Anlogic.lic
+RUN-1001 : Print Global Property
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  |  Note  
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     |        
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        |        
+RUN-1001 :        qor_monitor       |    off     |       off        |        
+RUN-1001 :        syn_ip_flow       |     ip     |       off        |   *    
+RUN-1001 :          thread          |    auto    |       auto       |        
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 : Print Gate Property
+RUN-1001 : ------------------------------------------------------------------
+RUN-1001 :          Parameters         |  Settings  |  Default Values  |  Note  
+RUN-1001 : ------------------------------------------------------------------
+RUN-1001 :         cascade_dsp         |    off     |       off        |        
+RUN-1001 :         cascade_eram        |    off     |       off        |        
+RUN-1001 :        gate_sim_model       |    off     |       off        |        
+RUN-1001 :        map_sim_model        |    off     |       off        |        
+RUN-1001 :         map_strategy        |     1      |        1         |        
+RUN-1001 :           opt_area          |   medium   |      medium      |        
+RUN-1001 :          opt_timing         |    auto    |       auto       |        
+RUN-1001 :         pack_effort         |   medium   |      medium      |        
+RUN-1001 :      pack_lslice_ripple     |     on     |        on        |        
+RUN-1001 :   pack_lslice_ripple_ratio  |    0.5     |       0.5        |        
+RUN-1001 :        pack_seq_in_io       |    auto    |       auto       |        
+RUN-1001 :        ph1_mux_ratio        |    1.0     |       1.0        |        
+RUN-1001 :            report           |  standard  |     standard     |        
+RUN-1001 :           retiming          |    off     |       off        |        
+RUN-1001 : ------------------------------------------------------------------
+SYN-6009 WARNING: MapIO check -- INOUT mpin sd_cmd in syn-ip module.
+SYN-6009 WARNING: MapIO check -- INOUT mpin sd_dat[3] in syn-ip module.
+SYN-6009 WARNING: MapIO check -- INOUT mpin sd_dat[2] in syn-ip module.
+SYN-6009 WARNING: MapIO check -- INOUT mpin sd_dat[1] in syn-ip module.
+SYN-6009 WARNING: MapIO check -- INOUT mpin sd_dat[0] in syn-ip module.
+SYN-6010 WARNING: MapIO check -- inst tribuf sd_cmd_i in syn-ip module.
+SYN-6010 WARNING: MapIO check -- inst tribuf sd_dat_i in syn-ip module.
+SYN-6010 WARNING: MapIO check -- inst tribuf sd_dat_i1 in syn-ip module.
+SYN-6010 WARNING: MapIO check -- inst tribuf sd_dat_i2 in syn-ip module.
+SYN-6010 WARNING: MapIO check -- inst tribuf sd_dat_i3 in syn-ip module.
+RUN-1002 : start command "update_pll_param -module FFT"
+SYN-2501 : Processed 0 LOGIC_BUF instances.
+SYN-2571 : Optimize after map_dsp, round 1
+SYN-2571 : Optimize after map_dsp, round 1, 0 better
+SYN-1001 : Throwback 98 control mux instances
+SYN-2501 : Optimize round 1
+SYN-1016 : Merged 152 instances.
+SYN-2501 : Optimize round 1, 385 better
+SYN-2501 : Optimize round 2
+SYN-2501 : Optimize round 2, 0 better
+SYN-2501 : Map 7 macro adder
+SYN-1019 : Optimized 498 mux instances.
+SYN-1016 : Merged 203 instances.
+SYN-3001 : Running gate level optimization.
+SYN-2581 : Mapping with K=5, #lut = 474 (4.10), #lev = 4 (1.86)
+SYN-2551 : Post LUT mapping optimization.
+SYN-2581 : Mapping with K=5, #lut = 469 (3.99), #lev = 4 (2.01)
+SYN-3001 : Logic optimization runtime opt =   0.07 sec, map =   0.00 sec
+SYN-3001 : Mapper mapped 1569 instances into 469 LUTs, name keeping = 65%.
+RUN-1002 : start command "write_verilog -nolf -hidename FFT_gate.v"
+HDL-1201 : write out verilog file FFT_gate.v
+GUI-2000 : The IP files have been created successfully :{EG4S20BG256(C:/Users/lyw15/Desktop/4S20/es8388/TD/al_ip/FFT.ipc)}

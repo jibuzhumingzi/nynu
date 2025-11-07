@@ -1,0 +1,334 @@
+module fft_256 #(
+    parameter DATA_WIDTH = 16,    // 数据位宽（含符号位）
+    parameter TWID_WIDTH = 16     // 旋转因子位宽（含符号位）
+) (
+    input clk,                    // 工作时钟
+    input rst_n,                  // 异步复位（低有效）
+    input [DATA_WIDTH-1:0] din_re, // 输入数据实部
+    input [DATA_WIDTH-1:0] din_im, // 输入数据虚部
+    input din_valid,              // 输入数据有效信号
+    output reg [DATA_WIDTH+7:0] dout_re, // 输出数据实部（位宽扩展防止溢出）
+    output reg [DATA_WIDTH+7:0] dout_im, // 输出数据虚部
+    output reg dout_valid         // 输出数据有效信号
+);
+
+// --------------------------
+// 1. 参数与内部信号定义
+// --------------------------
+localparam FFT_SIZE = 256;                  // FFT点数
+localparam STAGES = $clog2(FFT_SIZE);       // FFT级数（8级）
+localparam ADDR_WIDTH = $clog2(FFT_SIZE);   // 地址位宽（8位）
+
+// 旋转因子查找表（预计算的cos和sin值，Q1.15格式，范围[-1,1)）
+reg [TWID_WIDTH-1:0] twid_re [0:FFT_SIZE/2-1]; // 实部
+reg [TWID_WIDTH-1:0] twid_im [0:FFT_SIZE/2-1]; // 虚部
+
+// 位反转模块信号
+wire [DATA_WIDTH-1:0] br_dout_re, br_dout_im;
+wire br_valid;
+
+// 各级蝶形运算中间信号（8级流水线）
+wire [DATA_WIDTH+7:0] stage_re [0:STAGES-1];
+wire [DATA_WIDTH+7:0] stage_im [0:STAGES-1];
+wire [STAGES-1:0] stage_valid;
+
+// --------------------------
+// 2. 旋转因子初始化（Q1.15格式）
+// --------------------------
+initial begin
+    integer k;
+    real angle, c, s;
+    for (k = 0; k < FFT_SIZE/2; k = k + 1) begin
+        angle = -2.0 * $itor(k) * $pi / $itor(FFT_SIZE); // 旋转因子角度：-2πk/N
+        c = $cos(angle);  // 实部
+        s = $sin(angle);  // 虚部
+        // 量化为Q1.15（1符号位+15小数位）
+        twid_re[k] = $rtoi(c * (1 << (TWID_WIDTH-1)));
+        twid_im[k] = $rtoi(s * (1 << (TWID_WIDTH-1)));
+    end
+end
+
+// --------------------------
+// 3. 位反转模块（输入顺序重排）
+// --------------------------
+bit_reverse #(
+    .DATA_WIDTH(DATA_WIDTH),
+    .ADDR_WIDTH(ADDR_WIDTH)
+) u_bit_reverse (
+    .clk(clk),
+    .rst_n(rst_n),
+    .din_re(din_re),
+    .din_im(din_im),
+    .din_valid(din_valid),
+    .dout_re(br_dout_re),
+    .dout_im(br_dout_im),
+    .dout_valid(br_valid)
+);
+
+// --------------------------
+// 4. 多级蝶形运算（流水线结构）
+// --------------------------
+// 第1级蝶形运算
+butterfly #(
+    .DATA_WIDTH(DATA_WIDTH),
+    .TWID_WIDTH(TWID_WIDTH),
+    .STAGE(1),          // 第1级（2点蝶形）
+    .FFT_SIZE(FFT_SIZE)
+) u_stage1 (
+    .clk(clk),
+    .rst_n(rst_n),
+    .din_re(br_dout_re),
+    .din_im(br_dout_im),
+    .din_valid(br_valid),
+    .twid_re(twid_re),
+    .twid_im(twid_im),
+    .dout_re(stage_re[0]),
+    .dout_im(stage_im[0]),
+    .dout_valid(stage_valid[0])
+);
+
+// 第2~7级蝶形运算（中间级）
+generate
+    genvar s;
+    for (s = 2; s < STAGES; s = s + 1) begin : stage_gen
+        butterfly #(
+            .DATA_WIDTH(DATA_WIDTH),
+            .TWID_WIDTH(TWID_WIDTH),
+            .STAGE(s),
+            .FFT_SIZE(FFT_SIZE)
+        ) u_stage (
+            .clk(clk),
+            .rst_n(rst_n),
+            .din_re(stage_re[s-2]),
+            .din_im(stage_im[s-2]),
+            .din_valid(stage_valid[s-2]),
+            .twid_re(twid_re),
+            .twid_im(twid_im),
+            .dout_re(stage_re[s-1]),
+            .dout_im(stage_im[s-1]),
+            .dout_valid(stage_valid[s-1])
+        );
+    end
+endgenerate
+
+// 第8级蝶形运算（最后一级）
+butterfly #(
+    .DATA_WIDTH(DATA_WIDTH),
+    .TWID_WIDTH(TWID_WIDTH),
+    .STAGE(STAGES),
+    .FFT_SIZE(FFT_SIZE)
+) u_stage8 (
+    .clk(clk),
+    .rst_n(rst_n),
+    .din_re(stage_re[STAGES-2]),
+    .din_im(stage_im[STAGES-2]),
+    .din_valid(stage_valid[STAGES-2]),
+    .twid_re(twid_re),
+    .twid_im(twid_im),
+    .dout_re(stage_re[STAGES-1]),
+    .dout_im(stage_im[STAGES-1]),
+    .dout_valid(stage_valid[STAGES-1])
+);
+
+// --------------------------
+// 5. 输出寄存器（同步输出）
+// --------------------------
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        dout_re <= 0;
+        dout_im <= 0;
+        dout_valid <= 0;
+    end else begin
+        dout_re <= stage_re[STAGES-1];
+        dout_im <= stage_im[STAGES-1];
+        dout_valid <= stage_valid[STAGES-1];
+    end
+end
+
+// --------------------------
+// 位反转模块（子模块）
+// --------------------------
+module bit_reverse #(
+    parameter DATA_WIDTH = 16,
+    parameter ADDR_WIDTH = 8
+) (
+    input clk,
+    input rst_n,
+    input [DATA_WIDTH-1:0] din_re,
+    input [DATA_WIDTH-1:0] din_im,
+    input din_valid,
+    output reg [DATA_WIDTH-1:0] dout_re,
+    output reg [DATA_WIDTH-1:0] dout_im,
+    output reg dout_valid
+);
+
+reg [DATA_WIDTH-1:0] mem_re [0:(1<<ADDR_WIDTH)-1];
+reg [DATA_WIDTH-1:0] mem_im [0:(1<<ADDR_WIDTH)-1];
+reg [ADDR_WIDTH-1:0] wr_addr, rd_addr;
+reg [1:0] state;
+localparam IDLE = 2'b00, WRITE = 2'b01, READ = 2'b10;
+
+// 位反转地址计算
+function [ADDR_WIDTH-1:0] reverse;
+    input [ADDR_WIDTH-1:0] addr;
+    integer i;
+    begin
+        reverse = 0;
+        for (i = 0; i < ADDR_WIDTH; i = i + 1) begin
+            reverse[ADDR_WIDTH-1-i] = addr[i];
+        end
+    end
+endfunction
+
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        wr_addr <= 0;
+        rd_addr <= 0;
+        state <= IDLE;
+        dout_valid <= 0;
+    end else begin
+        case (state)
+            IDLE: begin
+                if (din_valid) begin
+                    state <= WRITE;
+                    wr_addr <= 0;
+                end
+            end
+            WRITE: begin  // 写入原始顺序数据
+                mem_re[wr_addr] <= din_re;
+                mem_im[wr_addr] <= din_im;
+                if (wr_addr == (1<<ADDR_WIDTH)-1) begin
+                    state <= READ;
+                    rd_addr <= 0;
+                end else begin
+                    wr_addr <= wr_addr + 1;
+                end
+            end
+            READ: begin  // 按位反转顺序读出
+                dout_re <= mem_re[reverse(rd_addr)];
+                dout_im <= mem_im[reverse(rd_addr)];
+                dout_valid <= 1;
+                if (rd_addr == (1<<ADDR_WIDTH)-1) begin
+                    state <= IDLE;
+                    dout_valid <= 0;
+                end else begin
+                    rd_addr <= rd_addr + 1;
+                end
+            end
+        endcase
+    end
+end
+
+endmodule
+
+// --------------------------
+// 蝶形运算单元（子模块）
+// --------------------------
+module butterfly #(
+    parameter DATA_WIDTH = 16,
+    parameter TWID_WIDTH = 16,
+    parameter STAGE = 1,
+    parameter FFT_SIZE = 256
+) (
+    input clk,
+    input rst_n,
+    input [DATA_WIDTH-1:0] din_re,
+    input [DATA_WIDTH-1:0] din_im,
+    input din_valid,
+    input [TWID_WIDTH-1:0] twid_re,  // 旋转因子实部（全局LUT）
+    input [TWID_WIDTH-1:0] twid_im,  // 旋转因子虚部（全局LUT）
+    output reg [DATA_WIDTH+7:0] dout_re,  // 扩展位宽防止溢出
+    output reg [DATA_WIDTH+7:0] dout_im,
+    output reg dout_valid
+);
+
+localparam GROUP_SIZE = 1 << STAGE;       // 每组蝶形单元数量
+localparam BUTTERFLY_NUM = FFT_SIZE / 2;  // 每级蝶形单元总数
+localparam TWID_STEP = FFT_SIZE / GROUP_SIZE;  // 旋转因子步长
+
+reg [DATA_WIDTH-1:0] reg_re [1:0], reg_im [1:0];  // 存储两个输入数据
+reg [TWID_WIDTH-1:0] reg_twid_re, reg_twid_im;     // 存储当前旋转因子
+reg [ADDR_WIDTH-1:0] cnt;  // 计数当前处理的蝶形单元
+reg valid_d1;              // 延迟有效信号
+
+wire [ADDR_WIDTH-1:0] ADDR_WIDTH = $clog2(FFT_SIZE);
+wire [ADDR_WIDTH-1:0] twid_idx = (cnt / (GROUP_SIZE/2)) * TWID_STEP;  // 旋转因子索引
+
+// 寄存输入数据和旋转因子
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        reg_re[0] <= 0;
+        reg_re[1] <= 0;
+        reg_im[0] <= 0;
+        reg_im[1] <= 0;
+        reg_twid_re <= 0;
+        reg_twid_im <= 0;
+        cnt <= 0;
+        valid_d1 <= 0;
+    end else begin
+        if (din_valid) begin
+            // 交替存储两个输入（A和B）
+            reg_re[cnt % 2] <= din_re;
+            reg_im[cnt % 2] <= din_im;
+            // 每两个数据更新一次旋转因子
+            if (cnt % 2 == 1) begin
+                reg_twid_re <= twid_re[twid_idx];
+                reg_twid_im <= twid_im[twid_idx];
+            end
+            cnt <= cnt + 1;
+            valid_d1 <= 1;
+        end else begin
+            valid_d1 <= 0;
+        end
+    end
+end
+
+// 蝶形运算：X = A + B*W，Y = A - B*W
+wire signed [DATA_WIDTH-1:0] a_re, a_im, b_re, b_im;
+wire signed [TWID_WIDTH-1:0] w_re, w_im;
+wire signed [DATA_WIDTH+TWID_WIDTH-1:0] b_mul_w_re, b_mul_w_im;  // 复数乘法结果
+wire signed [DATA_WIDTH+7:0] x_re, x_im, y_re, y_im;             // 蝶形输出
+
+assign a_re = reg_re[0];
+assign a_im = reg_im[0];
+assign b_re = reg_re[1];
+assign b_im = reg_im[1];
+assign w_re = reg_twid_re;
+assign w_im = reg_twid_im;
+
+// 复数乘法：B * W = (b_re*w_re - b_im*w_im) + j*(b_re*w_im + b_im*w_re)
+assign b_mul_w_re = a_re * w_re - a_im * w_im;
+assign b_mul_w_im = a_re * w_im + a_im * w_re;
+
+// 蝶形输出（右移15位还原Q1.15格式，并扩展位宽）
+assign x_re = a_re + (b_mul_w_re >>> (TWID_WIDTH-1));
+assign x_im = a_im + (b_mul_w_im >>> (TWID_WIDTH-1));
+assign y_re = a_re - (b_mul_w_re >>> (TWID_WIDTH-1));
+assign y_im = a_im - (b_mul_w_im >>> (TWID_WIDTH-1));
+
+// 输出寄存器（交替输出X和Y）
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        dout_re <= 0;
+        dout_im <= 0;
+        dout_valid <= 0;
+    end else begin
+        if (valid_d1) begin
+            // 偶数计数输出X，奇数计数输出Y
+            if (cnt % 2 == 0) begin
+                dout_re <= x_re;
+                dout_im <= x_im;
+            end else begin
+                dout_re <= y_re;
+                dout_im <= y_im;
+            end
+            dout_valid <= 1;
+        end else begin
+            dout_valid <= 0;
+        end
+    end
+end
+
+endmodule
+
+endmodule

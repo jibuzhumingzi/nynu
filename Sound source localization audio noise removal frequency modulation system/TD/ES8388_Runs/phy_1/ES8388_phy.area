@@ -1,0 +1,156 @@
+standard
+***Report Model: audio_speak Device: EG4S20BG256***
+
+IO Statistics
+#IO                        54
+  #input                   26
+  #output                  24
+  #inout                    4
+
+Utilization Statistics
+#lut                     8096   out of  19600   41.31%
+#reg                     7258   out of  19600   37.03%
+#le                      9873
+  #lut only              2615   out of   9873   26.49%
+  #reg only              1777   out of   9873   18.00%
+  #lut&reg               5481   out of   9873   55.52%
+#dsp                        2   out of     29    6.90%
+#bram                       0   out of     64    0.00%
+  #bram9k                   0
+  #fifo9k                   0
+#bram32k                    0   out of     16    0.00%
+#pad                       51   out of    188   27.13%
+  #ireg                     8
+  #oreg                    20
+  #treg                     4
+#pll                        4   out of      4  100.00%
+#gclk                      11   out of     16   68.75%
+
+Clock Resource Statistics
+Index     ClockNet                                            Type               DriverType         Driver                                                           Fanout
+#1        sys_clk_dup_1                                       GCLK               io                 sys_clk_syn_2.di                                                 4420
+#2        aud_bclk_1_dup_1                                    GCLK               io                 aud_bclk_1_syn_2.di                                              45
+#3        aud_bclk_2_dup_1                                    GCLK               io                 aud_bclk_2_syn_2.di                                              45
+#4        aud_bclk_3_dup_1                                    GCLK               io                 aud_bclk_3_syn_2.di                                              44
+#5        aud_bclk_dup_1                                      GCLK               io                 aud_bclk_syn_2.di                                                44
+#6        u2_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk    GCLK               lslice             u2_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk_reg_syn_9.q0    42
+#7        u1_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk    GCLK               mslice             u_spar_4mic_localization/mic2_sum_b3[5]_syn_8.q0                 38
+#8        u3_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk    GCLK               mslice             u3_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk_reg_syn_9.q1    35
+#9        aud_mclk_1_dup_1                                    GCLK               pll                u1_pll_clk/pll_inst.clkc1                                        0
+#10       aud_mclk_2_dup_1                                    GCLK               pll                u2_pll_clk/pll_inst.clkc1                                        0
+#11       aud_mclk_3_dup_1                                    GCLK               pll                u3_pll_clk/pll_inst.clkc1                                        0
+#12       aud_mclk_dup_1                                      GCLK               pll                u_pll_clk/pll_inst.clkc1                                         0
+#13       u1_pll_clk/clk0_buf                                 GCLK               pll                u1_pll_clk/pll_inst.clkc0                                        0
+#14       u2_pll_clk/clk0_buf                                 GCLK               pll                u2_pll_clk/pll_inst.clkc0                                        0
+#15       u3_pll_clk/clk0_buf                                 GCLK               pll                u3_pll_clk/pll_inst.clkc0                                        0
+#16       u_pll_clk/clk0_buf                                  GCLK               pll                u_pll_clk/pll_inst.clkc0                                         0
+
+
+Detailed IO Report
+
+        Name          Direction    Location    IOStandard    DriveStrength    PullType     PackReg   
+     aud_adcdat         INPUT        R14        LVCMOS25          N/A          PULLUP       IREG     
+    aud_adcdat_1        INPUT        G16        LVCMOS25          N/A          PULLUP       IREG     
+    aud_adcdat_2        INPUT         E7        LVCMOS25          N/A          PULLUP       IREG     
+    aud_adcdat_3        INPUT         L4        LVCMOS25          N/A          PULLUP       IREG     
+      aud_bclk          INPUT         M6        LVCMOS25          N/A          PULLUP       NONE     
+     aud_bclk_1         INPUT        G14        LVCMOS25          N/A          PULLUP       NONE     
+     aud_bclk_2         INPUT         D5        LVCMOS25          N/A          PULLUP       NONE     
+     aud_bclk_3         INPUT         H5        LVCMOS25          N/A          PULLUP       NONE     
+      aud_lrc           INPUT         M7        LVCMOS25          N/A          PULLUP       IREG     
+     aud_lrc_1          INPUT        H16        LVCMOS25          N/A          PULLUP       IREG     
+     aud_lrc_2          INPUT         C6        LVCMOS25          N/A          PULLUP       IREG     
+     aud_lrc_3          INPUT         K6        LVCMOS25          N/A          PULLUP       IREG     
+     denoise_en         INPUT        A11        LVCMOS25          N/A          PULLUP       NONE     
+  pitch_control[2]      INPUT        B10        LVCMOS25          N/A          PULLUP       NONE     
+  pitch_control[1]      INPUT        A10        LVCMOS25          N/A          PULLUP       NONE     
+  pitch_control[0]      INPUT         A9        LVCMOS25          N/A          PULLUP       NONE     
+    pitch_en[1]         INPUT        A13        LVCMOS25          N/A          PULLUP       NONE     
+    pitch_en[0]         INPUT        A14        LVCMOS25          N/A          PULLUP       NONE     
+      sys_clk           INPUT         R7        LVCMOS25          N/A          PULLUP       NONE     
+     sys_rst_n          INPUT         E3        LVCMOS25          N/A          PULLUP       NONE     
+    sys_rst_n_1         INPUT        E16        LVCMOS25          N/A           N/A         NONE     
+    sys_rst_n_2         INPUT         J1        LVCMOS25          N/A           N/A         NONE     
+    sys_rst_n_3         INPUT         E4        LVCMOS25          N/A           N/A         NONE     
+     aud_dacdat        OUTPUT         P6        LVCMOS25           8            NONE        OREG     
+    aud_dacdat_1       OUTPUT        H14        LVCMOS25           8            NONE        OREG     
+    aud_dacdat_2       OUTPUT         E6        LVCMOS25           8            NONE        OREG     
+    aud_dacdat_3       OUTPUT         K3        LVCMOS25           8            NONE        OREG     
+      aud_mclk         OUTPUT         N5        LVCMOS25           8            NONE        NONE     
+     aud_mclk_1        OUTPUT        F14        LVCMOS25           8            NONE        NONE     
+     aud_mclk_2        OUTPUT         F6        LVCMOS25           8            NONE        NONE     
+     aud_mclk_3        OUTPUT         H4        LVCMOS25           8            NONE        NONE     
+      aud_scl          OUTPUT        R12        LVCMOS25           8            NONE        OREG     
+     aud_scl_1         OUTPUT        D14        LVCMOS25           8            NONE        OREG     
+     aud_scl_2         OUTPUT         A2        LVCMOS25           8            NONE        OREG     
+     aud_scl_3         OUTPUT         G3        LVCMOS25           8            NONE        OREG     
+       ilaclk          OUTPUT         M9        LVCMOS25           8            NONE        NONE     
+      ilaclk_1         OUTPUT        L16        LVCMOS25           8            NONE        NONE     
+      ilaclk_2         OUTPUT         D3        LVCMOS25           8            NONE        NONE     
+      ilaclk_3         OUTPUT        K15        LVCMOS25           8            NONE        NONE     
+     led_eight         OUTPUT        M12        LVCMOS25           8            NONE        OREG     
+      led_five         OUTPUT        M10        LVCMOS25           8            NONE        OREG     
+      led_four         OUTPUT        P11        LVCMOS25           8            NONE        OREG     
+      led_one          OUTPUT         P9        LVCMOS25           8            NONE        OREG     
+     led_seven         OUTPUT        N12        LVCMOS25           8            NONE        OREG     
+      led_six          OUTPUT        L10        LVCMOS25           8            NONE        OREG     
+      led_tree         OUTPUT        R16        LVCMOS25           8            NONE        OREG     
+      led_two          OUTPUT        P12        LVCMOS25           8            NONE        OREG     
+      aud_sda           INOUT         R9        LVCMOS25           8           PULLUP     OREG;TREG  
+     aud_sda_1          INOUT        E15        LVCMOS25           8           PULLUP     OREG;TREG  
+     aud_sda_2          INOUT         C3        LVCMOS25           8           PULLUP     OREG;TREG  
+     aud_sda_3          INOUT         F3        LVCMOS25           8           PULLUP     OREG;TREG  
+
+Report Hierarchy Area:
++--------------------------------------------------------------------------------------------------------+
+|Instance                   |Module                 |le     |lut     |ripple  |seq     |bram    |dsp     |
++--------------------------------------------------------------------------------------------------------+
+|top                        |audio_speak            |9873   |7274    |822     |7290    |0       |2       |
+|  u1_es8388_ctrl           |es8388_ctrl            |265    |214     |25      |164     |0       |0       |
+|    u_audio_receive        |audio_receive          |90     |57      |12      |59      |0       |0       |
+|    u_audio_send           |audio_send             |46     |46      |0       |27      |0       |0       |
+|    u_es8388_config        |es8388_config          |129    |111     |13      |78      |0       |0       |
+|      u_i2c_dri            |i2c_dri                |64     |59      |5       |47      |0       |0       |
+|      u_i2c_reg_cfg        |i2c_reg_cfg            |65     |52      |8       |31      |0       |0       |
+|  u1_pll_clk               |clk_wiz_0              |0      |0       |0       |0       |0       |0       |
+|  u2_es8388_ctrl           |es8388_ctrl            |261    |201     |25      |155     |0       |0       |
+|    u_audio_receive        |audio_receive          |81     |49      |12      |53      |0       |0       |
+|    u_audio_send           |audio_send             |25     |13      |0       |25      |0       |0       |
+|    u_es8388_config        |es8388_config          |155    |139     |13      |77      |0       |0       |
+|      u_i2c_dri            |i2c_dri                |89     |84      |5       |49      |0       |0       |
+|      u_i2c_reg_cfg        |i2c_reg_cfg            |66     |55      |8       |28      |0       |0       |
+|  u2_pll_clk               |clk_wiz_0              |0      |0       |0       |0       |0       |0       |
+|  u3_es8388_ctrl           |es8388_ctrl            |231    |171     |25      |159     |0       |0       |
+|    u_audio_receive        |audio_receive          |88     |54      |12      |54      |0       |0       |
+|    u_audio_send           |audio_send             |23     |16      |0       |22      |0       |0       |
+|    u_es8388_config        |es8388_config          |120    |101     |13      |83      |0       |0       |
+|      u_i2c_dri            |i2c_dri                |73     |65      |5       |53      |0       |0       |
+|      u_i2c_reg_cfg        |i2c_reg_cfg            |47     |36      |8       |30      |0       |0       |
+|  u3_pll_clk               |clk_wiz_0              |0      |0       |0       |0       |0       |0       |
+|  u_es8388_ctrl            |es8388_ctrl            |417    |302     |87      |162     |0       |0       |
+|    u_audio_receive        |audio_receive          |85     |55      |12      |57      |0       |0       |
+|    u_audio_send           |audio_send             |34     |34      |0       |29      |0       |0       |
+|    u_es8388_config        |es8388_config          |298    |213     |75      |76      |0       |0       |
+|      u_i2c_dri            |i2c_dri                |110    |98      |5       |42      |0       |0       |
+|      u_i2c_reg_cfg        |i2c_reg_cfg            |188    |115     |70      |34      |0       |0       |
+|  u_noise_suppress         |noise_suppress         |50     |37      |13      |25      |0       |0       |
+|  u_pitch_shift            |pitch_shift            |6250   |4835    |13      |6128    |0       |0       |
+|  u_pll_clk                |clk_wiz_0              |1      |1       |0       |0       |0       |0       |
+|  u_simple_denoise         |simple_denoise         |141    |50      |35      |76      |0       |2       |
+|  u_spar_4mic_localization |spar_4mic_localization |2152   |1413    |559     |353     |0       |0       |
++--------------------------------------------------------------------------------------------------------+
+
+
+DataNet Average Fanout:
+
+   Index     Fanout     Nets   
+    #1          1       13306  
+    #2          2       1354   
+    #3          3        293   
+    #4          4        26    
+    #5        5-10       267   
+    #6        11-50      492   
+    #7       51-100       4    
+    #8       101-500     33    
+    #9        >500        5    
+  Average     2.92             

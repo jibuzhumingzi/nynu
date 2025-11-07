@@ -1,0 +1,743 @@
+============================================================
+   Tang Dynasty, V5.6.71036
+      Copyright (c) 2012-2023 Anlogic Inc.
+   Executable = D:/TD/bin/td.exe
+   Built at =   20:34:38 Mar 21 2023
+   Run by =     lyw15
+   Run Date =   Sun Oct 19 21:31:59 2025
+
+   Run on =     -001
+============================================================
+RUN-1002 : start command "open_project ES8388.prj"
+RUN-1001 : Print Global Property
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  |  Note  
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     |        
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        |        
+RUN-1001 :        qor_monitor       |    off     |       off        |        
+RUN-1001 :        syn_ip_flow       |    off     |       off        |        
+RUN-1001 :          thread          |    auto    |       auto       |        
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :   default_reg_initial   |    auto    |       auto       |        
+RUN-1001 :        infer_add        |     on     |        on        |        
+RUN-1001 :        infer_fsm        |    off     |       off        |        
+RUN-1001 :        infer_mult       |     on     |        on        |        
+RUN-1001 :        infer_ram        |     on     |        on        |        
+RUN-1001 :        infer_reg        |     on     |        on        |        
+RUN-1001 :   infer_reg_init_value  |     on     |        on        |        
+RUN-1001 :        infer_rom        |     on     |        on        |        
+RUN-1001 :      infer_shifter      |     on     |        on        |        
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 : Print Rtl Property
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :       compress_add      |   ripple   |      ripple      |        
+RUN-1001 :        elf_sload        |    off     |       off        |        
+RUN-1001 :       fix_undriven      |     0      |        0         |        
+RUN-1001 :         flatten         |    off     |       off        |        
+RUN-1001 :       gate_sharing      |     on     |        on        |        
+RUN-1001 :    hdl_warning_level    |   normal   |      normal      |        
+RUN-1001 :   impl_internal_tribuf  |     on     |        on        |        
+RUN-1001 :      impl_set_reset     |     on     |        on        |        
+RUN-1001 :        infer_gsr        |    off     |       off        |        
+RUN-1001 :      keep_hierarchy     |    auto    |       auto       |        
+RUN-1001 :        max_fanout       |    9999    |       9999       |        
+RUN-1001 :      max_oh2bin_len     |     10     |        10        |        
+RUN-1001 :       merge_equal       |     on     |        on        |        
+RUN-1001 :       merge_equiv       |     on     |        on        |        
+RUN-1001 :        merge_mux        |    off     |       off        |        
+RUN-1001 :     min_control_set     |     8      |        8         |        
+RUN-1001 :      min_ripple_len     |    auto    |       auto       |        
+RUN-1001 :       oh2bin_ratio      |    0.08    |       0.08       |        
+RUN-1001 :     opt_adder_fanout    |     on     |        on        |        
+RUN-1001 :        opt_arith        |     on     |        on        |        
+RUN-1001 :       opt_big_gate      |    off     |       off        |        
+RUN-1001 :        opt_const        |     on     |        on        |        
+RUN-1001 :      opt_const_mult     |     on     |        on        |        
+RUN-1001 :       opt_lessthan      |     on     |        on        |        
+RUN-1001 :         opt_mux         |    off     |       off        |        
+RUN-1001 :         opt_ram         |    high    |       high       |        
+RUN-1001 :      rtl_sim_model      |    off     |       off        |        
+RUN-1001 :         seq_syn         |     on     |        on        |        
+RUN-1001 : --------------------------------------------------------------
+HDL-1007 : analyze verilog file ../../al_ip/clk_wiz_0.v
+HDL-1007 : undeclared symbol 'open', assumed default net type 'wire' in ../../al_ip/clk_wiz_0.v(80)
+HDL-1007 : analyze verilog file ../../../RTL/audio_receive.v
+HDL-1007 : analyze verilog file ../../../RTL/audio_send.v
+HDL-1007 : analyze verilog file ../../../RTL/audio_speak.v
+HDL-1007 : analyze verilog file ../../../RTL/es8388_config.v
+HDL-1007 : analyze verilog file ../../../RTL/es8388_ctrl.v
+HDL-1007 : analyze verilog file ../../../RTL/i2c_dri.v
+HDL-1007 : analyze verilog file ../../../RTL/i2c_reg_cfg.v
+HDL-1007 : analyze verilog file ../../sound_direction_led.v
+RUN-1001 : Project manager successfully analyzed 9 source files.
+RUN-1002 : start command "import_device eagle_s20.db -package EG4S20BG256"
+ARC-1001 : Device Initialization.
+ARC-1001 : ------------------------------------------------------------------
+ARC-1001 :            OPTION            |          IO          |   SETTING   
+ARC-1001 : ------------------------------------------------------------------
+ARC-1001 :   cso_b/cclk/mosi/miso/dout  |  T3/R11/T10/P10/S11  |    gpio    
+ARC-1001 :             done             |         P13          |    gpio    
+ARC-1001 :           program_b          |          T2          |  dedicate  
+ARC-1001 :        tdi/tms/tck/tdo       |   C12/A15/C14/E14    |  dedicate  
+ARC-1001 : ------------------------------------------------------------------
+ARC-1004 : Device setting, marked 5 dedicate IOs in total.
+RUN-1002 : start command "import_db ../syn_1/ES8388_gate.db"
+RUN-1001 : Importing database generated by Tang Dynasty, V5.6.71036.
+RUN-1001 : Database version number 46146.
+RUN-1001 : Import flow parameters
+RUN-1001 : Import IO constraints
+RUN-1001 : Import Inst constraints
+RUN-1001 : Import design success TD_VERSION=5.6.71036 , DB_VERSION=46146
+RUN-1002 : start command "place"
+RUN-1001 : Open license file D:/TD/license/Anlogic.lic
+RUN-1001 : Print Global Property
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  |  Note  
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     |        
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        |        
+RUN-1001 :        qor_monitor       |    off     |       off        |        
+RUN-1001 :        syn_ip_flow       |    off     |       off        |        
+RUN-1001 :          thread          |    auto    |       auto       |        
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 : Print Place Property
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :      detailed_place     |     on     |        on        |        
+RUN-1001 :          effort         |   medium   |      medium      |        
+RUN-1001 :         fix_hold        |    off     |       off        |        
+RUN-1001 :       legalization      |    ori     |       ori        |        
+RUN-1001 :      new_spreading      |     on     |        on        |        
+RUN-1001 :        opt_timing       |   medium   |      medium      |        
+RUN-1001 :   post_clock_route_opt  |    off     |       off        |        
+RUN-1001 :       pr_strategy       |     1      |        1         |        
+RUN-1001 :        relaxation       |    1.00    |       1.00       |        
+RUN-1001 :         retiming        |    off     |       off        |        
+RUN-1001 : --------------------------------------------------------------
+PHY-3001 : Placer runs in 24 thread(s).
+RUN-1002 : start command "legalize_phy_inst"
+SYN-1011 : Flatten model audio_speak
+RUN-1002 : start command "phys_opt -simplify_lut"
+SYN-4016 : Net ilaclk_1_dup_1 driven by BUFG (0 clock/control pins, 2 other pins).
+SYN-4016 : Net ilaclk_dup_1 driven by BUFG (0 clock/control pins, 2 other pins).
+SYN-4027 : Net aud_mclk_1_dup_1 is clkc1 of pll u1_pll_clk/pll_inst.
+SYN-4019 : Net sys_clk_dup_1 is refclk of pll u1_pll_clk/pll_inst.
+SYN-4020 : Net sys_clk_dup_1 is fbclk of pll u1_pll_clk/pll_inst.
+SYN-4027 : Net aud_mclk_dup_1 is clkc1 of pll u_pll_clk/pll_inst.
+SYN-4019 : Net sys_clk_dup_1 is refclk of pll u_pll_clk/pll_inst.
+SYN-4020 : Net sys_clk_dup_1 is fbclk of pll u_pll_clk/pll_inst.
+SYN-4024 : Net "aud_bclk_dup_1" drives clk pins.
+SYN-4024 : Net "aud_bclk_1_dup_1" drives clk pins.
+SYN-4024 : Net "u1_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk" drives clk pins.
+SYN-4024 : Net "u_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk" drives clk pins.
+SYN-4025 : Tag rtl::Net aud_bclk_1_dup_1 as clock net
+SYN-4025 : Tag rtl::Net aud_bclk_dup_1 as clock net
+SYN-4025 : Tag rtl::Net aud_mclk_1_dup_1 as clock net
+SYN-4025 : Tag rtl::Net aud_mclk_dup_1 as clock net
+SYN-4025 : Tag rtl::Net ilaclk_1_dup_1 as clock net
+SYN-4025 : Tag rtl::Net ilaclk_dup_1 as clock net
+SYN-4025 : Tag rtl::Net sys_clk_dup_1 as clock net
+SYN-4025 : Tag rtl::Net u1_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk as clock net
+SYN-4025 : Tag rtl::Net u_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk as clock net
+SYN-4026 : Tagged 9 rtl::Net as clock net
+SYN-4015 : Create BUFG instance for clk Net aud_bclk_1_dup_1 to drive 80 clock pins.
+SYN-4015 : Create BUFG instance for clk Net aud_bclk_dup_1 to drive 80 clock pins.
+SYN-4015 : Create BUFG instance for clk Net u1_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk to drive 59 clock pins.
+SYN-4015 : Create BUFG instance for clk Net u_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk to drive 59 clock pins.
+PHY-1001 : Populate physical database on model audio_speak.
+RUN-1001 : There are total 798 instances
+RUN-0007 : 396 luts, 306 seqs, 34 mslices, 22 lslices, 29 pads, 0 brams, 0 dsps
+RUN-1001 : There are total 890 nets
+RUN-1001 : 574 nets have 2 pins
+RUN-1001 : 211 nets have [3 - 5] pins
+RUN-1001 : 47 nets have [6 - 10] pins
+RUN-1001 : 35 nets have [11 - 20] pins
+RUN-1001 : 20 nets have [21 - 99] pins
+RUN-1001 : 3 nets have 100+ pins
+RUN-1001 : Report Control nets information:
+RUN-1001 : DFF Distribution
+RUN-1001 : ----------------------------------
+RUN-1001 :   CE   |  SSR  |  ASR  |  DFF Count  
+RUN-1001 : ----------------------------------
+RUN-1001 :   No   |  No   |  No   |      0      
+RUN-1001 :   No   |  No   |  Yes  |     146     
+RUN-1001 :   No   |  Yes  |  No   |      0      
+RUN-1001 :   Yes  |  No   |  No   |      0      
+RUN-1001 :   Yes  |  No   |  Yes  |     144     
+RUN-1001 :   Yes  |  Yes  |  No   |     16      
+RUN-1001 : ----------------------------------
+RUN-0007 : Control Group Statistic
+RUN-0007 : ---------------------------
+RUN-0007 :   #CLK  |  #CE  |  #SSR/ASR  
+RUN-0007 : ---------------------------
+RUN-0007 :    5    |  11   |     5      
+RUN-0007 : ---------------------------
+RUN-0007 : Control Set = 16
+PHY-3001 : Initial placement ...
+PHY-3001 : design contains 796 instances, 396 luts, 306 seqs, 56 slices, 16 macros(56 instances: 34 mslices 22 lslices)
+PHY-0007 : Cell area utilization is 2%
+PHY-3001 : Global placement ...
+PHY-3001 : Initial: Len = 183871
+PHY-3001 : Clustering ...
+PHY-3001 : Level 0 #clusters 796.
+PHY-3001 : End clustering;  0.000038s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%)
+
+PHY-3001 : Run with size of 4
+PHY-3001 : Cell area utilization is 2%
+PHY-3001 : :::0::: Try harder cell spreading with beta_ = 0
+PHY-3002 : Step(1): len = 104132, overlap = 0
+PHY-3002 : Step(2): len = 68106.7, overlap = 0
+PHY-3002 : Step(3): len = 47782.2, overlap = 0
+PHY-3002 : Step(4): len = 36511.1, overlap = 0
+PHY-3002 : Step(5): len = 31309, overlap = 0
+PHY-3002 : Step(6): len = 27202.1, overlap = 0
+PHY-3002 : Step(7): len = 23711.1, overlap = 0
+PHY-3002 : Step(8): len = 22359, overlap = 0
+PHY-3002 : Step(9): len = 21921.4, overlap = 0
+PHY-3002 : Step(10): len = 21213.8, overlap = 0
+PHY-3002 : Step(11): len = 20167.4, overlap = 0
+PHY-3002 : Step(12): len = 20275.1, overlap = 0
+PHY-3002 : Step(13): len = 18389.8, overlap = 0
+PHY-3002 : Step(14): len = 18454.3, overlap = 0.3125
+PHY-3002 : Step(15): len = 16891.6, overlap = 1.125
+PHY-3002 : Step(16): len = 16896.3, overlap = 0.8125
+PHY-3002 : Step(17): len = 15213.8, overlap = 0
+PHY-3002 : Step(18): len = 15972.7, overlap = 0
+PHY-3002 : Step(19): len = 16131.4, overlap = 0
+PHY-3002 : Step(20): len = 13552.7, overlap = 0
+PHY-3002 : Step(21): len = 13004.9, overlap = 0
+PHY-3002 : Step(22): len = 13004.9, overlap = 0
+PHY-3002 : Step(23): len = 12005.4, overlap = 0.0625
+PHY-3002 : Step(24): len = 12005.4, overlap = 0.0625
+PHY-3002 : Step(25): len = 11766.5, overlap = 0.0625
+PHY-3001 : Legalization ...
+PHY-3001 : End legalization;  0.002343s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%)
+
+PHY-3001 : Run with size of 4
+PHY-3001 : Cell area utilization is 3%
+PHY-3001 : :::0::: Try harder cell spreading with beta_ = 0
+PHY-3002 : Step(26): len = 11653.4, overlap = 5.875
+PHY-3002 : Step(27): len = 11653.4, overlap = 5.875
+PHY-3002 : Step(28): len = 11499, overlap = 6.28125
+PHY-3002 : Step(29): len = 11499, overlap = 6.28125
+PHY-3002 : Step(30): len = 11424.6, overlap = 6.375
+PHY-3002 : Step(31): len = 11424.6, overlap = 6.375
+PHY-3002 : Step(32): len = 11354.6, overlap = 6.46875
+PHY-3002 : Step(33): len = 11354.6, overlap = 6.46875
+PHY-3002 : Step(34): len = 11269.3, overlap = 6.5625
+PHY-3002 : Step(35): len = 11269.3, overlap = 6.5625
+PHY-3002 : Step(36): len = 11232, overlap = 7.03125
+PHY-3002 : Step(37): len = 11232, overlap = 7.03125
+PHY-3002 : Step(38): len = 11119.8, overlap = 7.40625
+PHY-3002 : Step(39): len = 11119.8, overlap = 7.40625
+PHY-3002 : Step(40): len = 11201.3, overlap = 7.78125
+PHY-3002 : Step(41): len = 11201.3, overlap = 7.78125
+PHY-3002 : Step(42): len = 11023.7, overlap = 7.59375
+PHY-3002 : Step(43): len = 11023.7, overlap = 7.59375
+PHY-3002 : Step(44): len = 11091, overlap = 7.59375
+PHY-3002 : Step(45): len = 11091, overlap = 7.59375
+PHY-3002 : Step(46): len = 10956.1, overlap = 7.59375
+PHY-3002 : Step(47): len = 10956.1, overlap = 7.59375
+PHY-3002 : Step(48): len = 11042.1, overlap = 7.59375
+PHY-3002 : Step(49): len = 11042.1, overlap = 7.59375
+PHY-3002 : Step(50): len = 10899.2, overlap = 7.59375
+PHY-3002 : Step(51): len = 10899.2, overlap = 7.59375
+PHY-3002 : Step(52): len = 10919.6, overlap = 7.59375
+PHY-3002 : Step(53): len = 10919.6, overlap = 7.59375
+PHY-3002 : Step(54): len = 10830.5, overlap = 7.59375
+PHY-3002 : Step(55): len = 10830.5, overlap = 7.59375
+PHY-3002 : Step(56): len = 10920.5, overlap = 7.59375
+PHY-3002 : Step(57): len = 10920.5, overlap = 7.59375
+PHY-3002 : Step(58): len = 10782.4, overlap = 7.6875
+PHY-3002 : Step(59): len = 10782.4, overlap = 7.6875
+PHY-3002 : Step(60): len = 10818.5, overlap = 7.8125
+PHY-3002 : Step(61): len = 10818.5, overlap = 7.8125
+PHY-3002 : Step(62): len = 10720.3, overlap = 8.0625
+PHY-3002 : Step(63): len = 10720.3, overlap = 8.0625
+PHY-3002 : Step(64): len = 10839.2, overlap = 8.65625
+PHY-3002 : Step(65): len = 10839.2, overlap = 8.65625
+PHY-3002 : Step(66): len = 10685.1, overlap = 8.65625
+PHY-3002 : Step(67): len = 10685.1, overlap = 8.65625
+PHY-3002 : Step(68): len = 10626.6, overlap = 9.5
+PHY-3002 : Step(69): len = 10709.5, overlap = 9.3125
+PHY-3002 : Step(70): len = 10709.5, overlap = 9.3125
+PHY-3001 : Run with size of 2
+PHY-3001 : Cell area utilization is 3%
+PHY-3001 : :::0::: Try harder cell spreading with beta_ = 1.91953e-05
+PHY-3002 : Step(71): len = 11117.2, overlap = 37.3125
+PHY-3002 : Step(72): len = 11117.2, overlap = 37.3125
+PHY-3001 : :::1::: Try harder cell spreading with beta_ = 3.83906e-05
+PHY-3002 : Step(73): len = 11955.9, overlap = 34.9062
+PHY-3002 : Step(74): len = 12094.2, overlap = 34.625
+PHY-3002 : Step(75): len = 12217.2, overlap = 30.2812
+PHY-3002 : Step(76): len = 12517.6, overlap = 29.4688
+PHY-3002 : Step(77): len = 12685.6, overlap = 28.8438
+PHY-3001 : :::2::: Try harder cell spreading with beta_ = 7.67812e-05
+PHY-3002 : Step(78): len = 12344.1, overlap = 30.1562
+PHY-3002 : Step(79): len = 12344.1, overlap = 30.1562
+PHY-3002 : Step(80): len = 12265.7, overlap = 29.7812
+PHY-3001 : :::3::: Try harder cell spreading with beta_ = 0.000153562
+PHY-3002 : Step(81): len = 13000.6, overlap = 27.5
+PHY-3002 : Step(82): len = 13212.2, overlap = 25.4062
+PHY-3002 : Step(83): len = 13489.7, overlap = 22.0938
+PHY-3002 : Step(84): len = 13461, overlap = 20.6562
+PHY-3002 : Step(85): len = 13309.3, overlap = 20.25
+PHY-3001 : :::4::: Try harder cell spreading with beta_ = 0.000307125
+PHY-3002 : Step(86): len = 13268.7, overlap = 19.9375
+PHY-3002 : Step(87): len = 13365.6, overlap = 19.9375
+PHY-3001 : :::5::: Try harder cell spreading with beta_ = 0.00061425
+PHY-3002 : Step(88): len = 13422.4, overlap = 20.0625
+PHY-3002 : Step(89): len = 13615.7, overlap = 19.0625
+OPT-1001 : Start physical optimization ...
+OPT-1001 : Total overflow 38.66 peak overflow 3.47
+OPT-1001 : Start high-fanout net optimization ...
+OPT-1001 : Update timing in global mode
+PHY-1001 : Start incremental global routing, caller is place ...
+RUN-1001 : Generating global routing grids ...
+RUN-1001 : Building simple global routing graph ...
+PHY-1001 : Generate routing nets ...
+PHY-1001 : Reuse net number 0/890.
+PHY-1001 : Global iterations in 24 thread ...
+PHY-1002 : len = 15104, over cnt = 71(0%), over = 334, worst = 27
+PHY-1001 : End global iterations;  0.021295s wall, 0.031250s user + 0.000000s system = 0.031250s CPU (146.7%)
+
+PHY-1001 : Congestion index: top1 = 25.65, top5 = 9.71, top10 = 5.39, top15 = 3.60.
+PHY-1001 : End incremental global routing;  0.055419s wall, 0.046875s user + 0.015625s system = 0.062500s CPU (112.8%)
+
+RUN-1002 : start command "start_timer -report"
+TMR-5001 WARNING: No sdc constraints found while initiating timer.
+TMR-2505 : Start building timing graph for model audio_speak.
+TMR-2506 : Build timing graph completely. Port num: 26, tpin num: 3678, tnet num: 888, tinst num: 796, tnode num: 4799, tedge num: 5786.
+TMR-2508 : Levelizing timing graph completed, there are 17 levels in total.
+TMR-2501 : Timing graph initialized successfully.
+OPT-1001 : End timing update;  0.126128s wall, 0.109375s user + 0.015625s system = 0.125000s CPU (99.1%)
+
+OPT-1001 : 0 high-fanout net processed.
+OPT-1001 : End high-fanout net optimization;  0.189830s wall, 0.171875s user + 0.031250s system = 0.203125s CPU (107.0%)
+
+OPT-1001 : Current memory(MB): used = 169, reserve = 137, peak = 169.
+OPT-1001 : End physical optimization;  0.195136s wall, 0.171875s user + 0.031250s system = 0.203125s CPU (104.1%)
+
+PHY-3001 : Start packing ...
+SYN-4007 : Packing 0 MUX to BLE ...
+SYN-4008 : Packed 0 MUX and 0 SEQ to BLE.
+SYN-4007 : Packing 396 LUT to BLE ...
+SYN-4008 : Packed 396 LUT and 164 SEQ to BLE.
+SYN-4003 : Packing 142 remaining SEQ's ...
+SYN-4005 : Packed 87 SEQ with LUT/SLICE
+SYN-4006 : 165 single LUT's are left
+SYN-4006 : 55 single SEQ's are left
+SYN-4011 : Packing model "audio_speak" (AL_USER_NORMAL) with 451/547 primitive instances ...
+PHY-3001 : End packing;  0.018618s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (83.9%)
+
+PHY-1001 : Populate physical database on model audio_speak.
+RUN-1001 : There are total 346 instances
+RUN-1001 : 153 mslices, 153 lslices, 29 pads, 0 brams, 0 dsps
+RUN-1001 : There are total 732 nets
+RUN-1001 : 405 nets have 2 pins
+RUN-1001 : 222 nets have [3 - 5] pins
+RUN-1001 : 47 nets have [6 - 10] pins
+RUN-1001 : 39 nets have [11 - 20] pins
+RUN-1001 : 18 nets have [21 - 99] pins
+RUN-1001 : 1 nets have 100+ pins
+PHY-3001 : design contains 344 instances, 306 slices, 16 macros(56 instances: 34 mslices 22 lslices)
+PHY-3001 : Cell area utilization is 4%
+PHY-3001 : After packing: Len = 13603.4, Over = 25.5
+PHY-3001 : Run with size of 2
+PHY-3001 : Cell area utilization is 4%
+PHY-3001 : :::0::: Try harder cell spreading with beta_ = 4.63219e-05
+PHY-3002 : Step(90): len = 13049.3, overlap = 27.75
+PHY-3002 : Step(91): len = 13123.8, overlap = 27.25
+PHY-3002 : Step(92): len = 13034.6, overlap = 27.75
+PHY-3001 : :::1::: Try harder cell spreading with beta_ = 9.26439e-05
+PHY-3002 : Step(93): len = 13151.6, overlap = 25.75
+PHY-3002 : Step(94): len = 13261.7, overlap = 25
+PHY-3002 : Step(95): len = 13479.6, overlap = 22.5
+PHY-3001 : :::2::: Try harder cell spreading with beta_ = 0.000185288
+PHY-3002 : Step(96): len = 13633.7, overlap = 21.25
+PHY-3002 : Step(97): len = 13752.7, overlap = 21.5
+PHY-3002 : Step(98): len = 13912.9, overlap = 21.25
+PHY-3001 : Legalization ...
+PHY-3001 : End legalization;  0.071006s wall, 0.125000s user + 0.093750s system = 0.218750s CPU (308.1%)
+
+PHY-3001 : Trial Legalized: Len = 22954.2
+PHY-3001 : Run with size of 2
+PHY-3001 : Cell area utilization is 4%
+PHY-3001 : :::0::: Try harder cell spreading with beta_ = 0
+PHY-3002 : Step(99): len = 16515, overlap = 11.75
+PHY-3002 : Step(100): len = 14245.5, overlap = 20
+PHY-3002 : Step(101): len = 13414, overlap = 22.75
+PHY-3002 : Step(102): len = 12794.1, overlap = 25.75
+PHY-3002 : Step(103): len = 12782.5, overlap = 26.25
+PHY-3002 : Step(104): len = 12408.4, overlap = 28
+PHY-3002 : Step(105): len = 12420, overlap = 27.75
+PHY-3002 : Step(106): len = 12360.3, overlap = 26.25
+PHY-3001 : :::1::: Try harder cell spreading with beta_ = 3.04365e-05
+PHY-3002 : Step(107): len = 12315.2, overlap = 28.5
+PHY-3002 : Step(108): len = 12455.1, overlap = 28
+PHY-3002 : Step(109): len = 12702.7, overlap = 28.25
+PHY-3001 : :::2::: Try harder cell spreading with beta_ = 6.08731e-05
+PHY-3002 : Step(110): len = 12620.3, overlap = 28.75
+PHY-3002 : Step(111): len = 12739, overlap = 29.5
+PHY-3002 : Step(112): len = 12804.1, overlap = 29.5
+PHY-3001 : Legalization ...
+PHY-3001 : End legalization;  0.003801s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%)
+
+PHY-3001 : Legalized: Len = 20425.3, Over = 0
+PHY-3001 : End spreading;  0.001895s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%)
+
+PHY-3001 : Final: Len = 20425.3, Over = 0
+OPT-1001 : Start physical optimization ...
+OPT-1001 : Total overflow 0.00 peak overflow 0.00
+OPT-1001 : Start high-fanout net optimization ...
+OPT-1001 : Update timing in global mode
+PHY-1001 : Start incremental global routing, caller is place ...
+RUN-1001 : Generating global routing grids ...
+PHY-1001 : Generate routing nets ...
+PHY-1001 : Reuse net number 30/732.
+PHY-1001 : Global iterations in 24 thread ...
+PHY-1002 : len = 23904, over cnt = 75(0%), over = 107, worst = 4
+PHY-1002 : len = 24496, over cnt = 19(0%), over = 23, worst = 2
+PHY-1002 : len = 24728, over cnt = 2(0%), over = 2, worst = 1
+PHY-1002 : len = 24760, over cnt = 0(0%), over = 0, worst = 0
+PHY-1001 : End global iterations;  0.041794s wall, 0.031250s user + 0.015625s system = 0.046875s CPU (112.2%)
+
+PHY-1001 : Congestion index: top1 = 24.01, top5 = 14.13, top10 = 8.15, top15 = 5.58.
+PHY-1001 : End incremental global routing;  0.074230s wall, 0.046875s user + 0.031250s system = 0.078125s CPU (105.2%)
+
+RUN-1002 : start command "start_timer -report"
+TMR-5001 WARNING: No sdc constraints found while initiating timer.
+TMR-2505 : Start building timing graph for model audio_speak.
+TMR-2506 : Build timing graph completely. Port num: 26, tpin num: 3140, tnet num: 730, tinst num: 344, tnode num: 3949, tedge num: 5182.
+TMR-2508 : Levelizing timing graph completed, there are 17 levels in total.
+TMR-2501 : Timing graph initialized successfully.
+OPT-1001 : End timing update;  0.112580s wall, 0.093750s user + 0.015625s system = 0.109375s CPU (97.2%)
+
+OPT-1001 : 0 high-fanout net processed.
+OPT-1001 : End high-fanout net optimization;  0.194883s wall, 0.156250s user + 0.046875s system = 0.203125s CPU (104.2%)
+
+OPT-1001 : Current memory(MB): used = 172, reserve = 139, peak = 172.
+OPT-1001 : Update timing in Manhattan mode
+OPT-1001 : End timing update;  0.000504s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%)
+
+OPT-1001 : Start pin optimization...
+OPT-1001 : skip pin optimization...
+RUN-1001 : Generating global routing grids ...
+PHY-1001 : Generate routing nets ...
+PHY-1001 : Reuse net number 587/732.
+PHY-1001 : Global iterations in 24 thread ...
+PHY-1002 : len = 24760, over cnt = 0(0%), over = 0, worst = 0
+PHY-1001 : End global iterations;  0.001644s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%)
+
+PHY-1001 : Congestion index: top1 = 24.01, top5 = 14.13, top10 = 8.15, top15 = 5.58.
+OPT-1001 : Update timing in Manhattan mode
+OPT-1001 : End timing update;  0.000747s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%)
+
+RUN-1001 : QoR Analysis:
+OPT-0007 :   WNS 2147483647 TNS 0 NUM_FEPS 0
+RUN-1001 :   No local congestion issue, and most congested 1% tile average routing util is 23.551724
+RUN-1001 :   Top critical paths
+OPT-1001 : End physical optimization;  0.231922s wall, 0.187500s user + 0.046875s system = 0.234375s CPU (101.1%)
+
+RUN-1003 : finish command "place" in  3.157581s wall, 4.312500s user + 4.656250s system = 8.968750s CPU (284.0%)
+
+RUN-1004 : used memory is 147 MB, reserved memory is 115 MB, peak memory is 174 MB
+RUN-1002 : start command "export_db ES8388_place.db"
+RUN-1001 : Exported /
+RUN-1001 : Exported flow parameters
+RUN-1001 : Exported libs
+RUN-1001 : Exported entities
+RUN-1001 : Exported ports
+RUN-1001 : Exported pins
+RUN-1001 : Exported instances
+RUN-1001 : Exported nets
+RUN-1001 : Exported buses
+RUN-1001 : Exported models
+RUN-1001 : Exported congestions
+RUN-1001 : Exported violations
+RUN-1001 : Exported IO constraints
+RUN-1001 : Exported Inst constraints
+RUN-1002 : start command "route"
+RUN-1001 : Open license file D:/TD/license/Anlogic.lic
+RUN-1001 : Print Global Property
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  |  Note  
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     |        
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        |        
+RUN-1001 :        qor_monitor       |    off     |       off        |        
+RUN-1001 :        syn_ip_flow       |    off     |       off        |        
+RUN-1001 :          thread          |    auto    |       auto       |        
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 : Print Route Property
+RUN-1001 : -------------------------------------------------------
+RUN-1001 :    Parameters    |  Settings  |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------
+RUN-1001 :      effort      |   medium   |      medium      |        
+RUN-1001 :     fix_hold     |    off     |       off        |        
+RUN-1001 :    opt_timing    |   medium   |      medium      |        
+RUN-1001 :   phy_sim_model  |    off     |       off        |        
+RUN-1001 :     priority     |   timing   |      timing      |        
+RUN-1001 :     swap_pin     |     on     |        on        |        
+RUN-1001 : -------------------------------------------------------
+PHY-1001 : Route runs in 24 thread(s)
+RUN-1001 : There are total 346 instances
+RUN-1001 : 153 mslices, 153 lslices, 29 pads, 0 brams, 0 dsps
+RUN-1001 : There are total 732 nets
+RUN-1001 : 405 nets have 2 pins
+RUN-1001 : 222 nets have [3 - 5] pins
+RUN-1001 : 47 nets have [6 - 10] pins
+RUN-1001 : 39 nets have [11 - 20] pins
+RUN-1001 : 18 nets have [21 - 99] pins
+RUN-1001 : 1 nets have 100+ pins
+RUN-1002 : start command "start_timer -report"
+TMR-5001 WARNING: No sdc constraints found while initiating timer.
+TMR-2505 : Start building timing graph for model audio_speak.
+TMR-2506 : Build timing graph completely. Port num: 26, tpin num: 3140, tnet num: 730, tinst num: 344, tnode num: 3949, tedge num: 5182.
+TMR-2508 : Levelizing timing graph completed, there are 17 levels in total.
+TMR-2501 : Timing graph initialized successfully.
+PHY-1001 : 153 mslices, 153 lslices, 29 pads, 0 brams, 0 dsps
+TMR-2503 : Start to update net delay, extr mode = 3.
+TMR-2504 : Update delay of 730 nets completely.
+TMR-2502 : Annotate delay completely, extr mode = 3.
+TMR-3002 : No user constraint, initiate default constraint.
+TMR-1501 : Assign derive clock DeriveClock to 390 clock pins, and constraint 802 relative nodes.
+TMR-3003 : Constraints initiated successfully.
+TMR-3501 : Forward propagation: start to calculate arrival time...
+TMR-3502 : Backward propagation: start to calculate required time...
+TMR-3503 : Timing propagation completes.
+PHY-1001 : Start global routing, caller is route ...
+RUN-1001 : Generating global routing grids ...
+PHY-1001 : Generate routing nets ...
+PHY-1001 : Global iterations in 24 thread ...
+PHY-1002 : len = 23504, over cnt = 73(0%), over = 109, worst = 4
+PHY-1002 : len = 24144, over cnt = 15(0%), over = 18, worst = 2
+PHY-1002 : len = 24280, over cnt = 3(0%), over = 3, worst = 1
+PHY-1002 : len = 24328, over cnt = 0(0%), over = 0, worst = 0
+PHY-1001 : End global iterations;  0.043785s wall, 0.046875s user + 0.062500s system = 0.109375s CPU (249.8%)
+
+PHY-1001 : Congestion index: top1 = 23.73, top5 = 14.08, top10 = 8.08, top15 = 5.50.
+PHY-1001 : End global routing;  0.075600s wall, 0.078125s user + 0.062500s system = 0.140625s CPU (186.0%)
+
+PHY-1001 : Start detail routing ...
+PHY-1001 : Current memory(MB): used = 213, reserve = 182, peak = 228.
+PHY-1001 : Detailed router is running in normal mode.
+PHY-1001 : Generate detailed routing grids ...
+PHY-1001 : Processed IO instance aud_dacdat_syn_4 with INV attribute.
+PHY-1001 : Processed IO instance aud_dacdat_1_syn_4 with INV attribute.
+PHY-1001 : Generate nets ...
+PHY-1001 : clock net aud_bclk_syn_4 will be merged with clock aud_bclk_dup_1
+PHY-1001 : clock net aud_bclk_1_syn_4 will be merged with clock aud_bclk_1_dup_1
+PHY-1001 : net aud_mclk_dup_1 will be routed on clock mesh
+PHY-1001 : net aud_mclk_1_dup_1 will be routed on clock mesh
+PHY-1001 : clock net ilaclk_dup_1 will be merged with clock u_pll_clk/clk0_buf
+PHY-1001 : clock net ilaclk_1_dup_1 will be merged with clock u1_pll_clk/clk0_buf
+PHY-1001 : net sys_clk_dup_1 will be routed on clock mesh
+PHY-1001 : clock net u1_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk_syn_4 will be merged with clock u1_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk
+PHY-1001 : clock net u_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk_syn_4 will be merged with clock u_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk
+PHY-1001 : Current memory(MB): used = 473, reserve = 446, peak = 473.
+PHY-1001 : End build detailed router design. 2.512535s wall, 2.328125s user + 0.140625s system = 2.468750s CPU (98.3%)
+
+PHY-1001 : Detail Route ...
+PHY-1001 : ===== Detail Route Phase 1 =====
+PHY-1001 : Clock net routing.....
+PHY-1001 : Routed 1% nets.
+PHY-1022 : len = 16360, over cnt = 0(0%), over = 0, worst = 0, crit = 0
+PHY-1001 : End initial clock net routed; 1.705621s wall, 1.593750s user + 0.046875s system = 1.640625s CPU (96.2%)
+
+PHY-1001 : Current memory(MB): used = 505, reserve = 479, peak = 505.
+PHY-1001 : End phase 1; 1.711391s wall, 1.593750s user + 0.046875s system = 1.640625s CPU (95.9%)
+
+PHY-1001 : ===== Detail Route Phase 2 =====
+PHY-1001 : Initial routing.....
+PHY-1001 : Routed 41% nets.
+PHY-1001 : Routed 45% nets.
+PHY-1001 : Routed 52% nets.
+PHY-1001 : Routed 67% nets.
+PHY-1001 : Routed 89% nets.
+PHY-1022 : len = 114320, over cnt = 29(0%), over = 29, worst = 1, crit = 0
+PHY-1001 : Current memory(MB): used = 505, reserve = 479, peak = 505.
+PHY-1001 : End initial routed; 0.593966s wall, 0.593750s user + 0.265625s system = 0.859375s CPU (144.7%)
+
+PHY-1001 : Current memory(MB): used = 505, reserve = 479, peak = 505.
+PHY-1001 : End phase 2; 0.594131s wall, 0.593750s user + 0.265625s system = 0.859375s CPU (144.6%)
+
+PHY-1001 : ===== Detail Route Phase 3 =====
+PHY-1001 : Ripup-reroute.....
+PHY-1001 : ===== DR Iter 1 =====
+PHY-1022 : len = 114208, over cnt = 7(0%), over = 7, worst = 1, crit = 0
+PHY-1001 : End DR Iter 1; 0.019922s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (78.4%)
+
+PHY-1001 : ===== DR Iter 2 =====
+PHY-1022 : len = 114112, over cnt = 2(0%), over = 2, worst = 1, crit = 0
+PHY-1001 : End DR Iter 2; 0.019992s wall, 0.062500s user + 0.031250s system = 0.093750s CPU (468.9%)
+
+PHY-1001 : ===== DR Iter 3 =====
+PHY-1022 : len = 114112, over cnt = 0(0%), over = 0, worst = 0, crit = 0
+PHY-1001 : End DR Iter 3; 0.013472s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (116.0%)
+
+PHY-1001 : Commit to database.....
+PHY-1001 : 6 feed throughs used by 3 nets
+PHY-1001 : End commit to database; 0.073143s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (106.8%)
+
+PHY-1001 : Current memory(MB): used = 517, reserve = 490, peak = 517.
+PHY-1001 : End phase 3; 0.232423s wall, 0.281250s user + 0.031250s system = 0.312500s CPU (134.5%)
+
+PHY-1003 : Routed, final wirelength = 114112
+PHY-1001 : Current memory(MB): used = 517, reserve = 490, peak = 517.
+PHY-1001 : End export database. 0.006498s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%)
+
+PHY-1001 : End detail routing;  5.231672s wall, 4.937500s user + 0.515625s system = 5.453125s CPU (104.2%)
+
+RUN-1003 : finish command "route" in  5.482141s wall, 5.140625s user + 0.593750s system = 5.734375s CPU (104.6%)
+
+RUN-1004 : used memory is 435 MB, reserved memory is 408 MB, peak memory is 517 MB
+RUN-1002 : start command "report_area -io_info -file ES8388_phy.area"
+RUN-1001 : standard
+***Report Model: audio_speak Device: EG4S20BG256***
+
+IO Statistics
+#IO                        29
+  #input                   11
+  #output                  16
+  #inout                    2
+
+Utilization Statistics
+#lut                      532   out of  19600    2.71%
+#reg                      306   out of  19600    1.56%
+#le                       587
+  #lut only               281   out of    587   47.87%
+  #reg only                55   out of    587    9.37%
+  #lut&reg                251   out of    587   42.76%
+#dsp                        0   out of     29    0.00%
+#bram                       0   out of     64    0.00%
+  #bram9k                   0
+  #fifo9k                   0
+#bram32k                    0   out of     16    0.00%
+#pad                       29   out of    188   15.43%
+  #ireg                     4
+  #oreg                     6
+  #treg                     2
+#pll                        2   out of      4   50.00%
+#gclk                       6   out of     16   37.50%
+
+Clock Resource Statistics
+Index     ClockNet                                            Type               DriverType         Driver                                                           Fanout
+#1        aud_bclk_dup_1                                      GCLK               io                 aud_bclk_syn_2.di                                                45
+#2        aud_bclk_1_dup_1                                    GCLK               io                 aud_bclk_1_syn_2.di                                              44
+#3        u_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk     GCLK               mslice             u_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk_reg_syn_9.q1     44
+#4        u1_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk    GCLK               lslice             u1_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk_reg_syn_9.q1    42
+#5        sys_clk_dup_1                                       GCLK               io                 sys_clk_syn_2.di                                                 22
+#6        aud_mclk_1_dup_1                                    GCLK               pll                u1_pll_clk/pll_inst.clkc1                                        0
+#7        aud_mclk_dup_1                                      GCLK               pll                u_pll_clk/pll_inst.clkc1                                         0
+#8        u1_pll_clk/clk0_buf                                 GCLK               pll                u1_pll_clk/pll_inst.clkc0                                        0
+#9        u_pll_clk/clk0_buf                                  GCLK               pll                u_pll_clk/pll_inst.clkc0                                         0
+
+
+Detailed IO Report
+
+      Name        Direction    Location    IOStandard    DriveStrength    PullType     PackReg   
+   aud_adcdat       INPUT        R14        LVCMOS25          N/A          PULLUP       IREG     
+  aud_adcdat_1      INPUT         F7        LVCMOS25          N/A          PULLUP       IREG     
+    aud_bclk        INPUT         M6        LVCMOS25          N/A          PULLUP       NONE     
+   aud_bclk_1       INPUT         C4        LVCMOS25          N/A          PULLUP       NONE     
+    aud_lrc         INPUT         M7        LVCMOS25          N/A          PULLUP       IREG     
+   aud_lrc_1        INPUT         D6        LVCMOS25          N/A          PULLUP       IREG     
+    sys_clk         INPUT         R7        LVCMOS25          N/A          PULLUP       NONE     
+   sys_rst_n        INPUT         E3        LVCMOS25          N/A          PULLUP       NONE     
+  sys_rst_n_1       INPUT        H16        LVCMOS25          N/A           N/A         NONE     
+   volume[1]        INPUT        B10        LVCMOS25          N/A          PULLUP       NONE     
+   volume[0]        INPUT        A10        LVCMOS25          N/A          PULLUP       NONE     
+    I2S_BCLK       OUTPUT        F15        LVCMOS25           8            NONE        NONE     
+    I2S_DATA       OUTPUT        F13        LVCMOS25           8            NONE        NONE     
+   I2S_LRCLK       OUTPUT        D16        LVCMOS25           8            NONE        NONE     
+   aud_dacdat      OUTPUT         P6        LVCMOS25           8            NONE        OREG     
+  aud_dacdat_1     OUTPUT         C5        LVCMOS25           8            NONE        OREG     
+    aud_mclk       OUTPUT         N5        LVCMOS25           8            NONE        NONE     
+   aud_mclk_1      OUTPUT         B3        LVCMOS25           8            NONE        NONE     
+    aud_scl        OUTPUT        R12        LVCMOS25           8            NONE        OREG     
+   aud_scl_1       OUTPUT         B2        LVCMOS25           8            NONE        OREG     
+     ilaclk        OUTPUT         T5        LVCMOS25           8            NONE        NONE     
+    ilaclk_1       OUTPUT         D3        LVCMOS25           8            NONE        NONE     
+      led          OUTPUT        B14        LVCMOS25           8            NONE        NONE     
+     led_1         OUTPUT        B15        LVCMOS25           8            NONE        NONE     
+    leds[2]        OUTPUT        E13        LVCMOS25           8            NONE        NONE     
+    leds[1]        OUTPUT        C16        LVCMOS25           8            NONE        NONE     
+    leds[0]        OUTPUT        C15        LVCMOS25           8            NONE        NONE     
+    aud_sda         INOUT         R9        LVCMOS25           8           PULLUP     OREG;TREG  
+   aud_sda_1        INOUT         B1        LVCMOS25           8           PULLUP     OREG;TREG  
+
+Report Hierarchy Area:
++----------------------------------------------------------------------------------------+
+|Instance            |Module        |le     |lut     |ripple  |seq     |bram    |dsp     |
++----------------------------------------------------------------------------------------+
+|top                 |audio_speak   |587    |476     |56      |318     |0       |0       |
+|  u1_es8388_ctrl    |es8388_ctrl   |289    |245     |25      |145     |0       |0       |
+|    u_audio_receive |audio_receive |76     |50      |12      |55      |0       |0       |
+|    u_audio_send    |audio_send    |22     |22      |0       |22      |0       |0       |
+|    u_es8388_config |es8388_config |191    |173     |13      |68      |0       |0       |
+|      u_i2c_dri     |i2c_dri       |123    |116     |5       |41      |0       |0       |
+|      u_i2c_reg_cfg |i2c_reg_cfg   |68     |57      |8       |27      |0       |0       |
+|  u1_pll_clk        |clk_wiz_0     |1      |1       |0       |0       |0       |0       |
+|  u_es8388_ctrl     |es8388_ctrl   |272    |223     |25      |145     |0       |0       |
+|    u_audio_receive |audio_receive |80     |49      |12      |53      |0       |0       |
+|    u_audio_send    |audio_send    |26     |24      |0       |24      |0       |0       |
+|    u_es8388_config |es8388_config |166    |150     |13      |68      |0       |0       |
+|      u_i2c_dri     |i2c_dri       |108    |101     |5       |41      |0       |0       |
+|      u_i2c_reg_cfg |i2c_reg_cfg   |58     |49      |8       |27      |0       |0       |
+|  u_pll_clk         |clk_wiz_0     |1      |1       |0       |0       |0       |0       |
++----------------------------------------------------------------------------------------+
+
+
+DataNet Average Fanout:
+
+   Index     Fanout    Nets  
+    #1         1       374   
+    #2         2       157   
+    #3         3        54   
+    #4         4        9    
+    #5        5-10      52   
+    #6       11-50      44   
+    #7       51-100     2    
+  Average     3.15           
+
+RUN-1002 : start command "export_db ES8388_pr.db"
+RUN-1001 : Exported /
+RUN-1001 : Exported flow parameters
+RUN-1001 : Exported libs
+RUN-1001 : Exported entities
+RUN-1001 : Exported ports
+RUN-1001 : Exported pins
+RUN-1001 : Exported instances
+RUN-1001 : Exported nets
+RUN-1001 : Exported buses
+RUN-1001 : Exported models
+RUN-1001 : Exported congestions
+RUN-1001 : Exported violations
+RUN-1001 : Exported IO constraints
+RUN-1001 : Exported Inst constraints
+RUN-1002 : start command "export_bid ES8388_inst.bid"
+RUN-1002 : start command "bitgen -bit ES8388.bit -unused_io_status pulldown"
+BIT-1003 : Start to generate bitstream. 
+BIT-1002 : Bitgen processed 159 unused pads, reserve input tri_state with pulldown
+BIT-1002 : Init instances with 24 threads.
+BIT-1002 : Init instances completely, inst num: 503
+BIT-1002 : Init pips with 24 threads.
+BIT-1002 : Init pips completely, net num: 732, pip num: 7652
+BIT-1002 : Init feedthrough completely, num: 6
+BIT-1003 : Multithreading accelaration with 24 threads.
+BIT-1003 : Generate bitstream completely, there are 1371 valid insts, and 21218 bits set as '1'.
+BIT-1004 : PLL setting string = 0110
+BIT-1004 : Generate bits file ES8388.bit.
+RUN-1003 : finish command "bitgen -bit ES8388.bit -unused_io_status pulldown" in  1.235257s wall, 14.156250s user + 1.265625s system = 15.421875s CPU (1248.5%)
+
+RUN-1004 : used memory is 448 MB, reserved memory is 429 MB, peak memory is 678 MB
+RUN-1002 : start command "backup_run_log run.log ../.logs/phy_1/td_20251019_213159.log"

@@ -1,0 +1,2277 @@
+============================================================
+   Tang Dynasty, V5.6.71036
+      Copyright (c) 2012-2023 Anlogic Inc.
+   Executable = D:/TD/bin/td.exe
+   Built at =   20:34:38 Mar 21 2023
+   Run by =     lyw15
+   Run Date =   Fri Oct 31 23:24:56 2025
+
+   Run on =     -001
+============================================================
+RUN-1002 : start command "open_project ES8388.prj"
+RUN-1001 : Print Global Property
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  |  Note  
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     |        
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        |        
+RUN-1001 :        qor_monitor       |    off     |       off        |        
+RUN-1001 :        syn_ip_flow       |    off     |       off        |        
+RUN-1001 :          thread          |    auto    |       auto       |        
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :   default_reg_initial   |    auto    |       auto       |        
+RUN-1001 :        infer_add        |     on     |        on        |        
+RUN-1001 :        infer_fsm        |    off     |       off        |        
+RUN-1001 :        infer_mult       |     on     |        on        |        
+RUN-1001 :        infer_ram        |     on     |        on        |        
+RUN-1001 :        infer_reg        |     on     |        on        |        
+RUN-1001 :   infer_reg_init_value  |     on     |        on        |        
+RUN-1001 :        infer_rom        |     on     |        on        |        
+RUN-1001 :      infer_shifter      |     on     |        on        |        
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 : Print Rtl Property
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :       compress_add      |   ripple   |      ripple      |        
+RUN-1001 :        elf_sload        |    off     |       off        |        
+RUN-1001 :       fix_undriven      |     0      |        0         |        
+RUN-1001 :         flatten         |    off     |       off        |        
+RUN-1001 :       gate_sharing      |     on     |        on        |        
+RUN-1001 :    hdl_warning_level    |   normal   |      normal      |        
+RUN-1001 :   impl_internal_tribuf  |     on     |        on        |        
+RUN-1001 :      impl_set_reset     |     on     |        on        |        
+RUN-1001 :        infer_gsr        |    off     |       off        |        
+RUN-1001 :      keep_hierarchy     |    auto    |       auto       |        
+RUN-1001 :        max_fanout       |    9999    |       9999       |        
+RUN-1001 :      max_oh2bin_len     |     10     |        10        |        
+RUN-1001 :       merge_equal       |     on     |        on        |        
+RUN-1001 :       merge_equiv       |     on     |        on        |        
+RUN-1001 :        merge_mux        |    off     |       off        |        
+RUN-1001 :     min_control_set     |     8      |        8         |        
+RUN-1001 :      min_ripple_len     |    auto    |       auto       |        
+RUN-1001 :       oh2bin_ratio      |    0.08    |       0.08       |        
+RUN-1001 :     opt_adder_fanout    |     on     |        on        |        
+RUN-1001 :        opt_arith        |     on     |        on        |        
+RUN-1001 :       opt_big_gate      |    off     |       off        |        
+RUN-1001 :        opt_const        |     on     |        on        |        
+RUN-1001 :      opt_const_mult     |     on     |        on        |        
+RUN-1001 :       opt_lessthan      |     on     |        on        |        
+RUN-1001 :         opt_mux         |    off     |       off        |        
+RUN-1001 :         opt_ram         |    high    |       high       |        
+RUN-1001 :      rtl_sim_model      |    off     |       off        |        
+RUN-1001 :         seq_syn         |     on     |        on        |        
+RUN-1001 : --------------------------------------------------------------
+HDL-1007 : analyze verilog file ../../al_ip/clk_wiz_0.v
+HDL-1007 : undeclared symbol 'open', assumed default net type 'wire' in ../../al_ip/clk_wiz_0.v(80)
+HDL-1007 : analyze verilog file ../../../RTL/audio_receive.v
+HDL-1007 : analyze verilog file ../../../RTL/audio_send.v
+HDL-1007 : analyze verilog file ../../../RTL/audio_speak.v
+HDL-1007 : analyze verilog file ../../../RTL/es8388_config.v
+HDL-1007 : analyze verilog file ../../../RTL/es8388_ctrl.v
+HDL-1007 : analyze verilog file ../../../RTL/i2c_dri.v
+HDL-1007 : analyze verilog file ../../../RTL/i2c_reg_cfg.v
+HDL-1007 : analyze verilog file ../../../RTL/spar_4mic_localization.v
+HDL-1007 : analyze verilog file ../../../RTL/noise_suppress.v
+HDL-1007 : analyze verilog file ../../../RTL/pitch_shift.v
+HDL-5007 WARNING: loop variable declaration is not allowed in this mode of Verilog in ../../../RTL/pitch_shift.v(30)
+HDL-1007 : analyze verilog file ../../../RTL/simple_denoise.v
+RUN-1001 : Project manager successfully analyzed 12 source files.
+RUN-1002 : start command "import_device eagle_s20.db -package EG4S20BG256"
+ARC-1001 : Device Initialization.
+ARC-1001 : ------------------------------------------------------------------
+ARC-1001 :            OPTION            |          IO          |   SETTING   
+ARC-1001 : ------------------------------------------------------------------
+ARC-1001 :   cso_b/cclk/mosi/miso/dout  |  T3/R11/T10/P10/S11  |    gpio    
+ARC-1001 :             done             |         P13          |    gpio    
+ARC-1001 :           program_b          |          T2          |  dedicate  
+ARC-1001 :        tdi/tms/tck/tdo       |   C12/A15/C14/E14    |  dedicate  
+ARC-1001 : ------------------------------------------------------------------
+ARC-1004 : Device setting, marked 5 dedicate IOs in total.
+RUN-1002 : start command "import_db ../syn_1/ES8388_gate.db"
+RUN-1001 : Importing database generated by Tang Dynasty, V5.6.71036.
+RUN-1001 : Database version number 46146.
+RUN-1001 : Import flow parameters
+RUN-1001 : Import IO constraints
+RUN-1001 : Import Inst constraints
+RUN-1001 : Import design success TD_VERSION=5.6.71036 , DB_VERSION=46146
+RUN-1002 : start command "place"
+RUN-1001 : Open license file D:/TD/license/Anlogic.lic
+RUN-1001 : Print Global Property
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  |  Note  
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     |        
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        |        
+RUN-1001 :        qor_monitor       |    off     |       off        |        
+RUN-1001 :        syn_ip_flow       |    off     |       off        |        
+RUN-1001 :          thread          |    auto    |       auto       |        
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 : Print Place Property
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :      detailed_place     |     on     |        on        |        
+RUN-1001 :          effort         |   medium   |      medium      |        
+RUN-1001 :         fix_hold        |    off     |       off        |        
+RUN-1001 :       legalization      |    ori     |       ori        |        
+RUN-1001 :      new_spreading      |     on     |        on        |        
+RUN-1001 :        opt_timing       |   medium   |      medium      |        
+RUN-1001 :   post_clock_route_opt  |    off     |       off        |        
+RUN-1001 :       pr_strategy       |     1      |        1         |        
+RUN-1001 :        relaxation       |    1.00    |       1.00       |        
+RUN-1001 :         retiming        |    off     |       off        |        
+RUN-1001 : --------------------------------------------------------------
+PHY-3001 : Placer runs in 24 thread(s).
+RUN-1002 : start command "legalize_phy_inst"
+SYN-1011 : Flatten model audio_speak
+RUN-1002 : start command "phys_opt -simplify_lut"
+SYN-4016 : Net ilaclk_1_dup_1 driven by BUFG (0 clock/control pins, 2 other pins).
+SYN-4016 : Net ilaclk_2_dup_1 driven by BUFG (0 clock/control pins, 2 other pins).
+SYN-4016 : Net ilaclk_3_dup_1 driven by BUFG (0 clock/control pins, 2 other pins).
+SYN-4016 : Net ilaclk_dup_1 driven by BUFG (0 clock/control pins, 2 other pins).
+SYN-4027 : Net aud_mclk_1_dup_1 is clkc1 of pll u1_pll_clk/pll_inst.
+SYN-4019 : Net sys_clk_dup_1 is refclk of pll u1_pll_clk/pll_inst.
+SYN-4020 : Net sys_clk_dup_1 is fbclk of pll u1_pll_clk/pll_inst.
+SYN-4027 : Net aud_mclk_2_dup_1 is clkc1 of pll u2_pll_clk/pll_inst.
+SYN-4019 : Net sys_clk_dup_1 is refclk of pll u2_pll_clk/pll_inst.
+SYN-4020 : Net sys_clk_dup_1 is fbclk of pll u2_pll_clk/pll_inst.
+SYN-4027 : Net aud_mclk_3_dup_1 is clkc1 of pll u3_pll_clk/pll_inst.
+SYN-4019 : Net sys_clk_dup_1 is refclk of pll u3_pll_clk/pll_inst.
+SYN-4020 : Net sys_clk_dup_1 is fbclk of pll u3_pll_clk/pll_inst.
+SYN-4027 : Net aud_mclk_dup_1 is clkc1 of pll u_pll_clk/pll_inst.
+SYN-4019 : Net sys_clk_dup_1 is refclk of pll u_pll_clk/pll_inst.
+SYN-4020 : Net sys_clk_dup_1 is fbclk of pll u_pll_clk/pll_inst.
+SYN-4024 : Net "aud_bclk_1_dup_1" drives clk pins.
+SYN-4024 : Net "aud_bclk_2_dup_1" drives clk pins.
+SYN-4024 : Net "aud_bclk_dup_1" drives clk pins.
+SYN-4024 : Net "aud_bclk_3_dup_1" drives clk pins.
+SYN-4024 : Net "u1_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk" drives clk pins.
+SYN-4024 : Net "u2_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk" drives clk pins.
+SYN-4024 : Net "u3_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk" drives clk pins.
+SYN-7503 WARNING: Net "u_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk" drives clk pins. However it will not be tagged as clk net, for there's no more slots.
+SYN-4025 : Tag rtl::Net aud_bclk_1_dup_1 as clock net
+SYN-4025 : Tag rtl::Net aud_bclk_2_dup_1 as clock net
+SYN-4025 : Tag rtl::Net aud_bclk_3_dup_1 as clock net
+SYN-4025 : Tag rtl::Net aud_bclk_dup_1 as clock net
+SYN-4025 : Tag rtl::Net aud_mclk_1_dup_1 as clock net
+SYN-4025 : Tag rtl::Net aud_mclk_2_dup_1 as clock net
+SYN-4025 : Tag rtl::Net aud_mclk_3_dup_1 as clock net
+SYN-4025 : Tag rtl::Net aud_mclk_dup_1 as clock net
+SYN-4025 : Tag rtl::Net ilaclk_1_dup_1 as clock net
+SYN-4025 : Tag rtl::Net ilaclk_2_dup_1 as clock net
+SYN-4025 : Tag rtl::Net ilaclk_3_dup_1 as clock net
+SYN-4025 : Tag rtl::Net ilaclk_dup_1 as clock net
+SYN-4025 : Tag rtl::Net sys_clk_dup_1 as clock net
+SYN-4025 : Tag rtl::Net u1_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk as clock net
+SYN-4025 : Tag rtl::Net u2_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk as clock net
+SYN-4025 : Tag rtl::Net u3_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk as clock net
+SYN-4026 : Tagged 16 rtl::Net as clock net
+SYN-4015 : Create BUFG instance for clk Net aud_bclk_1_dup_1 to drive 83 clock pins.
+SYN-4015 : Create BUFG instance for clk Net aud_bclk_2_dup_1 to drive 83 clock pins.
+SYN-4015 : Create BUFG instance for clk Net aud_bclk_3_dup_1 to drive 80 clock pins.
+SYN-4015 : Create BUFG instance for clk Net aud_bclk_dup_1 to drive 80 clock pins.
+SYN-4015 : Create BUFG instance for clk Net u1_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk to drive 59 clock pins.
+SYN-4015 : Create BUFG instance for clk Net u2_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk to drive 59 clock pins.
+SYN-4015 : Create BUFG instance for clk Net u3_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk to drive 59 clock pins.
+PHY-1001 : Populate physical database on model audio_speak.
+RUN-1001 : There are total 14016 instances
+RUN-0007 : 5796 luts, 7235 seqs, 593 mslices, 317 lslices, 55 pads, 0 brams, 2 dsps
+RUN-1001 : There are total 16014 nets
+RUN-1001 : 13723 nets have 2 pins
+RUN-1001 : 1473 nets have [3 - 5] pins
+RUN-1001 : 322 nets have [6 - 10] pins
+RUN-1001 : 129 nets have [11 - 20] pins
+RUN-1001 : 323 nets have [21 - 99] pins
+RUN-1001 : 44 nets have 100+ pins
+RUN-1001 : Report Control nets information:
+RUN-1001 : DFF Distribution
+RUN-1001 : ----------------------------------
+RUN-1001 :   CE   |  SSR  |  ASR  |  DFF Count  
+RUN-1001 : ----------------------------------
+RUN-1001 :   No   |  No   |  No   |     24      
+RUN-1001 :   No   |  No   |  Yes  |     671     
+RUN-1001 :   No   |  Yes  |  No   |     27      
+RUN-1001 :   Yes  |  No   |  No   |      0      
+RUN-1001 :   Yes  |  No   |  Yes  |    6481     
+RUN-1001 :   Yes  |  Yes  |  No   |     32      
+RUN-1001 : ----------------------------------
+RUN-0007 : Control Group Statistic
+RUN-0007 : ---------------------------
+RUN-0007 :   #CLK  |  #CE  |  #SSR/ASR  
+RUN-0007 : ---------------------------
+RUN-0007 :    9    |  278  |     11     
+RUN-0007 : ---------------------------
+RUN-0007 : Control Set = 293
+PHY-3001 : Initial placement ...
+PHY-3001 : design contains 14014 instances, 5796 luts, 7235 seqs, 910 slices, 188 macros(910 instances: 593 mslices 317 lslices)
+PHY-3001 : Huge net led_dup_1 with 6372 pins
+PHY-3001 : Huge net u_pitch_shift/read_ptr[1] with 3028 pins
+PHY-3001 : Huge net u_pitch_shift/read_ptr[0] with 1776 pins
+PHY-0007 : Cell area utilization is 38%
+PHY-3001 : Global placement ...
+PHY-3001 : Initial: Len = 2.90492e+06
+PHY-3001 : Clustering ...
+PHY-3001 : Level 0 #clusters 14014.
+PHY-3001 : Level 1 #clusters 1524.
+PHY-3001 : End clustering;  0.084580s wall, 0.171875s user + 0.031250s system = 0.203125s CPU (240.2%)
+
+PHY-3001 : Run with size of 4
+PHY-3001 : Cell area utilization is 38%
+PHY-3001 : :::0::: Try harder cell spreading with beta_ = 0
+PHY-3002 : Step(1): len = 611785, overlap = 189.875
+PHY-3002 : Step(2): len = 545691, overlap = 267.906
+PHY-3002 : Step(3): len = 379562, overlap = 470.75
+PHY-3002 : Step(4): len = 330599, overlap = 568.25
+PHY-3002 : Step(5): len = 266051, overlap = 692.062
+PHY-3002 : Step(6): len = 229043, overlap = 766.594
+PHY-3002 : Step(7): len = 186691, overlap = 849.062
+PHY-3002 : Step(8): len = 165032, overlap = 898.125
+PHY-3002 : Step(9): len = 136654, overlap = 949.375
+PHY-3002 : Step(10): len = 120202, overlap = 994.219
+PHY-3002 : Step(11): len = 104707, overlap = 1029.28
+PHY-3002 : Step(12): len = 94271.6, overlap = 1044.69
+PHY-3002 : Step(13): len = 85331, overlap = 1084.62
+PHY-3002 : Step(14): len = 76265.2, overlap = 1097.59
+PHY-3002 : Step(15): len = 68529.7, overlap = 1128.03
+PHY-3001 : :::1::: Try harder cell spreading with beta_ = 3.0177e-07
+PHY-3002 : Step(16): len = 74462.3, overlap = 1100.97
+PHY-3002 : Step(17): len = 95639.3, overlap = 1042.94
+PHY-3002 : Step(18): len = 93513.1, overlap = 1014
+PHY-3002 : Step(19): len = 94104.2, overlap = 973.406
+PHY-3002 : Step(20): len = 92563.5, overlap = 955.719
+PHY-3002 : Step(21): len = 94906.7, overlap = 930.406
+PHY-3002 : Step(22): len = 93185, overlap = 919.469
+PHY-3002 : Step(23): len = 95014.6, overlap = 888
+PHY-3002 : Step(24): len = 92518.4, overlap = 861.688
+PHY-3002 : Step(25): len = 91737.5, overlap = 844.75
+PHY-3002 : Step(26): len = 89821.5, overlap = 835.031
+PHY-3002 : Step(27): len = 88775, overlap = 835.344
+PHY-3002 : Step(28): len = 87291.6, overlap = 842.188
+PHY-3002 : Step(29): len = 86563, overlap = 858.406
+PHY-3002 : Step(30): len = 85331.3, overlap = 883.906
+PHY-3002 : Step(31): len = 85287.6, overlap = 891.812
+PHY-3002 : Step(32): len = 84196.1, overlap = 915.031
+PHY-3002 : Step(33): len = 84241.2, overlap = 924.438
+PHY-3002 : Step(34): len = 83784.2, overlap = 924.406
+PHY-3002 : Step(35): len = 83048.6, overlap = 930.719
+PHY-3002 : Step(36): len = 81896.2, overlap = 932.344
+PHY-3002 : Step(37): len = 81462.5, overlap = 945.375
+PHY-3002 : Step(38): len = 80666.9, overlap = 976.469
+PHY-3001 : :::2::: Try harder cell spreading with beta_ = 6.0354e-07
+PHY-3002 : Step(39): len = 84457.3, overlap = 973.438
+PHY-3002 : Step(40): len = 87962.2, overlap = 944.562
+PHY-3002 : Step(41): len = 88402, overlap = 917.188
+PHY-3002 : Step(42): len = 88790.6, overlap = 905.688
+PHY-3001 : :::3::: Try harder cell spreading with beta_ = 1.20708e-06
+PHY-3002 : Step(43): len = 98126.9, overlap = 852.25
+PHY-3002 : Step(44): len = 113190, overlap = 731.969
+PHY-3002 : Step(45): len = 115603, overlap = 701.844
+PHY-3002 : Step(46): len = 116791, overlap = 675.844
+PHY-3002 : Step(47): len = 114811, overlap = 671.969
+PHY-3002 : Step(48): len = 114154, overlap = 682.188
+PHY-3002 : Step(49): len = 112255, overlap = 723.156
+PHY-3002 : Step(50): len = 111198, overlap = 755.594
+PHY-3002 : Step(51): len = 109720, overlap = 781.344
+PHY-3002 : Step(52): len = 109037, overlap = 792.5
+PHY-3002 : Step(53): len = 107600, overlap = 808.75
+PHY-3001 : :::4::: Try harder cell spreading with beta_ = 2.41416e-06
+PHY-3002 : Step(54): len = 116818, overlap = 770.344
+PHY-3002 : Step(55): len = 126799, overlap = 667.625
+PHY-3002 : Step(56): len = 129951, overlap = 637.875
+PHY-3002 : Step(57): len = 131092, overlap = 615.969
+PHY-3002 : Step(58): len = 130420, overlap = 602.438
+PHY-3002 : Step(59): len = 130478, overlap = 584.094
+PHY-3002 : Step(60): len = 129458, overlap = 569.031
+PHY-3002 : Step(61): len = 129149, overlap = 570.594
+PHY-3002 : Step(62): len = 128691, overlap = 563.531
+PHY-3001 : :::5::: Try harder cell spreading with beta_ = 4.82832e-06
+PHY-3002 : Step(63): len = 139291, overlap = 544.844
+PHY-3002 : Step(64): len = 147276, overlap = 468.438
+PHY-3002 : Step(65): len = 150700, overlap = 386.156
+PHY-3002 : Step(66): len = 151467, overlap = 360.156
+PHY-3002 : Step(67): len = 150417, overlap = 369.438
+PHY-3002 : Step(68): len = 150486, overlap = 374.031
+PHY-3002 : Step(69): len = 150083, overlap = 375.719
+PHY-3002 : Step(70): len = 150510, overlap = 360.781
+PHY-3002 : Step(71): len = 150090, overlap = 359.125
+PHY-3001 : :::6::: Try harder cell spreading with beta_ = 9.65664e-06
+PHY-3002 : Step(72): len = 161273, overlap = 301.625
+PHY-3002 : Step(73): len = 168798, overlap = 263.031
+PHY-3002 : Step(74): len = 170488, overlap = 219.469
+PHY-3002 : Step(75): len = 172015, overlap = 222.875
+PHY-3002 : Step(76): len = 171635, overlap = 216.25
+PHY-3002 : Step(77): len = 172461, overlap = 210.062
+PHY-3002 : Step(78): len = 172656, overlap = 208.094
+PHY-3002 : Step(79): len = 172262, overlap = 206.125
+PHY-3002 : Step(80): len = 172183, overlap = 207.281
+PHY-3001 : :::7::: Try harder cell spreading with beta_ = 1.93133e-05
+PHY-3002 : Step(81): len = 180398, overlap = 178.438
+PHY-3002 : Step(82): len = 187951, overlap = 161.125
+PHY-3002 : Step(83): len = 189566, overlap = 113.656
+PHY-3002 : Step(84): len = 191496, overlap = 107.906
+PHY-3002 : Step(85): len = 191761, overlap = 110
+PHY-3002 : Step(86): len = 192812, overlap = 109.031
+PHY-3002 : Step(87): len = 191138, overlap = 104.062
+PHY-3002 : Step(88): len = 191242, overlap = 104.188
+PHY-3002 : Step(89): len = 191163, overlap = 109.406
+PHY-3002 : Step(90): len = 191735, overlap = 113.938
+PHY-3002 : Step(91): len = 190614, overlap = 110
+PHY-3001 : :::8::: Try harder cell spreading with beta_ = 3.73562e-05
+PHY-3002 : Step(92): len = 197109, overlap = 109.281
+PHY-3002 : Step(93): len = 203118, overlap = 106.094
+PHY-3002 : Step(94): len = 204808, overlap = 106.969
+PHY-3002 : Step(95): len = 206170, overlap = 93.375
+PHY-3002 : Step(96): len = 206989, overlap = 85.9688
+PHY-3002 : Step(97): len = 208283, overlap = 83.1875
+PHY-3002 : Step(98): len = 207810, overlap = 97.0312
+PHY-3002 : Step(99): len = 208275, overlap = 94.9688
+PHY-3002 : Step(100): len = 208639, overlap = 87.25
+PHY-3002 : Step(101): len = 208872, overlap = 75.25
+PHY-3002 : Step(102): len = 208221, overlap = 85.6875
+PHY-3001 : :::9::: Try harder cell spreading with beta_ = 7.23661e-05
+PHY-3002 : Step(103): len = 213458, overlap = 85.0938
+PHY-3002 : Step(104): len = 219153, overlap = 84.7188
+PHY-3002 : Step(105): len = 220359, overlap = 79.8125
+PHY-3002 : Step(106): len = 221213, overlap = 70.125
+PHY-3002 : Step(107): len = 222136, overlap = 70.2812
+PHY-3002 : Step(108): len = 222819, overlap = 69.625
+PHY-3002 : Step(109): len = 222857, overlap = 73.3438
+PHY-3002 : Step(110): len = 222664, overlap = 65.0625
+PHY-3002 : Step(111): len = 222945, overlap = 62.4375
+PHY-3001 : :::10::: Try harder cell spreading with beta_ = 0.00014242
+PHY-3002 : Step(112): len = 227003, overlap = 58.0625
+PHY-3002 : Step(113): len = 230817, overlap = 55.6875
+PHY-3002 : Step(114): len = 232279, overlap = 48.2188
+PHY-3002 : Step(115): len = 234622, overlap = 36.2188
+PHY-3002 : Step(116): len = 236733, overlap = 35.7188
+PHY-3002 : Step(117): len = 238110, overlap = 35.6875
+PHY-3002 : Step(118): len = 238186, overlap = 33.3125
+PHY-3002 : Step(119): len = 238439, overlap = 27.4062
+PHY-3002 : Step(120): len = 239024, overlap = 27.2188
+PHY-3002 : Step(121): len = 239369, overlap = 27
+PHY-3002 : Step(122): len = 239088, overlap = 30.5938
+PHY-3002 : Step(123): len = 239354, overlap = 30.7812
+PHY-3002 : Step(124): len = 239663, overlap = 25.4062
+PHY-3001 : :::11::: Try harder cell spreading with beta_ = 0.000284841
+PHY-3002 : Step(125): len = 241804, overlap = 27.125
+PHY-3002 : Step(126): len = 245924, overlap = 29.0312
+PHY-3002 : Step(127): len = 248327, overlap = 28.7188
+PHY-3002 : Step(128): len = 250072, overlap = 25.1562
+PHY-3002 : Step(129): len = 251156, overlap = 20.4062
+PHY-3002 : Step(130): len = 251770, overlap = 21.9375
+PHY-3002 : Step(131): len = 251868, overlap = 21.8438
+PHY-3002 : Step(132): len = 252130, overlap = 18.5625
+PHY-3002 : Step(133): len = 252574, overlap = 18.6875
+PHY-3002 : Step(134): len = 252982, overlap = 19.0625
+PHY-3002 : Step(135): len = 252992, overlap = 17.0312
+PHY-3001 : :::12::: Try harder cell spreading with beta_ = 0.000535861
+PHY-3002 : Step(136): len = 254257, overlap = 17.3125
+PHY-3002 : Step(137): len = 256730, overlap = 17.5625
+PHY-3002 : Step(138): len = 258304, overlap = 18.875
+PHY-3002 : Step(139): len = 259913, overlap = 13.5
+PHY-3002 : Step(140): len = 260965, overlap = 11.0625
+PHY-3002 : Step(141): len = 261855, overlap = 12.4375
+PHY-3002 : Step(142): len = 262220, overlap = 12.125
+PHY-3002 : Step(143): len = 262684, overlap = 12.2188
+PHY-3002 : Step(144): len = 263166, overlap = 12
+PHY-3002 : Step(145): len = 263769, overlap = 12.875
+PHY-3002 : Step(146): len = 263902, overlap = 14.1875
+PHY-3001 : :::13::: Try harder cell spreading with beta_ = 0.000899132
+PHY-3002 : Step(147): len = 264765, overlap = 12.25
+PHY-3002 : Step(148): len = 266400, overlap = 13.3125
+PHY-3002 : Step(149): len = 267456, overlap = 13.875
+PHY-3002 : Step(150): len = 268852, overlap = 13.9375
+PHY-3002 : Step(151): len = 269650, overlap = 14.2188
+PHY-3002 : Step(152): len = 270179, overlap = 14.2812
+PHY-3002 : Step(153): len = 270557, overlap = 13.5938
+PHY-3002 : Step(154): len = 270981, overlap = 13.4688
+PHY-3002 : Step(155): len = 271404, overlap = 12.9688
+PHY-3002 : Step(156): len = 271605, overlap = 13.2188
+PHY-3002 : Step(157): len = 271693, overlap = 13.2188
+PHY-3001 : :::14::: Try harder cell spreading with beta_ = 0.0014548
+PHY-3002 : Step(158): len = 272318, overlap = 14.1875
+PHY-3002 : Step(159): len = 274053, overlap = 14.9375
+PHY-3001 : Legalization ...
+PHY-3001 : End legalization;  0.004431s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%)
+
+PHY-3001 : Run with size of 4
+PHY-3001 : Cell area utilization is 45%
+PHY-3001 : Analyzing congestion ...
+RUN-1001 : Generating global routing grids ...
+RUN-1001 : Building simple global routing graph ...
+PHY-1001 : Generate routing nets ...
+PHY-1001 : Reuse net number 0/16014.
+PHY-1001 : Global iterations in 24 thread ...
+PHY-1002 : len = 433392, over cnt = 1378(3%), over = 6317, worst = 45
+PHY-1001 : End global iterations;  0.706514s wall, 0.765625s user + 0.187500s system = 0.953125s CPU (134.9%)
+
+PHY-1001 : Congestion index: top1 = 61.85, top5 = 48.05, top10 = 40.71, top15 = 36.47.
+PHY-3001 : End congestion estimation;  0.819213s wall, 0.828125s user + 0.250000s system = 1.078125s CPU (131.6%)
+
+PHY-3001 : Update density targets...
+PHY-3001 : Update congestion history...
+PHY-3001 : :::0::: Try harder cell spreading with beta_ = 4.4126e-05
+PHY-3002 : Step(160): len = 300787, overlap = 33.0625
+PHY-3002 : Step(161): len = 310795, overlap = 31.0625
+PHY-3002 : Step(162): len = 312535, overlap = 31.9375
+PHY-3002 : Step(163): len = 296422, overlap = 34.5625
+PHY-3002 : Step(164): len = 288511, overlap = 36.2188
+PHY-3002 : Step(165): len = 285142, overlap = 37.3438
+PHY-3002 : Step(166): len = 276811, overlap = 45.1562
+PHY-3002 : Step(167): len = 272320, overlap = 46.75
+PHY-3002 : Step(168): len = 273008, overlap = 47.75
+PHY-3002 : Step(169): len = 268610, overlap = 53.3438
+PHY-3002 : Step(170): len = 268613, overlap = 55.1875
+PHY-3002 : Step(171): len = 268041, overlap = 60.5
+PHY-3001 : :::1::: Try harder cell spreading with beta_ = 8.8252e-05
+PHY-3002 : Step(172): len = 271103, overlap = 58.8125
+PHY-3002 : Step(173): len = 275937, overlap = 56.9062
+PHY-3002 : Step(174): len = 277589, overlap = 56.0938
+PHY-3002 : Step(175): len = 277536, overlap = 52.3438
+PHY-3002 : Step(176): len = 277871, overlap = 52.25
+PHY-3002 : Step(177): len = 275485, overlap = 51.9375
+PHY-3001 : :::2::: Try harder cell spreading with beta_ = 0.000176504
+PHY-3002 : Step(178): len = 284185, overlap = 48.75
+PHY-3002 : Step(179): len = 296847, overlap = 46.4062
+PHY-3002 : Step(180): len = 304303, overlap = 43.8438
+PHY-3002 : Step(181): len = 309688, overlap = 41
+PHY-3001 : Run with size of 2
+PHY-3001 : Cell area utilization is 45%
+PHY-3001 : Analyzing congestion ...
+RUN-1001 : Generating global routing grids ...
+PHY-1001 : Generate routing nets ...
+PHY-1001 : Reuse net number 113/16014.
+PHY-1001 : Global iterations in 24 thread ...
+PHY-1002 : len = 449760, over cnt = 1814(5%), over = 9947, worst = 68
+PHY-1001 : End global iterations;  0.913361s wall, 0.875000s user + 0.234375s system = 1.109375s CPU (121.5%)
+
+PHY-1001 : Congestion index: top1 = 75.30, top5 = 56.54, top10 = 47.70, top15 = 42.78.
+PHY-3001 : End congestion estimation;  1.046476s wall, 0.984375s user + 0.234375s system = 1.218750s CPU (116.5%)
+
+PHY-3001 : Update density targets...
+PHY-3001 : Update congestion history...
+PHY-3001 : :::0::: Try harder cell spreading with beta_ = 4.9345e-05
+PHY-3002 : Step(182): len = 283581, overlap = 189.094
+PHY-3002 : Step(183): len = 288231, overlap = 151.188
+PHY-3002 : Step(184): len = 285362, overlap = 128.438
+PHY-3002 : Step(185): len = 276657, overlap = 111
+PHY-3002 : Step(186): len = 277645, overlap = 111.906
+PHY-3002 : Step(187): len = 279481, overlap = 99.3438
+PHY-3002 : Step(188): len = 276164, overlap = 87.9062
+PHY-3002 : Step(189): len = 269352, overlap = 78.25
+PHY-3002 : Step(190): len = 265521, overlap = 71.3125
+PHY-3002 : Step(191): len = 265538, overlap = 73.8125
+PHY-3002 : Step(192): len = 264451, overlap = 71.4375
+PHY-3001 : :::1::: Try harder cell spreading with beta_ = 9.86901e-05
+PHY-3002 : Step(193): len = 266330, overlap = 67.4688
+PHY-3002 : Step(194): len = 271016, overlap = 61.75
+PHY-3002 : Step(195): len = 272458, overlap = 63.5938
+PHY-3002 : Step(196): len = 272896, overlap = 64.0625
+PHY-3001 : :::2::: Try harder cell spreading with beta_ = 0.00019738
+PHY-3002 : Step(197): len = 275012, overlap = 60.1562
+PHY-3002 : Step(198): len = 277267, overlap = 59.8438
+PHY-3002 : Step(199): len = 283665, overlap = 59.0625
+PHY-3002 : Step(200): len = 286058, overlap = 60.9375
+PHY-3002 : Step(201): len = 286789, overlap = 57.75
+OPT-1001 : Start physical optimization ...
+OPT-1001 : Total overflow 346.19 peak overflow 4.16
+OPT-1001 : Start high-fanout net optimization ...
+OPT-1001 : Update timing in global mode
+PHY-1001 : Start incremental global routing, caller is place ...
+RUN-1001 : Generating global routing grids ...
+PHY-1001 : Generate routing nets ...
+PHY-1001 : Reuse net number 223/16014.
+PHY-1001 : Global iterations in 24 thread ...
+PHY-1002 : len = 462808, over cnt = 2099(5%), over = 7858, worst = 40
+PHY-1001 : End global iterations;  1.486099s wall, 1.437500s user + 0.343750s system = 1.781250s CPU (119.9%)
+
+PHY-1001 : Congestion index: top1 = 55.22, top5 = 43.84, top10 = 39.12, top15 = 36.21.
+PHY-1001 : End incremental global routing;  1.630966s wall, 1.562500s user + 0.343750s system = 1.906250s CPU (116.9%)
+
+RUN-1002 : start command "start_timer -report"
+TMR-5001 WARNING: No sdc constraints found while initiating timer.
+TMR-2505 : Start building timing graph for model audio_speak.
+TMR-2506 : Build timing graph completely. Port num: 54, tpin num: 71302, tnet num: 14956, tinst num: 14014, tnode num: 100141, tedge num: 115720.
+TMR-2508 : Levelizing timing graph completed, there are 43 levels in total.
+TMR-2501 : Timing graph initialized successfully.
+OPT-1001 : End timing update;  0.622571s wall, 0.609375s user + 0.015625s system = 0.625000s CPU (100.4%)
+
+OPT-1001 : 0 high-fanout net processed.
+OPT-1001 : End high-fanout net optimization;  2.449333s wall, 2.359375s user + 0.359375s system = 2.718750s CPU (111.0%)
+
+OPT-1001 : Current memory(MB): used = 485, reserve = 464, peak = 485.
+OPT-1001 : End physical optimization;  2.543302s wall, 2.453125s user + 0.359375s system = 2.812500s CPU (110.6%)
+
+PHY-3001 : Start packing ...
+SYN-4007 : Packing 0 MUX to BLE ...
+SYN-4008 : Packed 0 MUX and 0 SEQ to BLE.
+SYN-4007 : Packing 5796 LUT to BLE ...
+SYN-4008 : Packed 5796 LUT and 553 SEQ to BLE.
+SYN-4003 : Packing 6682 remaining SEQ's ...
+SYN-4005 : Packed 4847 SEQ with LUT/SLICE
+SYN-4006 : 501 single LUT's are left
+SYN-4006 : 1835 single SEQ's are left
+SYN-4011 : Packing model "audio_speak" (AL_USER_NORMAL) with 7631/8616 primitive instances ...
+PHY-3001 : End packing;  0.948369s wall, 0.937500s user + 0.015625s system = 0.953125s CPU (100.5%)
+
+PHY-1001 : Populate physical database on model audio_speak.
+RUN-1001 : There are total 5898 instances
+RUN-1001 : 2912 mslices, 2911 lslices, 55 pads, 0 brams, 2 dsps
+RUN-1001 : There are total 15500 nets
+RUN-1001 : 13128 nets have 2 pins
+RUN-1001 : 1553 nets have [3 - 5] pins
+RUN-1001 : 322 nets have [6 - 10] pins
+RUN-1001 : 390 nets have [11 - 20] pins
+RUN-1001 : 66 nets have [21 - 99] pins
+RUN-1001 : 41 nets have 100+ pins
+PHY-3001 : design contains 5896 instances, 5823 slices, 188 macros(910 instances: 593 mslices 317 lslices)
+PHY-3001 : Huge net led_dup_1 with 4335 pins
+PHY-3001 : Huge net u_pitch_shift/read_ptr[1] with 2197 pins
+PHY-3001 : Huge net u_pitch_shift/read_ptr[0] with 1436 pins
+PHY-3001 : Cell area utilization is 66%
+PHY-3001 : After packing: Len = 314832, Over = 187
+PHY-3001 : Run with size of 2
+PHY-3001 : Cell area utilization is 66%
+PHY-3001 : Analyzing congestion ...
+RUN-1001 : Generating global routing grids ...
+PHY-1001 : Generate routing nets ...
+PHY-1001 : Reuse net number 5257/15500.
+PHY-1001 : Global iterations in 24 thread ...
+PHY-1002 : len = 503056, over cnt = 2224(6%), over = 5558, worst = 40
+PHY-1002 : len = 531616, over cnt = 1429(4%), over = 2901, worst = 22
+PHY-1002 : len = 557536, over cnt = 558(1%), over = 1119, worst = 22
+PHY-1002 : len = 568320, over cnt = 264(0%), over = 474, worst = 8
+PHY-1002 : len = 576968, over cnt = 0(0%), over = 0, worst = 0
+PHY-1001 : End global iterations;  1.314827s wall, 1.500000s user + 0.437500s system = 1.937500s CPU (147.4%)
+
+PHY-1001 : Congestion index: top1 = 48.49, top5 = 41.65, top10 = 38.25, top15 = 36.12.
+PHY-3001 : End congestion estimation;  1.547099s wall, 1.718750s user + 0.437500s system = 2.156250s CPU (139.4%)
+
+PHY-3001 : Update density targets...
+PHY-3001 : Update congestion history...
+PHY-3001 : :::0::: Try harder cell spreading with beta_ = 1.89236e-05
+PHY-3002 : Step(202): len = 294454, overlap = 190.75
+PHY-3002 : Step(203): len = 292377, overlap = 200.25
+PHY-3002 : Step(204): len = 283320, overlap = 219
+PHY-3002 : Step(205): len = 276539, overlap = 232.5
+PHY-3002 : Step(206): len = 277448, overlap = 229
+PHY-3002 : Step(207): len = 277880, overlap = 229
+PHY-3001 : :::1::: Try harder cell spreading with beta_ = 3.78472e-05
+PHY-3002 : Step(208): len = 283497, overlap = 227.75
+PHY-3002 : Step(209): len = 285520, overlap = 227.75
+PHY-3002 : Step(210): len = 287223, overlap = 216.25
+PHY-3001 : :::2::: Try harder cell spreading with beta_ = 7.56945e-05
+PHY-3002 : Step(211): len = 295352, overlap = 190.5
+PHY-3002 : Step(212): len = 298568, overlap = 182.5
+PHY-3002 : Step(213): len = 300091, overlap = 171.75
+PHY-3002 : Step(214): len = 299701, overlap = 167.5
+PHY-3002 : Step(215): len = 298623, overlap = 168.25
+PHY-3001 : Legalization ...
+PHY-3001 : End legalization;  1.058999s wall, 2.031250s user + 1.343750s system = 3.375000s CPU (318.7%)
+
+PHY-3001 : Trial Legalized: Len = 372153
+PHY-3001 : Run with size of 2
+PHY-3001 : Cell area utilization is 65%
+PHY-3001 : Analyzing congestion ...
+RUN-1001 : Generating global routing grids ...
+PHY-1001 : Generate routing nets ...
+PHY-1001 : Reuse net number 491/15500.
+PHY-1001 : Global iterations in 24 thread ...
+PHY-1002 : len = 571296, over cnt = 2000(5%), over = 2937, worst = 6
+PHY-1002 : len = 579944, over cnt = 1247(3%), over = 1734, worst = 5
+PHY-1002 : len = 598264, over cnt = 307(0%), over = 390, worst = 4
+PHY-1002 : len = 604200, over cnt = 18(0%), over = 25, worst = 3
+PHY-1002 : len = 604664, over cnt = 0(0%), over = 0, worst = 0
+PHY-1001 : End global iterations;  2.433522s wall, 2.218750s user + 0.640625s system = 2.859375s CPU (117.5%)
+
+PHY-1001 : Congestion index: top1 = 43.60, top5 = 39.15, top10 = 36.73, top15 = 35.15.
+PHY-3001 : End congestion estimation;  2.746711s wall, 2.515625s user + 0.656250s system = 3.171875s CPU (115.5%)
+
+PHY-3001 : Update density targets...
+PHY-3001 : Update congestion history...
+PHY-3001 : :::0::: Try harder cell spreading with beta_ = 5.33943e-05
+PHY-3002 : Step(216): len = 327646, overlap = 48.5
+PHY-3002 : Step(217): len = 312986, overlap = 91
+PHY-3002 : Step(218): len = 308736, overlap = 111
+PHY-3002 : Step(219): len = 304543, overlap = 130.25
+PHY-3002 : Step(220): len = 303646, overlap = 136.25
+PHY-3002 : Step(221): len = 302772, overlap = 143.25
+PHY-3001 : :::1::: Try harder cell spreading with beta_ = 0.000106789
+PHY-3002 : Step(222): len = 307341, overlap = 135.5
+PHY-3002 : Step(223): len = 309048, overlap = 135
+PHY-3002 : Step(224): len = 310477, overlap = 135.25
+PHY-3001 : :::2::: Try harder cell spreading with beta_ = 0.000213577
+PHY-3002 : Step(225): len = 314804, overlap = 130
+PHY-3002 : Step(226): len = 316868, overlap = 127.25
+PHY-3002 : Step(227): len = 320078, overlap = 117.25
+PHY-3002 : Step(228): len = 320686, overlap = 117.25
+PHY-3002 : Step(229): len = 321575, overlap = 115
+PHY-3001 : Legalization ...
+PHY-3001 : End legalization;  0.013176s wall, 0.000000s user + 0.000000s system = 0.000000s CPU (n/a%)
+
+PHY-3001 : Legalized: Len = 350655, Over = 0
+PHY-3001 : Spreading special nets. 25 overflows in 2952 tiles.
+PHY-3001 : End spreading;  0.036874s wall, 0.031250s user + 0.000000s system = 0.031250s CPU (84.7%)
+
+PHY-3001 : 36 instances has been re-located, deltaX = 16, deltaY = 20, maxDist = 1.
+PHY-3001 : Final: Len = 351523, Over = 0
+OPT-1001 : Start physical optimization ...
+OPT-1001 : Total overflow 0.00 peak overflow 0.00
+OPT-1001 : Start high-fanout net optimization ...
+OPT-1001 : Update timing in global mode
+PHY-1001 : Start incremental global routing, caller is place ...
+RUN-1001 : Generating global routing grids ...
+PHY-1001 : Generate routing nets ...
+PHY-1001 : Reuse net number 2466/15500.
+PHY-1001 : Global iterations in 24 thread ...
+PHY-1002 : len = 561104, over cnt = 1962(5%), over = 2803, worst = 6
+PHY-1002 : len = 570912, over cnt = 990(2%), over = 1315, worst = 5
+PHY-1002 : len = 580280, over cnt = 441(1%), over = 600, worst = 5
+PHY-1002 : len = 587984, over cnt = 110(0%), over = 138, worst = 3
+PHY-1002 : len = 590280, over cnt = 0(0%), over = 0, worst = 0
+PHY-1001 : End global iterations;  1.872075s wall, 1.812500s user + 0.453125s system = 2.265625s CPU (121.0%)
+
+PHY-1001 : Congestion index: top1 = 42.22, top5 = 37.74, top10 = 35.39, top15 = 33.93.
+PHY-1001 : End incremental global routing;  2.128693s wall, 2.078125s user + 0.453125s system = 2.531250s CPU (118.9%)
+
+RUN-1002 : start command "start_timer -report"
+TMR-5001 WARNING: No sdc constraints found while initiating timer.
+TMR-2505 : Start building timing graph for model audio_speak.
+TMR-2506 : Build timing graph completely. Port num: 54, tpin num: 63602, tnet num: 14442, tinst num: 5896, tnode num: 85516, tedge num: 103875.
+TMR-2508 : Levelizing timing graph completed, there are 41 levels in total.
+TMR-2501 : Timing graph initialized successfully.
+OPT-1001 : End timing update;  0.828846s wall, 0.812500s user + 0.015625s system = 0.828125s CPU (99.9%)
+
+OPT-1001 : 0 high-fanout net processed.
+OPT-1001 : End high-fanout net optimization;  3.188952s wall, 3.125000s user + 0.468750s system = 3.593750s CPU (112.7%)
+
+OPT-1001 : Current memory(MB): used = 513, reserve = 495, peak = 513.
+OPT-1001 : Update timing in Manhattan mode
+OPT-1001 : End timing update;  0.016133s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (96.8%)
+
+OPT-1001 : Start pin optimization...
+OPT-1001 : skip pin optimization...
+RUN-1001 : Generating global routing grids ...
+PHY-1001 : Generate routing nets ...
+PHY-1001 : Reuse net number 11521/15500.
+PHY-1001 : Global iterations in 24 thread ...
+PHY-1002 : len = 590280, over cnt = 0(0%), over = 0, worst = 0
+PHY-1001 : End global iterations;  0.060819s wall, 0.046875s user + 0.000000s system = 0.046875s CPU (77.1%)
+
+PHY-1001 : Congestion index: top1 = 42.22, top5 = 37.74, top10 = 35.39, top15 = 33.93.
+OPT-1001 : Update timing in Manhattan mode
+OPT-1001 : End timing update;  0.017654s wall, 0.031250s user + 0.000000s system = 0.031250s CPU (177.0%)
+
+RUN-1001 : QoR Analysis:
+OPT-0007 :   WNS 2147483647 TNS 0 NUM_FEPS 0
+RUN-1001 :   No local congestion issue, and most congested 1% tile average routing util is 41.724138
+RUN-1001 :   Top critical paths
+OPT-1001 : End physical optimization;  3.558432s wall, 3.468750s user + 0.468750s system = 3.937500s CPU (110.7%)
+
+RUN-1003 : finish command "place" in  21.366342s wall, 28.812500s user + 17.875000s system = 46.687500s CPU (218.5%)
+
+RUN-1004 : used memory is 426 MB, reserved memory is 408 MB, peak memory is 522 MB
+RUN-1002 : start command "export_db ES8388_place.db"
+RUN-1001 : Exported /
+RUN-1001 : Exported flow parameters
+RUN-1001 : Exported libs
+RUN-1001 : Exported entities
+RUN-1001 : Exported ports
+RUN-1001 : Exported pins
+RUN-1001 : Exported instances
+RUN-1001 : Exported nets
+RUN-1001 : Exported buses
+RUN-1001 : Exported models
+RUN-1001 : Exported congestions
+RUN-1001 : Exported violations
+RUN-1001 : Exported IO constraints
+RUN-1001 : Exported Inst constraints
+RUN-1003 : finish command "export_db ES8388_place.db" in  1.018562s wall, 1.531250s user + 0.046875s system = 1.578125s CPU (154.9%)
+
+RUN-1004 : used memory is 427 MB, reserved memory is 410 MB, peak memory is 522 MB
+RUN-1002 : start command "route"
+RUN-1001 : Open license file D:/TD/license/Anlogic.lic
+RUN-1001 : Print Global Property
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  |  Note  
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     |        
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        |        
+RUN-1001 :        qor_monitor       |    off     |       off        |        
+RUN-1001 :        syn_ip_flow       |    off     |       off        |        
+RUN-1001 :          thread          |    auto    |       auto       |        
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 : Print Route Property
+RUN-1001 : -------------------------------------------------------
+RUN-1001 :    Parameters    |  Settings  |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------
+RUN-1001 :      effort      |   medium   |      medium      |        
+RUN-1001 :     fix_hold     |    off     |       off        |        
+RUN-1001 :    opt_timing    |   medium   |      medium      |        
+RUN-1001 :   phy_sim_model  |    off     |       off        |        
+RUN-1001 :     priority     |   timing   |      timing      |        
+RUN-1001 :     swap_pin     |     on     |        on        |        
+RUN-1001 : -------------------------------------------------------
+PHY-1001 : Route runs in 24 thread(s)
+RUN-1001 : There are total 5898 instances
+RUN-1001 : 2912 mslices, 2911 lslices, 55 pads, 0 brams, 2 dsps
+RUN-1001 : There are total 15500 nets
+RUN-1001 : 13128 nets have 2 pins
+RUN-1001 : 1553 nets have [3 - 5] pins
+RUN-1001 : 322 nets have [6 - 10] pins
+RUN-1001 : 390 nets have [11 - 20] pins
+RUN-1001 : 66 nets have [21 - 99] pins
+RUN-1001 : 41 nets have 100+ pins
+RUN-1002 : start command "start_timer -report"
+TMR-5001 WARNING: No sdc constraints found while initiating timer.
+TMR-2505 : Start building timing graph for model audio_speak.
+TMR-2506 : Build timing graph completely. Port num: 54, tpin num: 63602, tnet num: 14442, tinst num: 5896, tnode num: 85516, tedge num: 103875.
+TMR-2508 : Levelizing timing graph completed, there are 41 levels in total.
+TMR-2501 : Timing graph initialized successfully.
+PHY-1001 : 2912 mslices, 2911 lslices, 55 pads, 0 brams, 2 dsps
+TMR-2503 : Start to update net delay, extr mode = 3.
+TMR-2504 : Update delay of 14442 nets completely.
+TMR-2502 : Annotate delay completely, extr mode = 3.
+TMR-3002 : No user constraint, initiate default constraint.
+TMR-1501 : Assign derive clock DeriveClock to 9828 clock pins, and constraint 21906 relative nodes.
+TMR-3003 : Constraints initiated successfully.
+TMR-3501 : Forward propagation: start to calculate arrival time...
+TMR-3502 : Backward propagation: start to calculate required time...
+TMR-3503 : Timing propagation completes.
+PHY-1001 : Start global routing, caller is route ...
+RUN-1001 : Generating global routing grids ...
+PHY-1001 : Generate routing nets ...
+PHY-1001 : Global iterations in 24 thread ...
+PHY-1002 : len = 537120, over cnt = 2156(6%), over = 3318, worst = 7
+PHY-1002 : len = 550912, over cnt = 1136(3%), over = 1577, worst = 7
+PHY-1002 : len = 566216, over cnt = 354(1%), over = 476, worst = 5
+PHY-1002 : len = 573536, over cnt = 4(0%), over = 4, worst = 1
+PHY-1002 : len = 573600, over cnt = 0(0%), over = 0, worst = 0
+PHY-1001 : End global iterations;  2.757178s wall, 2.828125s user + 0.656250s system = 3.484375s CPU (126.4%)
+
+PHY-1001 : Congestion index: top1 = 41.64, top5 = 37.15, top10 = 34.90, top15 = 33.52.
+PHY-1001 : End global routing;  2.946540s wall, 3.015625s user + 0.656250s system = 3.671875s CPU (124.6%)
+
+PHY-1001 : Start detail routing ...
+PHY-1001 : Current memory(MB): used = 625, reserve = 613, peak = 625.
+PHY-1001 : Detailed router is running in normal mode.
+PHY-1001 : Generate detailed routing grids ...
+PHY-1001 : Processed IO instance aud_dacdat_syn_4 with INV attribute.
+PHY-1001 : Processed IO instance aud_dacdat_1_syn_4 with INV attribute.
+PHY-1001 : Processed IO instance aud_dacdat_2_syn_4 with INV attribute.
+PHY-1001 : Processed IO instance aud_dacdat_3_syn_4 with INV attribute.
+PHY-1001 : Generate nets ...
+PHY-1001 : clock net aud_bclk_syn_4 will be merged with clock aud_bclk_dup_1
+PHY-1001 : clock net aud_bclk_1_syn_4 will be merged with clock aud_bclk_1_dup_1
+PHY-1001 : clock net aud_bclk_2_syn_4 will be merged with clock aud_bclk_2_dup_1
+PHY-1001 : clock net aud_bclk_3_syn_4 will be merged with clock aud_bclk_3_dup_1
+PHY-1001 : net aud_mclk_dup_1 will be routed on clock mesh
+PHY-1001 : net aud_mclk_1_dup_1 will be routed on clock mesh
+PHY-1001 : net aud_mclk_2_dup_1 will be routed on clock mesh
+PHY-1001 : net aud_mclk_3_dup_1 will be routed on clock mesh
+PHY-1001 : clock net ilaclk_dup_1 will be merged with clock u_pll_clk/clk0_buf
+PHY-1001 : clock net ilaclk_1_dup_1 will be merged with clock u1_pll_clk/clk0_buf
+PHY-1001 : clock net ilaclk_2_dup_1 will be merged with clock u2_pll_clk/clk0_buf
+PHY-1001 : clock net ilaclk_3_dup_1 will be merged with clock u3_pll_clk/clk0_buf
+PHY-1001 : net sys_clk_dup_1 will be routed on clock mesh
+PHY-1001 : clock net u1_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk_syn_4 will be merged with clock u1_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk
+PHY-1001 : clock net u2_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk_syn_4 will be merged with clock u2_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk
+PHY-1001 : clock net u3_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk_syn_4 will be merged with clock u3_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk
+PHY-1001 : Current memory(MB): used = 882, reserve = 873, peak = 882.
+PHY-1001 : End build detailed router design. 2.883725s wall, 2.734375s user + 0.062500s system = 2.796875s CPU (97.0%)
+
+PHY-1001 : Detail Route ...
+PHY-1001 : ===== Detail Route Phase 1 =====
+PHY-1001 : Clock net routing.....
+PHY-1001 : Routed 0% nets.
+PHY-1022 : len = 185568, over cnt = 0(0%), over = 0, worst = 0, crit = 0
+PHY-1001 : End initial clock net routed; 3.623202s wall, 3.546875s user + 0.015625s system = 3.562500s CPU (98.3%)
+
+PHY-1001 : Current memory(MB): used = 918, reserve = 910, peak = 918.
+PHY-1001 : End phase 1; 3.628760s wall, 3.546875s user + 0.015625s system = 3.562500s CPU (98.2%)
+
+PHY-1001 : ===== Detail Route Phase 2 =====
+PHY-1001 : Initial routing.....
+PHY-1001 : Routed 50% nets.
+PHY-1001 : Routed 57% nets.
+PHY-1001 : Routed 67% nets.
+PHY-1001 : Routed 77% nets.
+PHY-1001 : Routed 89% nets.
+PHY-1022 : len = 3.01516e+06, over cnt = 1398(0%), over = 1399, worst = 2, crit = 0
+PHY-1001 : Current memory(MB): used = 931, reserve = 922, peak = 931.
+PHY-1001 : End initial routed; 14.496951s wall, 16.875000s user + 5.859375s system = 22.734375s CPU (156.8%)
+
+PHY-1001 : Current memory(MB): used = 931, reserve = 922, peak = 931.
+PHY-1001 : End phase 2; 14.497050s wall, 16.875000s user + 5.859375s system = 22.734375s CPU (156.8%)
+
+PHY-1001 : ===== Detail Route Phase 3 =====
+PHY-1001 : Ripup-reroute.....
+PHY-1001 : ===== DR Iter 1 =====
+PHY-1022 : len = 2.95098e+06, over cnt = 697(0%), over = 699, worst = 2, crit = 0
+PHY-1001 : End DR Iter 1; 2.915404s wall, 3.828125s user + 0.140625s system = 3.968750s CPU (136.1%)
+
+PHY-1001 : ===== DR Iter 2 =====
+PHY-1022 : len = 2.92481e+06, over cnt = 185(0%), over = 185, worst = 1, crit = 0
+PHY-1001 : End DR Iter 2; 1.380360s wall, 1.484375s user + 0.046875s system = 1.531250s CPU (110.9%)
+
+PHY-1001 : ===== DR Iter 3 =====
+PHY-1022 : len = 2.91822e+06, over cnt = 18(0%), over = 18, worst = 1, crit = 0
+PHY-1001 : End DR Iter 3; 0.527747s wall, 0.500000s user + 0.062500s system = 0.562500s CPU (106.6%)
+
+PHY-1001 : ===== DR Iter 4 =====
+PHY-1022 : len = 2.91841e+06, over cnt = 6(0%), over = 6, worst = 1, crit = 0
+PHY-1001 : End DR Iter 4; 0.146183s wall, 0.125000s user + 0.015625s system = 0.140625s CPU (96.2%)
+
+PHY-1001 : ===== DR Iter 5 =====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 5; 0.182692s wall, 0.187500s user + 0.000000s system = 0.187500s CPU (102.6%)
+
+PHY-1001 : ===== DR Iter 6 =====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 6; 0.133406s wall, 0.140625s user + 0.000000s system = 0.140625s CPU (105.4%)
+
+PHY-1001 : ===== DR Iter 7 =====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 7; 0.251118s wall, 0.187500s user + 0.031250s system = 0.218750s CPU (87.1%)
+
+PHY-1001 : ===== DR Iter 8 =====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 8; 0.093130s wall, 0.109375s user + 0.046875s system = 0.156250s CPU (167.8%)
+
+PHY-1001 : ==== DR Iter 9 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 9; 0.093961s wall, 0.078125s user + 0.015625s system = 0.093750s CPU (99.8%)
+
+PHY-1001 : ==== DR Iter 10 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 10; 0.099535s wall, 0.078125s user + 0.015625s system = 0.093750s CPU (94.2%)
+
+PHY-1001 : ==== DR Iter 11 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 11; 0.110329s wall, 0.109375s user + 0.031250s system = 0.140625s CPU (127.5%)
+
+PHY-1001 : ==== DR Iter 12 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 12; 0.192812s wall, 0.218750s user + 0.000000s system = 0.218750s CPU (113.5%)
+
+PHY-1001 : ===== DR Iter 13 =====
+PHY-1022 : len = 2.91797e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 13; 0.094034s wall, 0.078125s user + 0.015625s system = 0.093750s CPU (99.7%)
+
+PHY-1001 : ==== DR Iter 14 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 14; 0.103497s wall, 0.093750s user + 0.015625s system = 0.109375s CPU (105.7%)
+
+PHY-1001 : ==== DR Iter 15 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 15; 0.108562s wall, 0.093750s user + 0.015625s system = 0.109375s CPU (100.7%)
+
+PHY-1001 : ==== DR Iter 16 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 16; 0.117711s wall, 0.109375s user + 0.000000s system = 0.109375s CPU (92.9%)
+
+PHY-1001 : ==== DR Iter 17 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 17; 0.205829s wall, 0.171875s user + 0.031250s system = 0.203125s CPU (98.7%)
+
+PHY-1001 : ==== DR Iter 18 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 18; 0.254204s wall, 0.234375s user + 0.015625s system = 0.250000s CPU (98.3%)
+
+PHY-1001 : ===== DR Iter 19 =====
+PHY-1022 : len = 2.91797e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 19; 0.097887s wall, 0.078125s user + 0.031250s system = 0.109375s CPU (111.7%)
+
+PHY-1001 : ==== DR Iter 20 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 20; 0.136289s wall, 0.125000s user + 0.015625s system = 0.140625s CPU (103.2%)
+
+PHY-1001 : ==== DR Iter 21 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 21; 0.103009s wall, 0.093750s user + 0.000000s system = 0.093750s CPU (91.0%)
+
+PHY-1001 : ==== DR Iter 22 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 22; 0.104699s wall, 0.109375s user + 0.000000s system = 0.109375s CPU (104.5%)
+
+PHY-1001 : ==== DR Iter 23 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 23; 0.207331s wall, 0.187500s user + 0.015625s system = 0.203125s CPU (98.0%)
+
+PHY-1001 : ==== DR Iter 24 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 24; 0.218769s wall, 0.234375s user + 0.078125s system = 0.312500s CPU (142.8%)
+
+PHY-1001 : ==== DR Iter 25 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 25; 0.534341s wall, 0.562500s user + 0.000000s system = 0.562500s CPU (105.3%)
+
+PHY-1001 : ===== DR Iter 26 =====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 26; 0.093266s wall, 0.078125s user + 0.015625s system = 0.093750s CPU (100.5%)
+
+PHY-1001 : ==== DR Iter 27 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 27; 0.095295s wall, 0.093750s user + 0.000000s system = 0.093750s CPU (98.4%)
+
+PHY-1001 : ==== DR Iter 28 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 28; 0.101676s wall, 0.125000s user + 0.015625s system = 0.140625s CPU (138.3%)
+
+PHY-1001 : ==== DR Iter 29 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 29; 0.151554s wall, 0.140625s user + 0.000000s system = 0.140625s CPU (92.8%)
+
+PHY-1001 : ==== DR Iter 30 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 30; 0.211364s wall, 0.203125s user + 0.015625s system = 0.218750s CPU (103.5%)
+
+PHY-1001 : ==== DR Iter 31 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 31; 0.219682s wall, 0.203125s user + 0.000000s system = 0.203125s CPU (92.5%)
+
+PHY-1001 : ==== DR Iter 32 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 32; 0.542895s wall, 0.515625s user + 0.015625s system = 0.531250s CPU (97.9%)
+
+PHY-1001 : ==== DR Iter 33 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 33; 0.540208s wall, 0.531250s user + 0.015625s system = 0.546875s CPU (101.2%)
+
+PHY-1001 : ===== DR Iter 34 =====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 34; 0.095901s wall, 0.156250s user + 0.015625s system = 0.171875s CPU (179.2%)
+
+PHY-1001 : ==== DR Iter 35 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 35; 0.100265s wall, 0.093750s user + 0.015625s system = 0.109375s CPU (109.1%)
+
+PHY-1001 : ==== DR Iter 36 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 36; 0.108411s wall, 0.093750s user + 0.015625s system = 0.109375s CPU (100.9%)
+
+PHY-1001 : ==== DR Iter 37 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 37; 0.114446s wall, 0.109375s user + 0.000000s system = 0.109375s CPU (95.6%)
+
+PHY-1001 : ==== DR Iter 38 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 38; 0.201195s wall, 0.156250s user + 0.031250s system = 0.187500s CPU (93.2%)
+
+PHY-1001 : ==== DR Iter 39 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 39; 0.212113s wall, 0.187500s user + 0.031250s system = 0.218750s CPU (103.1%)
+
+PHY-1001 : ==== DR Iter 40 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 40; 0.552100s wall, 0.531250s user + 0.015625s system = 0.546875s CPU (99.1%)
+
+PHY-1001 : ==== DR Iter 41 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 41; 0.544713s wall, 0.531250s user + 0.015625s system = 0.546875s CPU (100.4%)
+
+PHY-1001 : ==== DR Iter 42 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 42; 0.551300s wall, 0.515625s user + 0.015625s system = 0.531250s CPU (96.4%)
+
+PHY-1001 : ===== DR Iter 43 =====
+PHY-1022 : len = 2.91797e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 43; 0.092572s wall, 0.125000s user + 0.015625s system = 0.140625s CPU (151.9%)
+
+PHY-1001 : ==== DR Iter 44 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 44; 0.096070s wall, 0.078125s user + 0.031250s system = 0.109375s CPU (113.8%)
+
+PHY-1001 : ==== DR Iter 45 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 45; 0.106122s wall, 0.140625s user + 0.015625s system = 0.156250s CPU (147.2%)
+
+PHY-1001 : ==== DR Iter 46 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 46; 0.105572s wall, 0.078125s user + 0.031250s system = 0.109375s CPU (103.6%)
+
+PHY-1001 : ==== DR Iter 47 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 47; 0.200709s wall, 0.187500s user + 0.015625s system = 0.203125s CPU (101.2%)
+
+PHY-1001 : ==== DR Iter 48 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 48; 0.215466s wall, 0.187500s user + 0.031250s system = 0.218750s CPU (101.5%)
+
+PHY-1001 : ==== DR Iter 49 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 49; 0.561181s wall, 0.515625s user + 0.015625s system = 0.531250s CPU (94.7%)
+
+PHY-1001 : ==== DR Iter 50 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 50; 0.562579s wall, 0.500000s user + 0.046875s system = 0.546875s CPU (97.2%)
+
+PHY-1001 : ==== DR Iter 51 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 51; 0.541370s wall, 0.515625s user + 0.015625s system = 0.531250s CPU (98.1%)
+
+PHY-1001 : ==== DR Iter 52 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 52; 0.557954s wall, 0.531250s user + 0.031250s system = 0.562500s CPU (100.8%)
+
+PHY-1001 : ===== DR Iter 53 =====
+PHY-1022 : len = 2.91797e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 53; 0.091629s wall, 0.093750s user + 0.000000s system = 0.093750s CPU (102.3%)
+
+PHY-1001 : ==== DR Iter 54 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 54; 0.088070s wall, 0.078125s user + 0.015625s system = 0.093750s CPU (106.4%)
+
+PHY-1001 : ==== DR Iter 55 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 55; 0.101421s wall, 0.093750s user + 0.000000s system = 0.093750s CPU (92.4%)
+
+PHY-1001 : ==== DR Iter 56 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 56; 0.109328s wall, 0.093750s user + 0.015625s system = 0.109375s CPU (100.0%)
+
+PHY-1001 : ==== DR Iter 57 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 57; 0.201099s wall, 0.187500s user + 0.015625s system = 0.203125s CPU (101.0%)
+
+PHY-1001 : ==== DR Iter 58 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 58; 0.250032s wall, 0.203125s user + 0.046875s system = 0.250000s CPU (100.0%)
+
+PHY-1001 : ==== DR Iter 59 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 59; 0.549961s wall, 0.531250s user + 0.015625s system = 0.546875s CPU (99.4%)
+
+PHY-1001 : ==== DR Iter 60 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 60; 0.543145s wall, 0.546875s user + 0.000000s system = 0.546875s CPU (100.7%)
+
+PHY-1001 : ==== DR Iter 61 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 61; 0.540981s wall, 0.515625s user + 0.031250s system = 0.546875s CPU (101.1%)
+
+PHY-1001 : ==== DR Iter 62 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 62; 0.593285s wall, 0.578125s user + 0.000000s system = 0.578125s CPU (97.4%)
+
+PHY-1001 : ==== DR Iter 63 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 63; 0.554452s wall, 0.546875s user + 0.000000s system = 0.546875s CPU (98.6%)
+
+PHY-1001 : ===== DR Iter 64 =====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 64; 0.092672s wall, 0.078125s user + 0.031250s system = 0.109375s CPU (118.0%)
+
+PHY-1001 : ==== DR Iter 65 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 65; 0.093762s wall, 0.109375s user + 0.046875s system = 0.156250s CPU (166.6%)
+
+PHY-1001 : ==== DR Iter 66 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 66; 0.105005s wall, 0.109375s user + 0.031250s system = 0.140625s CPU (133.9%)
+
+PHY-1001 : ==== DR Iter 67 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 67; 0.106304s wall, 0.093750s user + 0.015625s system = 0.109375s CPU (102.9%)
+
+PHY-1001 : ==== DR Iter 68 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 68; 0.199187s wall, 0.171875s user + 0.031250s system = 0.203125s CPU (102.0%)
+
+PHY-1001 : ==== DR Iter 69 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 69; 0.249010s wall, 0.218750s user + 0.000000s system = 0.218750s CPU (87.8%)
+
+PHY-1001 : ==== DR Iter 70 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 70; 0.579278s wall, 0.578125s user + 0.000000s system = 0.578125s CPU (99.8%)
+
+PHY-1001 : ==== DR Iter 71 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 71; 0.624975s wall, 0.562500s user + 0.031250s system = 0.593750s CPU (95.0%)
+
+PHY-1001 : ==== DR Iter 72 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 72; 0.674875s wall, 0.656250s user + 0.015625s system = 0.671875s CPU (99.6%)
+
+PHY-1001 : ==== DR Iter 73 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 73; 0.583078s wall, 0.531250s user + 0.046875s system = 0.578125s CPU (99.2%)
+
+PHY-1001 : ==== DR Iter 74 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 74; 0.580402s wall, 0.531250s user + 0.046875s system = 0.578125s CPU (99.6%)
+
+PHY-1001 : ==== DR Iter 75 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 75; 0.625914s wall, 0.578125s user + 0.031250s system = 0.609375s CPU (97.4%)
+
+PHY-1001 : Current memory(MB): used = 935, reserve = 925, peak = 935.
+PHY-1001 : End phase 3; 24.255267s wall, 24.234375s user + 1.593750s system = 25.828125s CPU (106.5%)
+
+PHY-1003 : Routed, final wirelength = 2.91794e+06
+PHY-1001 : 725 feed throughs used by 268 nets
+PHY-1001 : Current memory(MB): used = 1028, reserve = 1021, peak = 1028.
+PHY-1001 : End export database. 1.685014s wall, 1.546875s user + 0.093750s system = 1.640625s CPU (97.4%)
+
+PHY-1001 : Fixing routing violation through ECO...
+RUN-1002 : start command "place -eco"
+RUN-1001 : Open license file D:/TD/license/Anlogic.lic
+RUN-1001 : Print Global Property
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  |  Note  
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     |        
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        |        
+RUN-1001 :        qor_monitor       |    off     |       off        |        
+RUN-1001 :        syn_ip_flow       |    off     |       off        |        
+RUN-1001 :          thread          |    auto    |       auto       |        
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 : Print Place Property
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :      detailed_place     |     on     |        on        |        
+RUN-1001 :          effort         |   medium   |      medium      |        
+RUN-1001 :         fix_hold        |    off     |       off        |        
+RUN-1001 :       legalization      |    ori     |       ori        |        
+RUN-1001 :      new_spreading      |     on     |        on        |        
+RUN-1001 :        opt_timing       |   medium   |      medium      |        
+RUN-1001 :   post_clock_route_opt  |    off     |       off        |        
+RUN-1001 :       pr_strategy       |     1      |        1         |        
+RUN-1001 :        relaxation       |    1.00    |       1.00       |        
+RUN-1001 :         retiming        |    off     |       off        |        
+RUN-1001 : --------------------------------------------------------------
+PHY-3001 : Placer runs in 24 thread(s).
+PHY-1001 : Populate physical database on model audio_speak.
+RUN-1001 : There are total 5898 instances
+RUN-1001 : 2912 mslices, 2911 lslices, 55 pads, 0 brams, 2 dsps
+RUN-1001 : There are total 15500 nets
+RUN-1001 : 13128 nets have 2 pins
+RUN-1001 : 1553 nets have [3 - 5] pins
+RUN-1001 : 322 nets have [6 - 10] pins
+RUN-1001 : 390 nets have [11 - 20] pins
+RUN-1001 : 66 nets have [21 - 99] pins
+RUN-1001 : 41 nets have 100+ pins
+RUN-1001 : Report Control nets information:
+RUN-1001 : DFF Distribution
+RUN-1001 : ----------------------------------
+RUN-1001 :   CE   |  SSR  |  ASR  |  DFF Count  
+RUN-1001 : ----------------------------------
+RUN-1001 :   No   |  No   |  No   |      0      
+RUN-1001 :   No   |  No   |  Yes  |      0      
+RUN-1001 :   No   |  Yes  |  No   |      0      
+RUN-1001 :   Yes  |  No   |  No   |      0      
+RUN-1001 :   Yes  |  No   |  Yes  |      0      
+RUN-1001 :   Yes  |  Yes  |  No   |      0      
+RUN-1001 : ----------------------------------
+RUN-0007 : Control Group Statistic
+RUN-0007 : ---------------------------
+RUN-0007 :   #CLK  |  #CE  |  #SSR/ASR  
+RUN-0007 : ---------------------------
+RUN-0007 :    9    |   1   |     1      
+RUN-0007 : ---------------------------
+RUN-0007 : Control Set = 0
+PHY-3001 : Initial placement ...
+PHY-3001 : eco special cells: 1 has valid locations, 0 needs to be replaced
+PHY-3001 : eco pad cells: 55 has valid locations, 0 needs to be replaced
+PHY-3001 : eco cells: (1 4 0) is for feedthrough
+PHY-3001 : eco cells: (1 5 2) is for feedthrough
+PHY-3001 : eco cells: (1 16 0) is for feedthrough
+PHY-3001 : eco cells: (1 20 1) is for feedthrough
+PHY-3001 : eco cells: (2 18 3) is for feedthrough
+PHY-3001 : eco cells: (2 20 3) is for feedthrough
+PHY-3001 : eco cells: (2 24 0) is for feedthrough
+PHY-3001 : eco cells: (2 24 1) is for feedthrough
+PHY-3001 : eco cells: (2 26 3) is for feedthrough
+PHY-3001 : eco cells: (2 30 0) is for feedthrough
+PHY-3001 : eco cells: (2 57 3) is for feedthrough
+PHY-3001 : eco cells: (3 6 1) is for feedthrough
+PHY-3001 : eco cells: (3 14 1) is for feedthrough
+PHY-3001 : eco cells: (3 17 2) is for feedthrough
+PHY-3001 : eco cells: (3 18 0) is for feedthrough
+PHY-3001 : eco cells: (3 19 0) is for feedthrough
+PHY-3001 : eco cells: (3 26 3) is for feedthrough
+PHY-3001 : eco cells: (3 30 3) is for feedthrough
+PHY-3001 : eco cells: (3 69 1) is for feedthrough
+PHY-3001 : eco cells: (4 9 2) is for feedthrough
+PHY-3001 : eco cells: (4 15 0) is for feedthrough
+PHY-3001 : eco cells: (4 24 2) is for feedthrough
+PHY-3001 : eco cells: (4 24 3) is for feedthrough
+PHY-3001 : eco cells: (4 28 2) is for feedthrough
+PHY-3001 : eco cells: (4 70 3) is for feedthrough
+PHY-3001 : eco cells: (5 18 3) is for feedthrough
+PHY-3001 : eco cells: (5 19 1) is for feedthrough
+PHY-3001 : eco cells: (5 25 2) is for feedthrough
+PHY-3001 : eco cells: (5 25 3) is for feedthrough
+PHY-3001 : eco cells: (5 29 2) is for feedthrough
+PHY-3001 : eco cells: (5 29 3) is for feedthrough
+PHY-3001 : eco cells: (5 61 1) is for feedthrough
+PHY-3001 : eco cells: (5 67 3) is for feedthrough
+PHY-3001 : eco cells: (6 5 0) is for feedthrough
+PHY-3001 : eco cells: (6 12 3) is for feedthrough
+PHY-3001 : eco cells: (6 21 3) is for feedthrough
+PHY-3001 : eco cells: (6 41 3) is for feedthrough
+PHY-3001 : eco cells: (7 19 1) is for feedthrough
+PHY-3001 : eco cells: (7 20 1) is for feedthrough
+PHY-3001 : eco cells: (7 24 1) is for feedthrough
+PHY-3001 : eco cells: (7 27 3) is for feedthrough
+PHY-3001 : eco cells: (9 27 1) is for feedthrough
+PHY-3001 : eco cells: (10 3 0) is for feedthrough
+PHY-3001 : eco cells: (10 21 2) is for feedthrough
+PHY-3001 : eco cells: (10 24 3) is for feedthrough
+PHY-3001 : eco cells: (10 26 3) is for feedthrough
+PHY-3001 : eco cells: (10 27 2) is for feedthrough
+PHY-3001 : eco cells: (10 27 3) is for feedthrough
+PHY-3001 : eco cells: (11 3 1) is for feedthrough
+PHY-3001 : eco cells: (11 4 0) is for feedthrough
+PHY-3001 : eco cells: (11 5 0) is for feedthrough
+PHY-3001 : eco cells: (11 9 3) is for feedthrough
+PHY-3001 : eco cells: (11 14 0) is for feedthrough
+PHY-3001 : eco cells: (11 15 3) is for feedthrough
+PHY-3001 : eco cells: (11 20 0) is for feedthrough
+PHY-3001 : eco cells: (11 24 3) is for feedthrough
+PHY-3001 : eco cells: (11 25 2) is for feedthrough
+PHY-3001 : eco cells: (11 26 1) is for feedthrough
+PHY-3001 : eco cells: (11 26 2) is for feedthrough
+PHY-3001 : eco cells: (11 27 3) is for feedthrough
+PHY-3001 : eco cells: (11 39 1) is for feedthrough
+PHY-3001 : eco cells: (11 39 3) is for feedthrough
+PHY-3001 : eco cells: (11 63 3) is for feedthrough
+PHY-3001 : eco cells: (12 2 2) is for feedthrough
+PHY-3001 : eco cells: (12 5 1) is for feedthrough
+PHY-3001 : eco cells: (12 14 0) is for feedthrough
+PHY-3001 : eco cells: (12 15 1) is for feedthrough
+PHY-3001 : eco cells: (12 16 2) is for feedthrough
+PHY-3001 : eco cells: (12 21 2) is for feedthrough
+PHY-3001 : eco cells: (12 24 1) is for feedthrough
+PHY-3001 : eco cells: (12 25 3) is for feedthrough
+PHY-3001 : eco cells: (12 31 0) is for feedthrough
+PHY-3001 : eco cells: (12 37 2) is for feedthrough
+PHY-3001 : eco cells: (12 40 1) is for feedthrough
+PHY-3001 : eco cells: (12 49 0) is for feedthrough
+PHY-3001 : eco cells: (13 3 0) is for feedthrough
+PHY-3001 : eco cells: (13 4 2) is for feedthrough
+PHY-3001 : eco cells: (13 6 3) is for feedthrough
+PHY-3001 : eco cells: (13 7 2) is for feedthrough
+PHY-3001 : eco cells: (13 9 2) is for feedthrough
+PHY-3001 : eco cells: (13 14 0) is for feedthrough
+PHY-3001 : eco cells: (13 14 1) is for feedthrough
+PHY-3001 : eco cells: (13 20 1) is for feedthrough
+PHY-3001 : eco cells: (13 24 3) is for feedthrough
+PHY-3001 : eco cells: (13 25 1) is for feedthrough
+PHY-3001 : eco cells: (13 25 2) is for feedthrough
+PHY-3001 : eco cells: (13 25 3) is for feedthrough
+PHY-3001 : eco cells: (13 26 0) is for feedthrough
+PHY-3001 : eco cells: (13 27 1) is for feedthrough
+PHY-3001 : eco cells: (13 27 2) is for feedthrough
+PHY-3001 : eco cells: (13 37 0) is for feedthrough
+PHY-3001 : eco cells: (13 44 1) is for feedthrough
+PHY-3001 : eco cells: (13 47 3) is for feedthrough
+PHY-3001 : eco cells: (13 51 1) is for feedthrough
+PHY-3001 : eco cells: (13 52 0) is for feedthrough
+PHY-3001 : eco cells: (13 63 3) is for feedthrough
+PHY-3001 : eco cells: (14 4 0) is for feedthrough
+PHY-3001 : eco cells: (14 8 1) is for feedthrough
+PHY-3001 : eco cells: (14 9 1) is for feedthrough
+PHY-3001 : eco cells: (14 10 3) is for feedthrough
+PHY-3001 : eco cells: (14 12 0) is for feedthrough
+PHY-3001 : eco cells: (14 14 1) is for feedthrough
+PHY-3001 : eco cells: (14 14 2) is for feedthrough
+PHY-3001 : eco cells: (14 15 2) is for feedthrough
+PHY-3001 : eco cells: (14 19 0) is for feedthrough
+PHY-3001 : eco cells: (14 19 2) is for feedthrough
+PHY-3001 : eco cells: (14 19 3) is for feedthrough
+PHY-3001 : eco cells: (14 20 1) is for feedthrough
+PHY-3001 : eco cells: (14 24 3) is for feedthrough
+PHY-3001 : eco cells: (14 25 0) is for feedthrough
+PHY-3001 : eco cells: (14 25 1) is for feedthrough
+PHY-3001 : eco cells: (14 25 2) is for feedthrough
+PHY-3001 : eco cells: (14 25 3) is for feedthrough
+PHY-3001 : eco cells: (14 26 0) is for feedthrough
+PHY-3001 : eco cells: (14 27 0) is for feedthrough
+PHY-3001 : eco cells: (14 27 2) is for feedthrough
+PHY-3001 : eco cells: (14 27 3) is for feedthrough
+PHY-3001 : eco cells: (14 28 0) is for feedthrough
+PHY-3001 : eco cells: (14 29 0) is for feedthrough
+PHY-3001 : eco cells: (14 29 1) is for feedthrough
+PHY-3001 : eco cells: (14 33 3) is for feedthrough
+PHY-3001 : eco cells: (14 36 2) is for feedthrough
+PHY-3001 : eco cells: (14 37 0) is for feedthrough
+PHY-3001 : eco cells: (14 38 0) is for feedthrough
+PHY-3001 : eco cells: (14 38 2) is for feedthrough
+PHY-3001 : eco cells: (14 39 1) is for feedthrough
+PHY-3001 : eco cells: (14 39 2) is for feedthrough
+PHY-3001 : eco cells: (14 40 0) is for feedthrough
+PHY-3001 : eco cells: (14 40 3) is for feedthrough
+PHY-3001 : eco cells: (14 41 0) is for feedthrough
+PHY-3001 : eco cells: (14 41 1) is for feedthrough
+PHY-3001 : eco cells: (14 41 3) is for feedthrough
+PHY-3001 : eco cells: (14 42 1) is for feedthrough
+PHY-3001 : eco cells: (14 44 1) is for feedthrough
+PHY-3001 : eco cells: (14 50 3) is for feedthrough
+PHY-3001 : eco cells: (15 4 0) is for feedthrough
+PHY-3001 : eco cells: (15 12 1) is for feedthrough
+PHY-3001 : eco cells: (15 14 1) is for feedthrough
+PHY-3001 : eco cells: (15 15 3) is for feedthrough
+PHY-3001 : eco cells: (15 16 3) is for feedthrough
+PHY-3001 : eco cells: (15 21 3) is for feedthrough
+PHY-3001 : eco cells: (15 22 0) is for feedthrough
+PHY-3001 : eco cells: (15 23 3) is for feedthrough
+PHY-3001 : eco cells: (15 25 1) is for feedthrough
+PHY-3001 : eco cells: (15 27 0) is for feedthrough
+PHY-3001 : eco cells: (15 28 2) is for feedthrough
+PHY-3001 : eco cells: (15 29 2) is for feedthrough
+PHY-3001 : eco cells: (15 38 0) is for feedthrough
+PHY-3001 : eco cells: (15 39 1) is for feedthrough
+PHY-3001 : eco cells: (15 39 3) is for feedthrough
+PHY-3001 : eco cells: (15 41 1) is for feedthrough
+PHY-3001 : eco cells: (15 41 2) is for feedthrough
+PHY-3001 : eco cells: (15 42 1) is for feedthrough
+PHY-3001 : eco cells: (15 58 2) is for feedthrough
+PHY-3001 : eco cells: (17 12 3) is for feedthrough
+PHY-3001 : eco cells: (17 14 3) is for feedthrough
+PHY-3001 : eco cells: (17 15 3) is for feedthrough
+PHY-3001 : eco cells: (17 18 0) is for feedthrough
+PHY-3001 : eco cells: (17 24 0) is for feedthrough
+PHY-3001 : eco cells: (17 27 2) is for feedthrough
+PHY-3001 : eco cells: (17 28 3) is for feedthrough
+PHY-3001 : eco cells: (17 29 3) is for feedthrough
+PHY-3001 : eco cells: (17 33 1) is for feedthrough
+PHY-3001 : eco cells: (17 36 1) is for feedthrough
+PHY-3001 : eco cells: (17 37 1) is for feedthrough
+PHY-3001 : eco cells: (17 38 1) is for feedthrough
+PHY-3001 : eco cells: (17 38 2) is for feedthrough
+PHY-3001 : eco cells: (17 40 3) is for feedthrough
+PHY-3001 : eco cells: (17 41 2) is for feedthrough
+PHY-3001 : eco cells: (17 42 1) is for feedthrough
+PHY-3001 : eco cells: (17 44 0) is for feedthrough
+PHY-3001 : eco cells: (17 44 1) is for feedthrough
+PHY-3001 : eco cells: (17 45 2) is for feedthrough
+PHY-3001 : eco cells: (17 46 3) is for feedthrough
+PHY-3001 : eco cells: (17 47 0) is for feedthrough
+PHY-3001 : eco cells: (18 3 0) is for feedthrough
+PHY-3001 : eco cells: (18 3 1) is for feedthrough
+PHY-3001 : eco cells: (18 3 2) is for feedthrough
+PHY-3001 : eco cells: (18 5 0) is for feedthrough
+PHY-3001 : eco cells: (18 9 0) is for feedthrough
+PHY-3001 : eco cells: (18 9 1) is for feedthrough
+PHY-3001 : eco cells: (18 12 0) is for feedthrough
+PHY-3001 : eco cells: (18 13 1) is for feedthrough
+PHY-3001 : eco cells: (18 18 3) is for feedthrough
+PHY-3001 : eco cells: (18 19 1) is for feedthrough
+PHY-3001 : eco cells: (18 21 1) is for feedthrough
+PHY-3001 : eco cells: (18 25 1) is for feedthrough
+PHY-3001 : eco cells: (18 25 2) is for feedthrough
+PHY-3001 : eco cells: (18 26 0) is for feedthrough
+PHY-3001 : eco cells: (18 26 3) is for feedthrough
+PHY-3001 : eco cells: (18 27 1) is for feedthrough
+PHY-3001 : eco cells: (18 27 2) is for feedthrough
+PHY-3001 : eco cells: (18 29 0) is for feedthrough
+PHY-3001 : eco cells: (18 30 2) is for feedthrough
+PHY-3001 : eco cells: (18 31 1) is for feedthrough
+PHY-3001 : eco cells: (18 32 0) is for feedthrough
+PHY-3001 : eco cells: (18 34 1) is for feedthrough
+PHY-3001 : eco cells: (18 34 3) is for feedthrough
+PHY-3001 : eco cells: (18 37 0) is for feedthrough
+PHY-3001 : eco cells: (18 37 1) is for feedthrough
+PHY-3001 : eco cells: (18 38 0) is for feedthrough
+PHY-3001 : eco cells: (18 39 0) is for feedthrough
+PHY-3001 : eco cells: (18 41 0) is for feedthrough
+PHY-3001 : eco cells: (18 41 2) is for feedthrough
+PHY-3001 : eco cells: (18 43 3) is for feedthrough
+PHY-3001 : eco cells: (18 46 1) is for feedthrough
+PHY-3001 : eco cells: (19 3 1) is for feedthrough
+PHY-3001 : eco cells: (19 19 1) is for feedthrough
+PHY-3001 : eco cells: (19 20 1) is for feedthrough
+PHY-3001 : eco cells: (19 22 1) is for feedthrough
+PHY-3001 : eco cells: (19 24 3) is for feedthrough
+PHY-3001 : eco cells: (19 26 0) is for feedthrough
+PHY-3001 : eco cells: (19 26 2) is for feedthrough
+PHY-3001 : eco cells: (19 26 3) is for feedthrough
+PHY-3001 : eco cells: (19 27 3) is for feedthrough
+PHY-3001 : eco cells: (19 29 0) is for feedthrough
+PHY-3001 : eco cells: (19 30 1) is for feedthrough
+PHY-3001 : eco cells: (19 30 3) is for feedthrough
+PHY-3001 : eco cells: (19 31 1) is for feedthrough
+PHY-3001 : eco cells: (19 33 3) is for feedthrough
+PHY-3001 : eco cells: (19 35 3) is for feedthrough
+PHY-3001 : eco cells: (19 37 0) is for feedthrough
+PHY-3001 : eco cells: (19 38 1) is for feedthrough
+PHY-3001 : eco cells: (19 39 0) is for feedthrough
+PHY-3001 : eco cells: (19 40 0) is for feedthrough
+PHY-3001 : eco cells: (19 40 1) is for feedthrough
+PHY-3001 : eco cells: (19 40 3) is for feedthrough
+PHY-3001 : eco cells: (19 41 0) is for feedthrough
+PHY-3001 : eco cells: (19 43 3) is for feedthrough
+PHY-3001 : eco cells: (19 44 0) is for feedthrough
+PHY-3001 : eco cells: (19 46 0) is for feedthrough
+PHY-3001 : eco cells: (19 46 1) is for feedthrough
+PHY-3001 : eco cells: (19 50 2) is for feedthrough
+PHY-3001 : eco cells: (19 51 3) is for feedthrough
+PHY-3001 : eco cells: (19 52 0) is for feedthrough
+PHY-3001 : eco cells: (20 4 1) is for feedthrough
+PHY-3001 : eco cells: (20 5 2) is for feedthrough
+PHY-3001 : eco cells: (20 9 1) is for feedthrough
+PHY-3001 : eco cells: (20 9 2) is for feedthrough
+PHY-3001 : eco cells: (20 11 1) is for feedthrough
+PHY-3001 : eco cells: (20 14 1) is for feedthrough
+PHY-3001 : eco cells: (20 14 2) is for feedthrough
+PHY-3001 : eco cells: (20 15 0) is for feedthrough
+PHY-3001 : eco cells: (20 16 1) is for feedthrough
+PHY-3001 : eco cells: (20 17 0) is for feedthrough
+PHY-3001 : eco cells: (20 20 1) is for feedthrough
+PHY-3001 : eco cells: (20 22 2) is for feedthrough
+PHY-3001 : eco cells: (20 24 1) is for feedthrough
+PHY-3001 : eco cells: (20 24 3) is for feedthrough
+PHY-3001 : eco cells: (20 25 0) is for feedthrough
+PHY-3001 : eco cells: (20 25 1) is for feedthrough
+PHY-3001 : eco cells: (20 27 3) is for feedthrough
+PHY-3001 : eco cells: (20 28 0) is for feedthrough
+PHY-3001 : eco cells: (20 32 1) is for feedthrough
+PHY-3001 : eco cells: (20 33 1) is for feedthrough
+PHY-3001 : eco cells: (20 33 3) is for feedthrough
+PHY-3001 : eco cells: (20 34 1) is for feedthrough
+PHY-3001 : eco cells: (20 37 1) is for feedthrough
+PHY-3001 : eco cells: (20 38 3) is for feedthrough
+PHY-3001 : eco cells: (20 39 0) is for feedthrough
+PHY-3001 : eco cells: (20 40 2) is for feedthrough
+PHY-3001 : eco cells: (20 40 3) is for feedthrough
+PHY-3001 : eco cells: (20 41 0) is for feedthrough
+PHY-3001 : eco cells: (20 41 1) is for feedthrough
+PHY-3001 : eco cells: (20 41 3) is for feedthrough
+PHY-3001 : eco cells: (20 43 0) is for feedthrough
+PHY-3001 : eco cells: (20 44 2) is for feedthrough
+PHY-3001 : eco cells: (20 47 2) is for feedthrough
+PHY-3001 : eco cells: (20 51 2) is for feedthrough
+PHY-3001 : eco cells: (21 3 3) is for feedthrough
+PHY-3001 : eco cells: (21 4 0) is for feedthrough
+PHY-3001 : eco cells: (21 6 0) is for feedthrough
+PHY-3001 : eco cells: (21 9 0) is for feedthrough
+PHY-3001 : eco cells: (21 9 2) is for feedthrough
+PHY-3001 : eco cells: (21 9 3) is for feedthrough
+PHY-3001 : eco cells: (21 11 2) is for feedthrough
+PHY-3001 : eco cells: (21 16 0) is for feedthrough
+PHY-3001 : eco cells: (21 17 1) is for feedthrough
+PHY-3001 : eco cells: (21 17 3) is for feedthrough
+PHY-3001 : eco cells: (21 20 0) is for feedthrough
+PHY-3001 : eco cells: (21 25 1) is for feedthrough
+PHY-3001 : eco cells: (21 27 0) is for feedthrough
+PHY-3001 : eco cells: (21 27 1) is for feedthrough
+PHY-3001 : eco cells: (21 30 1) is for feedthrough
+PHY-3001 : eco cells: (21 34 0) is for feedthrough
+PHY-3001 : eco cells: (21 34 1) is for feedthrough
+PHY-3001 : eco cells: (21 38 1) is for feedthrough
+PHY-3001 : eco cells: (21 39 1) is for feedthrough
+PHY-3001 : eco cells: (21 42 0) is for feedthrough
+PHY-3001 : eco cells: (21 43 1) is for feedthrough
+PHY-3001 : eco cells: (21 44 0) is for feedthrough
+PHY-3001 : eco cells: (21 44 2) is for feedthrough
+PHY-3001 : eco cells: (21 46 0) is for feedthrough
+PHY-3001 : eco cells: (21 48 3) is for feedthrough
+PHY-3001 : eco cells: (21 49 0) is for feedthrough
+PHY-3001 : eco cells: (21 50 2) is for feedthrough
+PHY-3001 : eco cells: (21 51 0) is for feedthrough
+PHY-3001 : eco cells: (22 4 0) is for feedthrough
+PHY-3001 : eco cells: (22 5 3) is for feedthrough
+PHY-3001 : eco cells: (22 10 2) is for feedthrough
+PHY-3001 : eco cells: (22 19 0) is for feedthrough
+PHY-3001 : eco cells: (22 20 3) is for feedthrough
+PHY-3001 : eco cells: (22 24 3) is for feedthrough
+PHY-3001 : eco cells: (22 25 1) is for feedthrough
+PHY-3001 : eco cells: (22 26 3) is for feedthrough
+PHY-3001 : eco cells: (22 28 2) is for feedthrough
+PHY-3001 : eco cells: (22 28 3) is for feedthrough
+PHY-3001 : eco cells: (22 29 2) is for feedthrough
+PHY-3001 : eco cells: (22 31 0) is for feedthrough
+PHY-3001 : eco cells: (22 31 2) is for feedthrough
+PHY-3001 : eco cells: (22 31 3) is for feedthrough
+PHY-3001 : eco cells: (22 33 2) is for feedthrough
+PHY-3001 : eco cells: (22 34 2) is for feedthrough
+PHY-3001 : eco cells: (22 36 3) is for feedthrough
+PHY-3001 : eco cells: (22 37 0) is for feedthrough
+PHY-3001 : eco cells: (22 39 3) is for feedthrough
+PHY-3001 : eco cells: (22 41 2) is for feedthrough
+PHY-3001 : eco cells: (22 42 1) is for feedthrough
+PHY-3001 : eco cells: (22 44 3) is for feedthrough
+PHY-3001 : eco cells: (22 45 1) is for feedthrough
+PHY-3001 : eco cells: (22 45 2) is for feedthrough
+PHY-3001 : eco cells: (22 46 3) is for feedthrough
+PHY-3001 : eco cells: (22 47 1) is for feedthrough
+PHY-3001 : eco cells: (22 47 2) is for feedthrough
+PHY-3001 : eco cells: (22 48 0) is for feedthrough
+PHY-3001 : eco cells: (22 51 0) is for feedthrough
+PHY-3001 : eco cells: (22 55 3) is for feedthrough
+PHY-3001 : eco cells: (22 57 1) is for feedthrough
+PHY-3001 : eco cells: (22 60 1) is for feedthrough
+PHY-3001 : eco cells: (22 62 0) is for feedthrough
+PHY-3001 : eco cells: (22 62 1) is for feedthrough
+PHY-3001 : eco cells: (23 3 2) is for feedthrough
+PHY-3001 : eco cells: (23 5 2) is for feedthrough
+PHY-3001 : eco cells: (23 7 1) is for feedthrough
+PHY-3001 : eco cells: (23 9 3) is for feedthrough
+PHY-3001 : eco cells: (23 18 2) is for feedthrough
+PHY-3001 : eco cells: (23 20 1) is for feedthrough
+PHY-3001 : eco cells: (23 26 3) is for feedthrough
+PHY-3001 : eco cells: (23 28 0) is for feedthrough
+PHY-3001 : eco cells: (23 28 2) is for feedthrough
+PHY-3001 : eco cells: (23 28 3) is for feedthrough
+PHY-3001 : eco cells: (23 29 2) is for feedthrough
+PHY-3001 : eco cells: (23 32 2) is for feedthrough
+PHY-3001 : eco cells: (23 32 3) is for feedthrough
+PHY-3001 : eco cells: (23 33 3) is for feedthrough
+PHY-3001 : eco cells: (23 34 3) is for feedthrough
+PHY-3001 : eco cells: (23 36 0) is for feedthrough
+PHY-3001 : eco cells: (23 37 2) is for feedthrough
+PHY-3001 : eco cells: (23 38 1) is for feedthrough
+PHY-3001 : eco cells: (23 39 0) is for feedthrough
+PHY-3001 : eco cells: (23 41 0) is for feedthrough
+PHY-3001 : eco cells: (23 41 1) is for feedthrough
+PHY-3001 : eco cells: (23 41 2) is for feedthrough
+PHY-3001 : eco cells: (23 41 3) is for feedthrough
+PHY-3001 : eco cells: (23 42 0) is for feedthrough
+PHY-3001 : eco cells: (23 42 3) is for feedthrough
+PHY-3001 : eco cells: (23 44 0) is for feedthrough
+PHY-3001 : eco cells: (23 46 3) is for feedthrough
+PHY-3001 : eco cells: (23 51 0) is for feedthrough
+PHY-3001 : eco cells: (23 56 1) is for feedthrough
+PHY-3001 : eco cells: (23 57 0) is for feedthrough
+PHY-3001 : eco cells: (23 60 0) is for feedthrough
+PHY-3001 : eco cells: (23 60 3) is for feedthrough
+PHY-3001 : eco cells: (25 4 3) is for feedthrough
+PHY-3001 : eco cells: (25 8 2) is for feedthrough
+PHY-3001 : eco cells: (25 15 3) is for feedthrough
+PHY-3001 : eco cells: (25 16 1) is for feedthrough
+PHY-3001 : eco cells: (25 16 3) is for feedthrough
+PHY-3001 : eco cells: (25 17 2) is for feedthrough
+PHY-3001 : eco cells: (25 19 1) is for feedthrough
+PHY-3001 : eco cells: (25 24 0) is for feedthrough
+PHY-3001 : eco cells: (25 25 0) is for feedthrough
+PHY-3001 : eco cells: (25 26 3) is for feedthrough
+PHY-3001 : eco cells: (25 27 3) is for feedthrough
+PHY-3001 : eco cells: (25 32 0) is for feedthrough
+PHY-3001 : eco cells: (25 32 1) is for feedthrough
+PHY-3001 : eco cells: (25 34 0) is for feedthrough
+PHY-3001 : eco cells: (25 40 0) is for feedthrough
+PHY-3001 : eco cells: (25 42 2) is for feedthrough
+PHY-3001 : eco cells: (25 42 3) is for feedthrough
+PHY-3001 : eco cells: (25 44 0) is for feedthrough
+PHY-3001 : eco cells: (25 45 0) is for feedthrough
+PHY-3001 : eco cells: (25 45 1) is for feedthrough
+PHY-3001 : eco cells: (25 45 2) is for feedthrough
+PHY-3001 : eco cells: (25 46 0) is for feedthrough
+PHY-3001 : eco cells: (25 46 3) is for feedthrough
+PHY-3001 : eco cells: (25 47 3) is for feedthrough
+PHY-3001 : eco cells: (25 48 0) is for feedthrough
+PHY-3001 : eco cells: (25 48 1) is for feedthrough
+PHY-3001 : eco cells: (25 50 0) is for feedthrough
+PHY-3001 : eco cells: (25 52 0) is for feedthrough
+PHY-3001 : eco cells: (25 53 2) is for feedthrough
+PHY-3001 : eco cells: (25 54 1) is for feedthrough
+PHY-3001 : eco cells: (25 55 3) is for feedthrough
+PHY-3001 : eco cells: (25 58 2) is for feedthrough
+PHY-3001 : eco cells: (25 61 0) is for feedthrough
+PHY-3001 : eco cells: (26 9 0) is for feedthrough
+PHY-3001 : eco cells: (26 10 2) is for feedthrough
+PHY-3001 : eco cells: (26 10 3) is for feedthrough
+PHY-3001 : eco cells: (26 11 1) is for feedthrough
+PHY-3001 : eco cells: (26 18 0) is for feedthrough
+PHY-3001 : eco cells: (26 20 2) is for feedthrough
+PHY-3001 : eco cells: (26 21 0) is for feedthrough
+PHY-3001 : eco cells: (26 21 3) is for feedthrough
+PHY-3001 : eco cells: (26 24 0) is for feedthrough
+PHY-3001 : eco cells: (26 25 1) is for feedthrough
+PHY-3001 : eco cells: (26 25 2) is for feedthrough
+PHY-3001 : eco cells: (26 26 2) is for feedthrough
+PHY-3001 : eco cells: (26 27 0) is for feedthrough
+PHY-3001 : eco cells: (26 27 2) is for feedthrough
+PHY-3001 : eco cells: (26 28 3) is for feedthrough
+PHY-3001 : eco cells: (26 32 2) is for feedthrough
+PHY-3001 : eco cells: (26 32 3) is for feedthrough
+PHY-3001 : eco cells: (26 35 2) is for feedthrough
+PHY-3001 : eco cells: (26 37 1) is for feedthrough
+PHY-3001 : eco cells: (26 39 1) is for feedthrough
+PHY-3001 : eco cells: (26 40 3) is for feedthrough
+PHY-3001 : eco cells: (26 41 0) is for feedthrough
+PHY-3001 : eco cells: (26 42 1) is for feedthrough
+PHY-3001 : eco cells: (26 44 0) is for feedthrough
+PHY-3001 : eco cells: (26 45 1) is for feedthrough
+PHY-3001 : eco cells: (26 46 2) is for feedthrough
+PHY-3001 : eco cells: (26 47 2) is for feedthrough
+PHY-3001 : eco cells: (26 49 1) is for feedthrough
+PHY-3001 : eco cells: (26 50 0) is for feedthrough
+PHY-3001 : eco cells: (26 50 3) is for feedthrough
+PHY-3001 : eco cells: (26 51 0) is for feedthrough
+PHY-3001 : eco cells: (26 51 3) is for feedthrough
+PHY-3001 : eco cells: (26 52 2) is for feedthrough
+PHY-3001 : eco cells: (26 53 0) is for feedthrough
+PHY-3001 : eco cells: (26 53 1) is for feedthrough
+PHY-3001 : eco cells: (26 56 0) is for feedthrough
+PHY-3001 : eco cells: (26 56 1) is for feedthrough
+PHY-3001 : eco cells: (26 57 3) is for feedthrough
+PHY-3001 : eco cells: (26 58 1) is for feedthrough
+PHY-3001 : eco cells: (26 60 3) is for feedthrough
+PHY-3001 : eco cells: (27 3 1) is for feedthrough
+PHY-3001 : eco cells: (27 3 3) is for feedthrough
+PHY-3001 : eco cells: (27 10 0) is for feedthrough
+PHY-3001 : eco cells: (27 12 1) is for feedthrough
+PHY-3001 : eco cells: (27 16 1) is for feedthrough
+PHY-3001 : eco cells: (27 17 2) is for feedthrough
+PHY-3001 : eco cells: (27 17 3) is for feedthrough
+PHY-3001 : eco cells: (27 20 1) is for feedthrough
+PHY-3001 : eco cells: (27 21 1) is for feedthrough
+PHY-3001 : eco cells: (27 22 0) is for feedthrough
+PHY-3001 : eco cells: (27 23 0) is for feedthrough
+PHY-3001 : eco cells: (27 23 2) is for feedthrough
+PHY-3001 : eco cells: (27 28 2) is for feedthrough
+PHY-3001 : eco cells: (27 32 1) is for feedthrough
+PHY-3001 : eco cells: (27 33 2) is for feedthrough
+PHY-3001 : eco cells: (27 34 2) is for feedthrough
+PHY-3001 : eco cells: (27 35 0) is for feedthrough
+PHY-3001 : eco cells: (27 35 2) is for feedthrough
+PHY-3001 : eco cells: (27 35 3) is for feedthrough
+PHY-3001 : eco cells: (27 36 2) is for feedthrough
+PHY-3001 : eco cells: (27 36 3) is for feedthrough
+PHY-3001 : eco cells: (27 38 3) is for feedthrough
+PHY-3001 : eco cells: (27 39 2) is for feedthrough
+PHY-3001 : eco cells: (27 40 1) is for feedthrough
+PHY-3001 : eco cells: (27 40 2) is for feedthrough
+PHY-3001 : eco cells: (27 42 2) is for feedthrough
+PHY-3001 : eco cells: (27 43 1) is for feedthrough
+PHY-3001 : eco cells: (27 43 2) is for feedthrough
+PHY-3001 : eco cells: (27 45 0) is for feedthrough
+PHY-3001 : eco cells: (27 47 0) is for feedthrough
+PHY-3001 : eco cells: (27 49 0) is for feedthrough
+PHY-3001 : eco cells: (27 49 2) is for feedthrough
+PHY-3001 : eco cells: (27 49 3) is for feedthrough
+PHY-3001 : eco cells: (27 53 0) is for feedthrough
+PHY-3001 : eco cells: (27 55 3) is for feedthrough
+PHY-3001 : eco cells: (27 56 2) is for feedthrough
+PHY-3001 : eco cells: (27 57 2) is for feedthrough
+PHY-3001 : eco cells: (27 59 3) is for feedthrough
+PHY-3001 : eco cells: (27 60 0) is for feedthrough
+PHY-3001 : eco cells: (27 60 3) is for feedthrough
+PHY-3001 : eco cells: (27 65 3) is for feedthrough
+PHY-3001 : eco cells: (28 7 1) is for feedthrough
+PHY-3001 : eco cells: (28 10 2) is for feedthrough
+PHY-3001 : eco cells: (28 10 3) is for feedthrough
+PHY-3001 : eco cells: (28 12 2) is for feedthrough
+PHY-3001 : eco cells: (28 14 1) is for feedthrough
+PHY-3001 : eco cells: (28 18 0) is for feedthrough
+PHY-3001 : eco cells: (28 19 3) is for feedthrough
+PHY-3001 : eco cells: (28 21 1) is for feedthrough
+PHY-3001 : eco cells: (28 23 0) is for feedthrough
+PHY-3001 : eco cells: (28 24 1) is for feedthrough
+PHY-3001 : eco cells: (28 26 2) is for feedthrough
+PHY-3001 : eco cells: (28 34 1) is for feedthrough
+PHY-3001 : eco cells: (28 37 0) is for feedthrough
+PHY-3001 : eco cells: (28 38 3) is for feedthrough
+PHY-3001 : eco cells: (28 39 0) is for feedthrough
+PHY-3001 : eco cells: (28 40 3) is for feedthrough
+PHY-3001 : eco cells: (28 41 1) is for feedthrough
+PHY-3001 : eco cells: (28 41 3) is for feedthrough
+PHY-3001 : eco cells: (28 42 0) is for feedthrough
+PHY-3001 : eco cells: (28 42 2) is for feedthrough
+PHY-3001 : eco cells: (28 43 2) is for feedthrough
+PHY-3001 : eco cells: (28 44 1) is for feedthrough
+PHY-3001 : eco cells: (28 44 3) is for feedthrough
+PHY-3001 : eco cells: (28 46 1) is for feedthrough
+PHY-3001 : eco cells: (28 48 1) is for feedthrough
+PHY-3001 : eco cells: (28 49 0) is for feedthrough
+PHY-3001 : eco cells: (28 50 0) is for feedthrough
+PHY-3001 : eco cells: (28 53 2) is for feedthrough
+PHY-3001 : eco cells: (28 55 1) is for feedthrough
+PHY-3001 : eco cells: (28 55 3) is for feedthrough
+PHY-3001 : eco cells: (28 57 3) is for feedthrough
+PHY-3001 : eco cells: (28 60 1) is for feedthrough
+PHY-3001 : eco cells: (28 60 2) is for feedthrough
+PHY-3001 : eco cells: (29 3 0) is for feedthrough
+PHY-3001 : eco cells: (29 4 2) is for feedthrough
+PHY-3001 : eco cells: (29 7 0) is for feedthrough
+PHY-3001 : eco cells: (29 9 1) is for feedthrough
+PHY-3001 : eco cells: (29 20 2) is for feedthrough
+PHY-3001 : eco cells: (29 22 3) is for feedthrough
+PHY-3001 : eco cells: (29 23 0) is for feedthrough
+PHY-3001 : eco cells: (29 23 2) is for feedthrough
+PHY-3001 : eco cells: (29 24 0) is for feedthrough
+PHY-3001 : eco cells: (29 24 2) is for feedthrough
+PHY-3001 : eco cells: (29 24 3) is for feedthrough
+PHY-3001 : eco cells: (29 27 0) is for feedthrough
+PHY-3001 : eco cells: (29 32 0) is for feedthrough
+PHY-3001 : eco cells: (29 32 2) is for feedthrough
+PHY-3001 : eco cells: (29 35 3) is for feedthrough
+PHY-3001 : eco cells: (29 36 1) is for feedthrough
+PHY-3001 : eco cells: (29 37 2) is for feedthrough
+PHY-3001 : eco cells: (29 38 0) is for feedthrough
+PHY-3001 : eco cells: (29 38 3) is for feedthrough
+PHY-3001 : eco cells: (29 39 3) is for feedthrough
+PHY-3001 : eco cells: (29 40 0) is for feedthrough
+PHY-3001 : eco cells: (29 41 2) is for feedthrough
+PHY-3001 : eco cells: (29 42 0) is for feedthrough
+PHY-3001 : eco cells: (29 42 1) is for feedthrough
+PHY-3001 : eco cells: (29 42 3) is for feedthrough
+PHY-3001 : eco cells: (29 44 2) is for feedthrough
+PHY-3001 : eco cells: (29 44 3) is for feedthrough
+PHY-3001 : eco cells: (29 45 3) is for feedthrough
+PHY-3001 : eco cells: (29 46 1) is for feedthrough
+PHY-3001 : eco cells: (29 47 0) is for feedthrough
+PHY-3001 : eco cells: (29 47 3) is for feedthrough
+PHY-3001 : eco cells: (29 48 0) is for feedthrough
+PHY-3001 : eco cells: (29 49 3) is for feedthrough
+PHY-3001 : eco cells: (29 55 1) is for feedthrough
+PHY-3001 : eco cells: (29 57 2) is for feedthrough
+PHY-3001 : eco cells: (29 60 2) is for feedthrough
+PHY-3001 : eco cells: (30 14 2) is for feedthrough
+PHY-3001 : eco cells: (30 23 3) is for feedthrough
+PHY-3001 : eco cells: (30 27 1) is for feedthrough
+PHY-3001 : eco cells: (30 31 2) is for feedthrough
+PHY-3001 : eco cells: (30 33 0) is for feedthrough
+PHY-3001 : eco cells: (30 42 1) is for feedthrough
+PHY-3001 : eco cells: (30 43 2) is for feedthrough
+PHY-3001 : eco cells: (30 44 2) is for feedthrough
+PHY-3001 : eco cells: (30 48 0) is for feedthrough
+PHY-3001 : eco cells: (30 48 2) is for feedthrough
+PHY-3001 : eco cells: (30 51 1) is for feedthrough
+PHY-3001 : eco cells: (30 51 3) is for feedthrough
+PHY-3001 : eco cells: (30 53 1) is for feedthrough
+PHY-3001 : eco cells: (30 55 3) is for feedthrough
+PHY-3001 : eco cells: (30 56 1) is for feedthrough
+PHY-3001 : eco cells: (30 58 1) is for feedthrough
+PHY-3001 : eco cells: (31 16 0) is for feedthrough
+PHY-3001 : eco cells: (31 24 0) is for feedthrough
+PHY-3001 : eco cells: (31 35 3) is for feedthrough
+PHY-3001 : eco cells: (31 36 0) is for feedthrough
+PHY-3001 : eco cells: (31 42 1) is for feedthrough
+PHY-3001 : eco cells: (31 49 3) is for feedthrough
+PHY-3001 : eco cells: (31 51 2) is for feedthrough
+PHY-3001 : eco cells: (31 53 0) is for feedthrough
+PHY-3001 : eco cells: (31 55 0) is for feedthrough
+PHY-3001 : eco cells: (31 59 2) is for feedthrough
+PHY-3001 : eco cells: (31 60 1) is for feedthrough
+PHY-3001 : eco cells: (33 6 3) is for feedthrough
+PHY-3001 : eco cells: (33 7 1) is for feedthrough
+PHY-3001 : eco cells: (33 8 1) is for feedthrough
+PHY-3001 : eco cells: (33 9 3) is for feedthrough
+PHY-3001 : eco cells: (33 15 2) is for feedthrough
+PHY-3001 : eco cells: (33 25 2) is for feedthrough
+PHY-3001 : eco cells: (33 33 2) is for feedthrough
+PHY-3001 : eco cells: (33 34 2) is for feedthrough
+PHY-3001 : eco cells: (33 35 1) is for feedthrough
+PHY-3001 : eco cells: (33 42 1) is for feedthrough
+PHY-3001 : eco cells: (33 42 3) is for feedthrough
+PHY-3001 : eco cells: (33 43 2) is for feedthrough
+PHY-3001 : eco cells: (33 44 0) is for feedthrough
+PHY-3001 : eco cells: (33 44 3) is for feedthrough
+PHY-3001 : eco cells: (33 46 2) is for feedthrough
+PHY-3001 : eco cells: (33 54 0) is for feedthrough
+PHY-3001 : eco cells: (33 64 0) is for feedthrough
+PHY-3001 : eco cells: (34 2 3) is for feedthrough
+PHY-3001 : eco cells: (34 3 1) is for feedthrough
+PHY-3001 : eco cells: (34 14 1) is for feedthrough
+PHY-3001 : eco cells: (34 15 2) is for feedthrough
+PHY-3001 : eco cells: (34 16 0) is for feedthrough
+PHY-3001 : eco cells: (34 20 2) is for feedthrough
+PHY-3001 : eco cells: (34 21 1) is for feedthrough
+PHY-3001 : eco cells: (34 22 0) is for feedthrough
+PHY-3001 : eco cells: (34 23 0) is for feedthrough
+PHY-3001 : eco cells: (34 24 3) is for feedthrough
+PHY-3001 : eco cells: (34 33 0) is for feedthrough
+PHY-3001 : eco cells: (34 39 3) is for feedthrough
+PHY-3001 : eco cells: (34 40 3) is for feedthrough
+PHY-3001 : eco cells: (34 41 2) is for feedthrough
+PHY-3001 : eco cells: (34 42 1) is for feedthrough
+PHY-3001 : eco cells: (34 48 2) is for feedthrough
+PHY-3001 : eco cells: (34 51 0) is for feedthrough
+PHY-3001 : eco cells: (34 59 2) is for feedthrough
+PHY-3001 : eco cells: (34 60 3) is for feedthrough
+PHY-3001 : eco cells: (35 14 0) is for feedthrough
+PHY-3001 : eco cells: (35 19 1) is for feedthrough
+PHY-3001 : eco cells: (35 23 3) is for feedthrough
+PHY-3001 : eco cells: (35 24 0) is for feedthrough
+PHY-3001 : eco cells: (35 24 2) is for feedthrough
+PHY-3001 : eco cells: (35 32 2) is for feedthrough
+PHY-3001 : eco cells: (35 43 3) is for feedthrough
+PHY-3001 : eco cells: (35 47 2) is for feedthrough
+PHY-3001 : eco cells: (35 47 3) is for feedthrough
+PHY-3001 : eco cells: (35 49 3) is for feedthrough
+PHY-3001 : eco cells: (35 50 1) is for feedthrough
+PHY-3001 : eco cells: (35 54 0) is for feedthrough
+PHY-3001 : eco cells: (35 56 0) is for feedthrough
+PHY-3001 : eco cells: (35 58 0) is for feedthrough
+PHY-3001 : eco cells: (35 58 1) is for feedthrough
+PHY-3001 : eco cells: (35 59 3) is for feedthrough
+PHY-3001 : eco cells: (35 68 0) is for feedthrough
+PHY-3001 : eco cells: (36 5 2) is for feedthrough
+PHY-3001 : eco cells: (36 11 1) is for feedthrough
+PHY-3001 : eco cells: (36 22 1) is for feedthrough
+PHY-3001 : eco cells: (36 36 1) is for feedthrough
+PHY-3001 : eco cells: (36 37 1) is for feedthrough
+PHY-3001 : eco cells: (36 38 1) is for feedthrough
+PHY-3001 : eco cells: (36 39 1) is for feedthrough
+PHY-3001 : eco cells: (36 40 0) is for feedthrough
+PHY-3001 : eco cells: (36 46 1) is for feedthrough
+PHY-3001 : eco cells: (36 46 2) is for feedthrough
+PHY-3001 : eco cells: (36 49 0) is for feedthrough
+PHY-3001 : eco cells: (36 50 1) is for feedthrough
+PHY-3001 : eco cells: (36 56 1) is for feedthrough
+PHY-3001 : eco cells: (36 57 0) is for feedthrough
+PHY-3001 : eco cells: (36 58 0) is for feedthrough
+PHY-3001 : eco cells: (37 7 0) is for feedthrough
+PHY-3001 : eco cells: (37 16 2) is for feedthrough
+PHY-3001 : eco cells: (37 18 0) is for feedthrough
+PHY-3001 : eco cells: (37 22 1) is for feedthrough
+PHY-3001 : eco cells: (37 35 2) is for feedthrough
+PHY-3001 : eco cells: (37 40 2) is for feedthrough
+PHY-3001 : eco cells: (37 49 2) is for feedthrough
+PHY-3001 : eco cells: (37 50 3) is for feedthrough
+PHY-3001 : eco cells: (37 51 2) is for feedthrough
+PHY-3001 : eco cells: (37 53 1) is for feedthrough
+PHY-3001 : eco cells: (37 60 0) is for feedthrough
+PHY-3001 : eco cells: (38 35 2) is for feedthrough
+PHY-3001 : eco cells: (38 49 3) is for feedthrough
+PHY-3001 : eco cells: (38 50 1) is for feedthrough
+PHY-3001 : eco cells: (38 51 0) is for feedthrough
+PHY-3001 : eco cells: (39 4 0) is for feedthrough
+PHY-3001 : eco cells: (39 7 2) is for feedthrough
+PHY-3001 : eco cells: (39 8 1) is for feedthrough
+PHY-3001 : eco cells: (39 50 0) is for feedthrough
+PHY-3001 : eco cells: 5825 has valid locations, 0 needs to be replaced
+PHY-3001 : design contains 5896 instances, 5823 slices, 188 macros(910 instances: 593 mslices 317 lslices)
+PHY-3001 : Huge net led_dup_1 with 4335 pins
+PHY-3001 : Huge net u_pitch_shift/read_ptr[1] with 3028 pins
+PHY-3001 : Huge net u_pitch_shift/read_ptr[0] with 1776 pins
+PHY-3001 : End placement; No cells to be placed.
+RUN-1001 : Eco place succeeded
+RUN-1002 : start command "route -eco"
+RUN-1001 : Open license file D:/TD/license/Anlogic.lic
+RUN-1001 : Print Global Property
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  |  Note  
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     |        
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        |        
+RUN-1001 :        qor_monitor       |    off     |       off        |        
+RUN-1001 :        syn_ip_flow       |    off     |       off        |        
+RUN-1001 :          thread          |    auto    |       auto       |        
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 : Print Route Property
+RUN-1001 : -------------------------------------------------------
+RUN-1001 :    Parameters    |  Settings  |  Default Values  |  Note  
+RUN-1001 : -------------------------------------------------------
+RUN-1001 :      effort      |   medium   |      medium      |        
+RUN-1001 :     fix_hold     |    off     |       off        |        
+RUN-1001 :    opt_timing    |   medium   |      medium      |        
+RUN-1001 :   phy_sim_model  |    off     |       off        |        
+RUN-1001 :     priority     |   timing   |      timing      |        
+RUN-1001 :     swap_pin     |     on     |        on        |        
+RUN-1001 : -------------------------------------------------------
+PHY-1001 : Route runs in 24 thread(s)
+RUN-1001 : There are total 5898 instances
+RUN-1001 : 2912 mslices, 2911 lslices, 55 pads, 0 brams, 2 dsps
+RUN-1001 : There are total 15500 nets
+RUN-1001 : 13128 nets have 2 pins
+RUN-1001 : 1553 nets have [3 - 5] pins
+RUN-1001 : 322 nets have [6 - 10] pins
+RUN-1001 : 390 nets have [11 - 20] pins
+RUN-1001 : 66 nets have [21 - 99] pins
+RUN-1001 : 41 nets have 100+ pins
+PHY-1001 : 2912 mslices, 2911 lslices, 55 pads, 0 brams, 2 dsps
+TMR-2503 : Start to update net delay, extr mode = 3.
+TMR-2504 : Update delay of 14442 nets completely.
+TMR-2502 : Annotate delay completely, extr mode = 3.
+TMR-3501 : Forward propagation: start to calculate arrival time...
+TMR-3502 : Backward propagation: start to calculate required time...
+TMR-3503 : Timing propagation completes.
+PHY-1001 : Start detail routing ...
+PHY-1001 : Current memory(MB): used = 961, reserve = 962, peak = 1028.
+PHY-1001 : Detailed router is running in eco mode.
+PHY-1001 : Refresh detailed routing grids ...
+PHY-1001 : Processed IO instance aud_dacdat_syn_4 with INV attribute.
+PHY-1001 : Processed IO instance aud_dacdat_1_syn_4 with INV attribute.
+PHY-1001 : Processed IO instance aud_dacdat_2_syn_4 with INV attribute.
+PHY-1001 : Processed IO instance aud_dacdat_3_syn_4 with INV attribute.
+PHY-1001 : Generate nets ...
+PHY-1001 : clock net aud_bclk_syn_4 will be merged with clock aud_bclk_dup_1
+PHY-1001 : clock net aud_bclk_1_syn_4 will be merged with clock aud_bclk_1_dup_1
+PHY-1001 : clock net aud_bclk_2_syn_4 will be merged with clock aud_bclk_2_dup_1
+PHY-1001 : clock net aud_bclk_3_syn_4 will be merged with clock aud_bclk_3_dup_1
+PHY-1001 : net aud_mclk_dup_1 will be routed on clock mesh
+PHY-1001 : net aud_mclk_1_dup_1 will be routed on clock mesh
+PHY-1001 : net aud_mclk_2_dup_1 will be routed on clock mesh
+PHY-1001 : net aud_mclk_3_dup_1 will be routed on clock mesh
+PHY-1001 : clock net ilaclk_dup_1 will be merged with clock u_pll_clk/clk0_buf
+PHY-1001 : clock net ilaclk_1_dup_1 will be merged with clock u1_pll_clk/clk0_buf
+PHY-1001 : clock net ilaclk_2_dup_1 will be merged with clock u2_pll_clk/clk0_buf
+PHY-1001 : clock net ilaclk_3_dup_1 will be merged with clock u3_pll_clk/clk0_buf
+PHY-1001 : net sys_clk_dup_1 will be routed on clock mesh
+PHY-1001 : clock net u1_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk_syn_4 will be merged with clock u1_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk
+PHY-1001 : clock net u2_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk_syn_4 will be merged with clock u2_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk
+PHY-1001 : clock net u3_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk_syn_4 will be merged with clock u3_es8388_ctrl/u_es8388_config/u_i2c_dri/dri_clk
+PHY-1001 : eco open net = 0
+PHY-1001 : Current memory(MB): used = 1013, reserve = 1011, peak = 1028.
+PHY-1001 : End build detailed router design. 1.251983s wall, 1.218750s user + 0.015625s system = 1.234375s CPU (98.6%)
+
+PHY-1001 : Detail Route ...
+PHY-1001 : ===== Detail Route Phase 1 =====
+PHY-1001 : Clock net routing.....
+PHY-1001 : Routed 89% nets.
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End initial clock net routed; 0.013961s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (111.9%)
+
+PHY-1001 : Ripup-reroute.....
+PHY-1001 : ===== DR Iter 1 =====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 1; 0.020789s wall, 0.031250s user + 0.000000s system = 0.031250s CPU (150.3%)
+
+PHY-1001 : ===== DR Iter 2 =====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 2; 0.023528s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (66.4%)
+
+PHY-1001 : ===== DR Iter 3 =====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 3; 0.024574s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (63.6%)
+
+PHY-1001 : ===== DR Iter 4 =====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 4; 0.020953s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (74.6%)
+
+PHY-1001 : ===== DR Iter 5 =====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 5; 0.017553s wall, 0.015625s user + 0.000000s system = 0.015625s CPU (89.0%)
+
+PHY-1001 : Current memory(MB): used = 1013, reserve = 1011, peak = 1028.
+PHY-1001 : End phase 1; 0.148404s wall, 0.156250s user + 0.000000s system = 0.156250s CPU (105.3%)
+
+PHY-1001 : ===== Detail Route Phase 2 =====
+PHY-1001 : Initial routing.....
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : Current memory(MB): used = 1014, reserve = 1011, peak = 1028.
+PHY-1001 : End initial routed; 0.078362s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (99.7%)
+
+PHY-1001 : Current memory(MB): used = 1014, reserve = 1011, peak = 1028.
+PHY-1001 : End phase 2; 0.078449s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (99.6%)
+
+PHY-1001 : ===== Detail Route Phase 3 =====
+PHY-1001 : Ripup-reroute.....
+PHY-1001 : ===== DR Iter 1 =====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 1; 0.072323s wall, 0.031250s user + 0.031250s system = 0.062500s CPU (86.4%)
+
+PHY-1001 : ===== DR Iter 2 =====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 2; 0.073621s wall, 0.062500s user + 0.000000s system = 0.062500s CPU (84.9%)
+
+PHY-1001 : ===== DR Iter 3 =====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 3; 0.075311s wall, 0.062500s user + 0.000000s system = 0.062500s CPU (83.0%)
+
+PHY-1001 : ===== DR Iter 4 =====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 4; 0.080843s wall, 0.062500s user + 0.000000s system = 0.062500s CPU (77.3%)
+
+PHY-1001 : ===== DR Iter 5 =====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 5; 0.073425s wall, 0.062500s user + 0.015625s system = 0.078125s CPU (106.4%)
+
+PHY-1001 : ===== DR Iter 6 =====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 6; 0.074894s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (104.3%)
+
+PHY-1001 : ===== DR Iter 7 =====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 7; 0.078900s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (99.0%)
+
+PHY-1001 : ==== DR Iter 8 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 8; 0.085263s wall, 0.125000s user + 0.031250s system = 0.156250s CPU (183.3%)
+
+PHY-1001 : ==== DR Iter 9 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 9; 0.077569s wall, 0.062500s user + 0.000000s system = 0.062500s CPU (80.6%)
+
+PHY-1001 : ==== DR Iter 10 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 10; 0.072700s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (107.5%)
+
+PHY-1001 : ==== DR Iter 11 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 11; 0.090983s wall, 0.062500s user + 0.015625s system = 0.078125s CPU (85.9%)
+
+PHY-1001 : ===== DR Iter 12 =====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 12; 0.079766s wall, 0.062500s user + 0.015625s system = 0.078125s CPU (97.9%)
+
+PHY-1001 : ==== DR Iter 13 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 13; 0.075512s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (103.5%)
+
+PHY-1001 : ==== DR Iter 14 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 14; 0.076661s wall, 0.125000s user + 0.031250s system = 0.156250s CPU (203.8%)
+
+PHY-1001 : ==== DR Iter 15 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 15; 0.072858s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (107.2%)
+
+PHY-1001 : ==== DR Iter 16 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 16; 0.077412s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (100.9%)
+
+PHY-1001 : ==== DR Iter 17 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 17; 0.078512s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (99.5%)
+
+PHY-1001 : ===== DR Iter 18 =====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 18; 0.078078s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (100.1%)
+
+PHY-1001 : ==== DR Iter 19 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 19; 0.074236s wall, 0.093750s user + 0.046875s system = 0.140625s CPU (189.4%)
+
+PHY-1001 : ==== DR Iter 20 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 20; 0.075169s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (103.9%)
+
+PHY-1001 : ==== DR Iter 21 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 21; 0.099437s wall, 0.093750s user + 0.000000s system = 0.093750s CPU (94.3%)
+
+PHY-1001 : ==== DR Iter 22 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 22; 0.082306s wall, 0.062500s user + 0.015625s system = 0.078125s CPU (94.9%)
+
+PHY-1001 : ==== DR Iter 23 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 23; 0.086122s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (90.7%)
+
+PHY-1001 : ==== DR Iter 24 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 24; 0.083742s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (93.3%)
+
+PHY-1001 : ===== DR Iter 25 =====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 25; 0.082022s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (95.2%)
+
+PHY-1001 : ==== DR Iter 26 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 26; 0.081909s wall, 0.062500s user + 0.000000s system = 0.062500s CPU (76.3%)
+
+PHY-1001 : ==== DR Iter 27 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 27; 0.082264s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (95.0%)
+
+PHY-1001 : ==== DR Iter 28 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 28; 0.080528s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (97.0%)
+
+PHY-1001 : ==== DR Iter 29 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 29; 0.078152s wall, 0.062500s user + 0.000000s system = 0.062500s CPU (80.0%)
+
+PHY-1001 : ==== DR Iter 30 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 30; 0.077311s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (101.1%)
+
+PHY-1001 : ==== DR Iter 31 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 31; 0.076673s wall, 0.078125s user + 0.015625s system = 0.093750s CPU (122.3%)
+
+PHY-1001 : ==== DR Iter 32 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 32; 0.077629s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (100.6%)
+
+PHY-1001 : ===== DR Iter 33 =====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 33; 0.080291s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (97.3%)
+
+PHY-1001 : ==== DR Iter 34 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 34; 0.076178s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (102.6%)
+
+PHY-1001 : ==== DR Iter 35 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 35; 0.076066s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (102.7%)
+
+PHY-1001 : ==== DR Iter 36 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 36; 0.075331s wall, 0.062500s user + 0.000000s system = 0.062500s CPU (83.0%)
+
+PHY-1001 : ==== DR Iter 37 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 37; 0.078404s wall, 0.093750s user + 0.015625s system = 0.109375s CPU (139.5%)
+
+PHY-1001 : ==== DR Iter 38 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 38; 0.079269s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (98.6%)
+
+PHY-1001 : ==== DR Iter 39 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 39; 0.077602s wall, 0.093750s user + 0.062500s system = 0.156250s CPU (201.3%)
+
+PHY-1001 : ==== DR Iter 40 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 40; 0.073967s wall, 0.062500s user + 0.031250s system = 0.093750s CPU (126.7%)
+
+PHY-1001 : ==== DR Iter 41 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 41; 0.081347s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (96.0%)
+
+PHY-1001 : ===== DR Iter 42 =====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 42; 0.082954s wall, 0.093750s user + 0.000000s system = 0.093750s CPU (113.0%)
+
+PHY-1001 : ==== DR Iter 43 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 43; 0.073075s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (106.9%)
+
+PHY-1001 : ==== DR Iter 44 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 44; 0.076165s wall, 0.062500s user + 0.000000s system = 0.062500s CPU (82.1%)
+
+PHY-1001 : ==== DR Iter 45 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 45; 0.075389s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (103.6%)
+
+PHY-1001 : ==== DR Iter 46 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 46; 0.078917s wall, 0.078125s user + 0.046875s system = 0.125000s CPU (158.4%)
+
+PHY-1001 : ==== DR Iter 47 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 47; 0.077147s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (101.3%)
+
+PHY-1001 : ==== DR Iter 48 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 48; 0.069456s wall, 0.062500s user + 0.015625s system = 0.078125s CPU (112.5%)
+
+PHY-1001 : ==== DR Iter 49 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 49; 0.076685s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (101.9%)
+
+PHY-1001 : ==== DR Iter 50 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 50; 0.072344s wall, 0.062500s user + 0.000000s system = 0.062500s CPU (86.4%)
+
+PHY-1001 : ==== DR Iter 51 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 51; 0.075964s wall, 0.062500s user + 0.015625s system = 0.078125s CPU (102.8%)
+
+PHY-1001 : ===== DR Iter 52 =====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 52; 0.084452s wall, 0.062500s user + 0.000000s system = 0.062500s CPU (74.0%)
+
+PHY-1001 : ==== DR Iter 53 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 53; 0.076717s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (101.8%)
+
+PHY-1001 : ==== DR Iter 54 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 54; 0.074065s wall, 0.062500s user + 0.000000s system = 0.062500s CPU (84.4%)
+
+PHY-1001 : ==== DR Iter 55 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 55; 0.073477s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (106.3%)
+
+PHY-1001 : ==== DR Iter 56 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 56; 0.071523s wall, 0.062500s user + 0.015625s system = 0.078125s CPU (109.2%)
+
+PHY-1001 : ==== DR Iter 57 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 57; 0.075155s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (104.0%)
+
+PHY-1001 : ==== DR Iter 58 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 58; 0.074939s wall, 0.062500s user + 0.000000s system = 0.062500s CPU (83.4%)
+
+PHY-1001 : ==== DR Iter 59 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 59; 0.075725s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (103.2%)
+
+PHY-1001 : ==== DR Iter 60 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 60; 0.080150s wall, 0.062500s user + 0.015625s system = 0.078125s CPU (97.5%)
+
+PHY-1001 : ==== DR Iter 61 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 61; 0.073422s wall, 0.062500s user + 0.046875s system = 0.109375s CPU (149.0%)
+
+PHY-1001 : ==== DR Iter 62 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 62; 0.092976s wall, 0.093750s user + 0.000000s system = 0.093750s CPU (100.8%)
+
+PHY-1001 : ===== DR Iter 63 =====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 63; 0.074513s wall, 0.062500s user + 0.031250s system = 0.093750s CPU (125.8%)
+
+PHY-1001 : ==== DR Iter 64 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 64; 0.075159s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (103.9%)
+
+PHY-1001 : ==== DR Iter 65 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 65; 0.082122s wall, 0.062500s user + 0.015625s system = 0.078125s CPU (95.1%)
+
+PHY-1001 : ==== DR Iter 66 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 66; 0.072475s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (107.8%)
+
+PHY-1001 : ==== DR Iter 67 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 67; 0.072343s wall, 0.062500s user + 0.000000s system = 0.062500s CPU (86.4%)
+
+PHY-1001 : ==== DR Iter 68 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 68; 0.072555s wall, 0.093750s user + 0.015625s system = 0.109375s CPU (150.7%)
+
+PHY-1001 : ==== DR Iter 69 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 69; 0.070769s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (110.4%)
+
+PHY-1001 : ==== DR Iter 70 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 70; 0.073616s wall, 0.062500s user + 0.000000s system = 0.062500s CPU (84.9%)
+
+PHY-1001 : ==== DR Iter 71 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 71; 0.074907s wall, 0.062500s user + 0.015625s system = 0.078125s CPU (104.3%)
+
+PHY-1001 : ==== DR Iter 72 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 72; 0.073635s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (106.1%)
+
+PHY-1001 : ==== DR Iter 73 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 73; 0.085309s wall, 0.078125s user + 0.000000s system = 0.078125s CPU (91.6%)
+
+PHY-1001 : ==== DR Iter 74 ====
+PHY-1022 : len = 2.91794e+06, over cnt = 1(0%), over = 1, worst = 1, crit = 0
+PHY-1001 : End DR Iter 74; 0.070810s wall, 0.078125s user + 0.015625s system = 0.093750s CPU (132.4%)
+
+PHY-1001 : Current memory(MB): used = 1014, reserve = 1012, peak = 1028.
+PHY-1001 : End phase 3; 5.821190s wall, 5.625000s user + 0.578125s system = 6.203125s CPU (106.6%)
+
+PHY-1001 : 725 feed throughs used by 268 nets
+PHY-1001 : Current memory(MB): used = 1018, reserve = 1016, peak = 1028.
+PHY-1001 : End export database. 1.620191s wall, 1.578125s user + 0.015625s system = 1.593750s CPU (98.4%)
+
+PHY-1001 : Routing violations:
+PHY-8023 ERROR: Location: (x20y25_local4), nets: u_pitch_shift/buffer[0]_b256[181] u_pitch_shift/buffer[0]_b256[180]
+PHY-1001 : End of Routing Violations.
+RUN-1003 : finish command "route -eco" in  9.574624s wall, 9.281250s user + 0.609375s system = 9.890625s CPU (103.3%)
+
+RUN-1004 : used memory is 1017 MB, reserved memory is 1015 MB, peak memory is 1028 MB
+RUN-8102 ERROR: Incremental route failed
+PHY-1001 : Routing violations:
+PHY-8023 ERROR: Location: (x20y25_local4), nets: u_pitch_shift/buffer[0]_b256[181] u_pitch_shift/buffer[0]_b256[180]
+PHY-1001 : End of Routing Violations.
+RUN-1003 : finish command "route" in  61.236468s wall, 62.906250s user + 8.968750s system = 71.875000s CPU (117.4%)
+
+RUN-1004 : used memory is 1017 MB, reserved memory is 1015 MB, peak memory is 1028 MB
+RUN-1002 : start command "backup_run_log run.log ../.logs/phy_1/td_20251031_232456.log"

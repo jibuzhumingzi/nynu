@@ -1,0 +1,68 @@
+standard
+***Report Model: audio_speak Device: EG4S20BG256***
+
+IO Statistics
+#IO                        54
+  #input                   26
+  #output                  24
+  #inout                    4
+
+Gate Statistics
+#Basic gates             9401
+  #and                    761
+  #nand                     0
+  #or                    1076
+  #nor                      0
+  #xor                      4
+  #xnor                     0
+  #buf                      0
+  #not                    172
+  #bufif1                   4
+  #MX21                   106
+  #FADD                     0
+  #DFF                   7278
+  #LATCH                    0
+#MACRO_ADD                119
+#MACRO_EQ                 166
+#MACRO_MULT                 1
+#MACRO_MUX                412
+#MACRO_OTHERS               8
+
+Report Hierarchy Area:
++---------------------------------------------------------------------------+
+|Instance                   |Module                 |gates  |seq    |macros |
++---------------------------------------------------------------------------+
+|top                        |audio_speak            |2123   |7278   |294    |
+|  u1_es8388_ctrl           |es8388_ctrl            |482    |151    |50     |
+|    u_audio_receive        |audio_receive          |26     |55     |5      |
+|    u_audio_send           |audio_send             |1      |28     |0      |
+|    u_es8388_config        |es8388_config          |455    |68     |45     |
+|      u_i2c_dri            |i2c_dri                |453    |41     |40     |
+|      u_i2c_reg_cfg        |i2c_reg_cfg            |2      |27     |5      |
+|  u1_pll_clk               |clk_wiz_0              |0      |0      |1      |
+|  u2_es8388_ctrl           |es8388_ctrl            |482    |151    |50     |
+|    u_audio_receive        |audio_receive          |26     |55     |5      |
+|    u_audio_send           |audio_send             |1      |28     |0      |
+|    u_es8388_config        |es8388_config          |455    |68     |45     |
+|      u_i2c_dri            |i2c_dri                |453    |41     |40     |
+|      u_i2c_reg_cfg        |i2c_reg_cfg            |2      |27     |5      |
+|  u2_pll_clk               |clk_wiz_0              |0      |0      |1      |
+|  u3_es8388_ctrl           |es8388_ctrl            |482    |148    |50     |
+|    u_audio_receive        |audio_receive          |26     |55     |5      |
+|    u_audio_send           |audio_send             |1      |25     |0      |
+|    u_es8388_config        |es8388_config          |455    |68     |45     |
+|      u_i2c_dri            |i2c_dri                |453    |41     |40     |
+|      u_i2c_reg_cfg        |i2c_reg_cfg            |2      |27     |5      |
+|  u3_pll_clk               |clk_wiz_0              |0      |0      |1      |
+|  u_es8388_ctrl            |es8388_ctrl            |482    |148    |50     |
+|    u_audio_receive        |audio_receive          |26     |55     |5      |
+|    u_audio_send           |audio_send             |1      |25     |0      |
+|    u_es8388_config        |es8388_config          |455    |68     |45     |
+|      u_i2c_dri            |i2c_dri                |453    |41     |40     |
+|      u_i2c_reg_cfg        |i2c_reg_cfg            |2      |27     |5      |
+|  u_noise_suppress         |noise_suppress         |24     |24     |2      |
+|  u_pitch_shift            |pitch_shift            |2      |6201   |7      |
+|  u_pll_clk                |clk_wiz_0              |0      |0      |1      |
+|  u_simple_denoise         |simple_denoise         |0      |79     |4      |
+|  u_spar_4mic_localization |spar_4mic_localization |162    |344    |71     |
++---------------------------------------------------------------------------+

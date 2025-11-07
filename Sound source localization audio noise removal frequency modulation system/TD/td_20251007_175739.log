@@ -1,0 +1,37 @@
+============================================================
+   Tang Dynasty, V5.6.71036
+      Copyright (c) 2012-2023 Anlogic Inc.
+   Executable = D:/TD/bin/td.exe
+   Built at =   20:34:38 Mar 21 2023
+   Run by =     lyw15
+   Run Date =   Tue Oct  7 17:57:39 2025
+
+   Run on =     -001
+============================================================
+RUN-001 : GUI based run...
+GUI-5005 WARNING: Unknown file icon ...
+GUI-5005 WARNING: Unknown file icon ...
+RUN-1002 : start command "download -bit ES8388_Runs\phy_1\ES8388.bit -mode jtag -spd 7 -sec 64 -cable 0"
+PRG-2014 : Chip validation success: EAGLE_S20_BG256
+RUN-1002 : start command "bit_to_vec -chip EAGLE_S20_BG256 -m jtag_burst -freq 4 -bit ES8388_Runs/phy_1/ES8388.bit"
+RUN-1002 : start command "program -cable 0 -mode svf -spd 7 -p"
+RUN-1003 : finish command "program -cable 0 -mode svf -spd 7 -p" in  6.515770s wall, 0.203125s user + 0.171875s system = 0.375000s CPU (5.8%)
+
+RUN-1004 : used memory is 203 MB, reserved memory is 115 MB, peak memory is 233 MB
+RUN-1003 : finish command "download -bit ES8388_Runs\phy_1\ES8388.bit -mode jtag -spd 7 -sec 64 -cable 0" in  6.727996s wall, 0.265625s user + 0.203125s system = 0.468750s CPU (7.0%)
+
+RUN-1004 : used memory is 203 MB, reserved memory is 115 MB, peak memory is 233 MB
+GUI-1001 : Downloading succeeded!
+RUN-1002 : start command "download -bit ES8388_Runs\phy_1\ES8388.bit -mode jtag -spd 7 -sec 64 -cable 0"
+PRG-2014 : Chip validation success: EAGLE_S20_BG256
+RUN-1002 : start command "bit_to_vec -chip EAGLE_S20_BG256 -m jtag_burst -freq 4 -bit ES8388_Runs/phy_1/ES8388.bit"
+RUN-1002 : start command "program -cable 0 -mode svf -spd 7 -p"
+RUN-1003 : finish command "program -cable 0 -mode svf -spd 7 -p" in  6.478156s wall, 0.187500s user + 0.234375s system = 0.421875s CPU (6.5%)
+
+RUN-1004 : used memory is 204 MB, reserved memory is 114 MB, peak memory is 234 MB
+RUN-1003 : finish command "download -bit ES8388_Runs\phy_1\ES8388.bit -mode jtag -spd 7 -sec 64 -cable 0" in  6.694440s wall, 0.234375s user + 0.281250s system = 0.515625s CPU (7.7%)
+
+RUN-1004 : used memory is 204 MB, reserved memory is 115 MB, peak memory is 234 MB
+GUI-1001 : Downloading succeeded!
+GUI-5005 WARNING: Unknown file icon ...
+GUI-5005 WARNING: Unknown file icon ...

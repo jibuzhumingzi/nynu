@@ -1,0 +1,13 @@
+============================================================
+   Tang Dynasty, V5.6.71036
+      Copyright (c) 2012-2023 Anlogic Inc.
+   Executable = D:/TD/bin/td.exe
+   Built at =   20:34:38 Mar 21 2023
+   Run by =     lyw15
+   Run Date =   Thu Oct 30 14:26:57 2025
+
+   Run on =     -001
+============================================================
+RUN-8001 ERROR: Load IPC file error: C:/Users/lyw15/Desktop/12/4MIC_SPAR _8ledSHI/TD/al_ip/clk_wiz_0.ipc, this file doesn't exist.
+RUN-8001 ERROR: Load IPC file error: C:/Users/lyw15/Desktop/12/4MIC_SPAR _8ledSHI/TD/al_ip/clk_wiz_0.ipc, this file doesn't exist.
+RUN-8001 ERROR: Load IPC file error: C:/Users/lyw15/Desktop/12/4MIC_SPAR _8ledSHI/TD/al_ip/clk_wiz_0.ipc, this file doesn't exist.

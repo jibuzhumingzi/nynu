@@ -1,0 +1,699 @@
+============================================================
+   Tang Dynasty, V5.6.71036
+      Copyright (c) 2012-2023 Anlogic Inc.
+   Executable = D:/TD/bin/td.exe
+   Built at =   20:34:38 Mar 21 2023
+   Run by =     lyw15
+   Run Date =   Mon Nov  3 20:17:42 2025
+
+   Run on =     -001
+============================================================
+RUN-1002 : start command "open_project ES8388.prj"
+RUN-1001 : Print Global Property
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  |  Note  
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     |        
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        |        
+RUN-1001 :        qor_monitor       |    off     |       off        |        
+RUN-1001 :        syn_ip_flow       |    off     |       off        |        
+RUN-1001 :          thread          |    auto    |       auto       |        
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :   default_reg_initial   |    auto    |       auto       |        
+RUN-1001 :        infer_add        |     on     |        on        |        
+RUN-1001 :        infer_fsm        |    off     |       off        |        
+RUN-1001 :        infer_mult       |     on     |        on        |        
+RUN-1001 :        infer_ram        |     on     |        on        |        
+RUN-1001 :        infer_reg        |     on     |        on        |        
+RUN-1001 :   infer_reg_init_value  |     on     |        on        |        
+RUN-1001 :        infer_rom        |     on     |        on        |        
+RUN-1001 :      infer_shifter      |     on     |        on        |        
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 : Print Rtl Property
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :       compress_add      |   ripple   |      ripple      |        
+RUN-1001 :        elf_sload        |    off     |       off        |        
+RUN-1001 :       fix_undriven      |     0      |        0         |        
+RUN-1001 :         flatten         |    off     |       off        |        
+RUN-1001 :       gate_sharing      |     on     |        on        |        
+RUN-1001 :    hdl_warning_level    |   normal   |      normal      |        
+RUN-1001 :   impl_internal_tribuf  |     on     |        on        |        
+RUN-1001 :      impl_set_reset     |     on     |        on        |        
+RUN-1001 :        infer_gsr        |    off     |       off        |        
+RUN-1001 :      keep_hierarchy     |    auto    |       auto       |        
+RUN-1001 :        max_fanout       |    9999    |       9999       |        
+RUN-1001 :      max_oh2bin_len     |     10     |        10        |        
+RUN-1001 :       merge_equal       |     on     |        on        |        
+RUN-1001 :       merge_equiv       |     on     |        on        |        
+RUN-1001 :        merge_mux        |    off     |       off        |        
+RUN-1001 :     min_control_set     |     8      |        8         |        
+RUN-1001 :      min_ripple_len     |    auto    |       auto       |        
+RUN-1001 :       oh2bin_ratio      |    0.08    |       0.08       |        
+RUN-1001 :     opt_adder_fanout    |     on     |        on        |        
+RUN-1001 :        opt_arith        |     on     |        on        |        
+RUN-1001 :       opt_big_gate      |    off     |       off        |        
+RUN-1001 :        opt_const        |     on     |        on        |        
+RUN-1001 :      opt_const_mult     |     on     |        on        |        
+RUN-1001 :       opt_lessthan      |     on     |        on        |        
+RUN-1001 :         opt_mux         |    off     |       off        |        
+RUN-1001 :         opt_ram         |    high    |       high       |        
+RUN-1001 :      rtl_sim_model      |    off     |       off        |        
+RUN-1001 :         seq_syn         |     on     |        on        |        
+RUN-1001 : --------------------------------------------------------------
+HDL-1007 : analyze verilog file ../../al_ip/clk_wiz_0.v
+HDL-1007 : undeclared symbol 'open', assumed default net type 'wire' in ../../al_ip/clk_wiz_0.v(80)
+HDL-1007 : analyze verilog file ../../../RTL/audio_receive.v
+HDL-1007 : analyze verilog file ../../../RTL/audio_send.v
+HDL-1007 : analyze verilog file ../../../RTL/audio_speak.v
+HDL-1007 : undeclared symbol 'audio_valid', assumed default net type 'wire' in ../../../RTL/audio_speak.v(294)
+HDL-1007 : undeclared symbol 'data_valid', assumed default net type 'wire' in ../../../RTL/audio_speak.v(299)
+HDL-1007 : analyze verilog file ../../../RTL/es8388_config.v
+HDL-1007 : analyze verilog file ../../../RTL/es8388_ctrl.v
+HDL-1007 : analyze verilog file ../../../RTL/i2c_dri.v
+HDL-1007 : analyze verilog file ../../../RTL/i2c_reg_cfg.v
+HDL-1007 : analyze verilog file ../../../RTL/spar_4mic_localization.v
+HDL-1007 : analyze verilog file ../../../RTL/noise_suppress.v
+HDL-1007 : analyze verilog file ../../../RTL/pitch_shift.v
+HDL-5007 WARNING: loop variable declaration is not allowed in this mode of Verilog in ../../../RTL/pitch_shift.v(171)
+HDL-1007 : analyze verilog file ../../../RTL/simple_denoise.v
+RUN-1001 : Project manager successfully analyzed 12 source files.
+RUN-1002 : start command "import_device eagle_s20.db -package EG4S20BG256"
+ARC-1001 : Device Initialization.
+ARC-1001 : ------------------------------------------------------------------
+ARC-1001 :            OPTION            |          IO          |   SETTING   
+ARC-1001 : ------------------------------------------------------------------
+ARC-1001 :   cso_b/cclk/mosi/miso/dout  |  T3/R11/T10/P10/S11  |    gpio    
+ARC-1001 :             done             |         P13          |    gpio    
+ARC-1001 :           program_b          |          T2          |  dedicate  
+ARC-1001 :        tdi/tms/tck/tdo       |   C12/A15/C14/E14    |  dedicate  
+ARC-1001 : ------------------------------------------------------------------
+ARC-1004 : Device setting, marked 5 dedicate IOs in total.
+RUN-1002 : start command "elaborate -top audio_speak"
+RUN-1001 : Print Design Property
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :   default_reg_initial   |    auto    |       auto       |        
+RUN-1001 :        infer_add        |     on     |        on        |        
+RUN-1001 :        infer_fsm        |    off     |       off        |        
+RUN-1001 :        infer_mult       |     on     |        on        |        
+RUN-1001 :        infer_ram        |     on     |        on        |        
+RUN-1001 :        infer_reg        |     on     |        on        |        
+RUN-1001 :   infer_reg_init_value  |     on     |        on        |        
+RUN-1001 :        infer_rom        |     on     |        on        |        
+RUN-1001 :      infer_shifter      |     on     |        on        |        
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 : Print Rtl Property
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :       compress_add      |   ripple   |      ripple      |        
+RUN-1001 :        elf_sload        |    off     |       off        |        
+RUN-1001 :       fix_undriven      |     0      |        0         |        
+RUN-1001 :         flatten         |    off     |       off        |        
+RUN-1001 :       gate_sharing      |     on     |        on        |        
+RUN-1001 :    hdl_warning_level    |   normal   |      normal      |        
+RUN-1001 :   impl_internal_tribuf  |     on     |        on        |        
+RUN-1001 :      impl_set_reset     |     on     |        on        |        
+RUN-1001 :        infer_gsr        |    off     |       off        |        
+RUN-1001 :      keep_hierarchy     |    auto    |       auto       |        
+RUN-1001 :        max_fanout       |    9999    |       9999       |        
+RUN-1001 :      max_oh2bin_len     |     10     |        10        |        
+RUN-1001 :       merge_equal       |     on     |        on        |        
+RUN-1001 :       merge_equiv       |     on     |        on        |        
+RUN-1001 :        merge_mux        |    off     |       off        |        
+RUN-1001 :     min_control_set     |     8      |        8         |        
+RUN-1001 :      min_ripple_len     |    auto    |       auto       |        
+RUN-1001 :       oh2bin_ratio      |    0.08    |       0.08       |        
+RUN-1001 :     opt_adder_fanout    |     on     |        on        |        
+RUN-1001 :        opt_arith        |     on     |        on        |        
+RUN-1001 :       opt_big_gate      |    off     |       off        |        
+RUN-1001 :        opt_const        |     on     |        on        |        
+RUN-1001 :      opt_const_mult     |     on     |        on        |        
+RUN-1001 :       opt_lessthan      |     on     |        on        |        
+RUN-1001 :         opt_mux         |    off     |       off        |        
+RUN-1001 :         opt_ram         |    high    |       high       |        
+RUN-1001 :      rtl_sim_model      |    off     |       off        |        
+RUN-1001 :         seq_syn         |     on     |        on        |        
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 : Print Global Property
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  |  Note  
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     |        
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        |        
+RUN-1001 :        qor_monitor       |    off     |       off        |        
+RUN-1001 :        syn_ip_flow       |    off     |       off        |        
+RUN-1001 :          thread          |    auto    |       auto       |        
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 : Print Design Property
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :   default_reg_initial   |    auto    |       auto       |        
+RUN-1001 :        infer_add        |     on     |        on        |        
+RUN-1001 :        infer_fsm        |    off     |       off        |        
+RUN-1001 :        infer_mult       |     on     |        on        |        
+RUN-1001 :        infer_ram        |     on     |        on        |        
+RUN-1001 :        infer_reg        |     on     |        on        |        
+RUN-1001 :   infer_reg_init_value  |     on     |        on        |        
+RUN-1001 :        infer_rom        |     on     |        on        |        
+RUN-1001 :      infer_shifter      |     on     |        on        |        
+RUN-1001 : --------------------------------------------------------------
+HDL-1007 : elaborate module audio_speak in ../../../RTL/audio_speak.v(1)
+HDL-1007 : elaborate module clk_wiz_0 in ../../al_ip/clk_wiz_0.v(23)
+HDL-1007 : elaborate module EG_LOGIC_BUFG in D:/TD/arch/eagle_macro.v(8)
+HDL-1007 : elaborate module EG_PHY_PLL(FIN="50.000",FBCLK_DIV=4,CLKC0_DIV=4,CLKC1_DIV=65,CLKC0_ENABLE="ENABLE",CLKC1_ENABLE="ENABLE",FEEDBK_PATH="CLKC0_EXT",CLKC0_CPHASE=3,CLKC1_CPHASE=64,GMC_GAIN=4,ICP_CURRENT=13,KVCO=4,LPF_CAPACITOR=1,LPF_RESISTOR=4,SYNC_ENABLE="DISABLE") in D:/TD/arch/eagle_macro.v(930)
+HDL-1007 : elaborate module es8388_ctrl in ../../../RTL/es8388_ctrl.v(1)
+HDL-1007 : elaborate module es8388_config(WL=6'b011000) in ../../../RTL/es8388_config.v(3)
+HDL-1007 : elaborate module i2c_reg_cfg(WL=6'b011000) in ../../../RTL/i2c_reg_cfg.v(1)
+HDL-1007 : elaborate module i2c_dri in ../../../RTL/i2c_dri.v(1)
+HDL-5007 WARNING: actual bit length 8 differs from formal bit length 16 for port 'i2c_addr' in ../../../RTL/es8388_config.v(59)
+HDL-1007 : elaborate module audio_receive(WL=6'b011000) in ../../../RTL/audio_receive.v(1)
+HDL-1007 : elaborate module audio_send(WL=6'b011000) in ../../../RTL/audio_send.v(1)
+HDL-1007 : elaborate module spar_4mic_localization in ../../../RTL/spar_4mic_localization.v(1)
+HDL-1007 : extracting RAM for identifier 'mic1_buf' in ../../../RTL/spar_4mic_localization.v(47)
+HDL-1007 : extracting RAM for identifier 'mic2_buf' in ../../../RTL/spar_4mic_localization.v(48)
+HDL-1007 : extracting RAM for identifier 'mic3_buf' in ../../../RTL/spar_4mic_localization.v(49)
+HDL-1007 : extracting RAM for identifier 'mic4_buf' in ../../../RTL/spar_4mic_localization.v(50)
+HDL-5007 WARNING: actual bit length 32 differs from formal bit length 24 for port 'mic1_data' in ../../../RTL/audio_speak.v(252)
+HDL-5007 WARNING: actual bit length 32 differs from formal bit length 24 for port 'mic2_data' in ../../../RTL/audio_speak.v(253)
+HDL-5007 WARNING: actual bit length 32 differs from formal bit length 24 for port 'mic3_data' in ../../../RTL/audio_speak.v(254)
+HDL-5007 WARNING: actual bit length 32 differs from formal bit length 24 for port 'mic4_data' in ../../../RTL/audio_speak.v(255)
+HDL-1007 : elaborate module simple_denoise in ../../../RTL/simple_denoise.v(1)
+HDL-1007 : elaborate module noise_suppress(THRESHOLD=32'b0111111111111) in ../../../RTL/noise_suppress.v(1)
+HDL-1007 : elaborate module pitch_shift in ../../../RTL/pitch_shift.v(1)
+HDL-5007 WARNING: net 'pitch_shifted_audio[31]' does not have a driver in ../../../RTL/audio_speak.v(81)
+HDL-5007 WARNING: net 'audio_valid' does not have a driver in ../../../RTL/audio_speak.v(294)
+HDL-1200 : Current top model is audio_speak
+HDL-1100 : Inferred 4 RAMs.
+RUN-1003 : finish command "elaborate -top audio_speak" in  2.968743s wall, 2.578125s user + 0.328125s system = 2.906250s CPU (97.9%)
+
+RUN-1004 : used memory is 554 MB, reserved memory is 544 MB, peak memory is 952 MB
+RUN-1002 : start command "export_db ES8388_elaborate.db"
+RUN-1001 : Exported /
+RUN-1001 : Exported flow parameters
+RUN-1001 : Exported libs
+RUN-1001 : Exported entities
+RUN-1001 : Exported ports
+RUN-1001 : Exported pins
+RUN-1001 : Exported instances
+RUN-1001 : Exported nets
+RUN-1001 : Exported buses
+RUN-1001 : Exported models
+RUN-1001 : Exported congestions
+RUN-1001 : Exported violations
+RUN-1001 : Exported IO constraints
+RUN-1001 : Exported Inst constraints
+RUN-1003 : finish command "export_db ES8388_elaborate.db" in  2.621200s wall, 3.984375s user + 0.031250s system = 4.015625s CPU (153.2%)
+
+RUN-1004 : used memory is 547 MB, reserved memory is 535 MB, peak memory is 952 MB
+RUN-1002 : start command "read_adc ../../ES8388.adc"
+RUN-1002 : start command "set_pin_assignment  aud_adcdat   LOCATION = R14; "
+RUN-1002 : start command "set_pin_assignment  aud_bclk   LOCATION = M6; "
+RUN-1002 : start command "set_pin_assignment  aud_dacdat   LOCATION = P6; "
+RUN-1002 : start command "set_pin_assignment  aud_lrc   LOCATION = M7; "
+RUN-1002 : start command "set_pin_assignment  aud_mclk   LOCATION = N5; "
+RUN-1002 : start command "set_pin_assignment  aud_scl   LOCATION = R12; "
+RUN-1002 : start command "set_pin_assignment  aud_sda   LOCATION = R9; "
+RUN-1002 : start command "set_pin_assignment  ilaclk   LOCATION = M9; "
+RUN-1002 : start command "set_pin_assignment  sys_clk   LOCATION = R7; "
+RUN-1002 : start command "set_pin_assignment  sys_rst_n   LOCATION = E3; "
+RUN-1002 : start command "set_pin_assignment  aud_sda_2   LOCATION = C3; "
+RUN-1002 : start command "set_pin_assignment  aud_scl_2   LOCATION = A2; "
+RUN-1002 : start command "set_pin_assignment  aud_mclk_2   LOCATION = F6; "
+RUN-1002 : start command "set_pin_assignment  aud_bclk_2   LOCATION = D5; "
+RUN-1002 : start command "set_pin_assignment  aud_dacdat_2   LOCATION = E6; "
+RUN-1002 : start command "set_pin_assignment  aud_lrc_2   LOCATION = C6; "
+RUN-1002 : start command "set_pin_assignment  aud_adcdat_2   LOCATION = E7; "
+RUN-1002 : start command "set_pin_assignment  ilaclk_2   LOCATION = D3; "
+RUN-1002 : start command "set_pin_assignment  aud_adcdat_3   LOCATION = L4; "
+RUN-1002 : start command "set_pin_assignment  aud_lrc_3   LOCATION = K6; "
+RUN-1002 : start command "set_pin_assignment  aud_dacdat_3   LOCATION = K3; "
+RUN-1002 : start command "set_pin_assignment  aud_bclk_3   LOCATION = H5; "
+RUN-1002 : start command "set_pin_assignment  aud_mclk_3   LOCATION = H4; "
+RUN-1002 : start command "set_pin_assignment  aud_scl_3   LOCATION = G3; "
+RUN-1002 : start command "set_pin_assignment  aud_sda_3   LOCATION = F3; "
+RUN-1002 : start command "set_pin_assignment  ilaclk_3   LOCATION = K15; "
+RUN-1002 : start command "set_pin_assignment  aud_sda_1   LOCATION = E15; "
+RUN-1002 : start command "set_pin_assignment  aud_scl_1   LOCATION = D14; "
+RUN-1002 : start command "set_pin_assignment  aud_mclk_1   LOCATION = F14; "
+RUN-1002 : start command "set_pin_assignment  aud_bclk_1   LOCATION = G14; "
+RUN-1002 : start command "set_pin_assignment  aud_dacdat_1   LOCATION =H14; "
+RUN-1002 : start command "set_pin_assignment  aud_lrc_1   LOCATION =H16; "
+RUN-1002 : start command "set_pin_assignment  aud_adcdat_1   LOCATION = G16; "
+RUN-1002 : start command "set_pin_assignment  ilaclk_1   LOCATION = L16; "
+RUN-1002 : start command "set_pin_assignment  led_one   LOCATION = P9; "
+RUN-1002 : start command "set_pin_assignment  led_two   LOCATION = P12; "
+RUN-1002 : start command "set_pin_assignment  led_tree   LOCATION = R16; "
+RUN-1002 : start command "set_pin_assignment  led_four   LOCATION = P11; "
+RUN-1002 : start command "set_pin_assignment  led_five   LOCATION = M10; "
+RUN-1002 : start command "set_pin_assignment  led_six   LOCATION = L10; "
+RUN-1002 : start command "set_pin_assignment  led_seven   LOCATION = N12; "
+RUN-1002 : start command "set_pin_assignment  led_eight   LOCATION = M12; "
+RUN-1002 : start command "set_pin_assignment  pitch_control[0]   LOCATION = A9; "
+RUN-1002 : start command "set_pin_assignment  pitch_control[1]   LOCATION = A10; "
+RUN-1002 : start command "set_pin_assignment  pitch_control[2]   LOCATION = B10; "
+RUN-1002 : start command "set_pin_assignment  denoise_en   LOCATION = A11; "
+RUN-1002 : start command "set_pin_assignment  pitch_en[0]   LOCATION = A14; "
+RUN-1002 : start command "set_pin_assignment  pitch_en[1]   LOCATION = A13; "
+RUN-1002 : start command "set_pin_assignment  s1   LOCATION = F13; "
+RUN-1002 : start command "set_pin_assignment  s2   LOCATION = F15; "
+RUN-1002 : start command "set_pin_assignment key   LOCATION = D16; "
+RUN-1002 : start command "set_pin_assignment leds[0]   LOCATION =C15; "
+RUN-1002 : start command "set_pin_assignment leds[1]   LOCATION = C16; "
+RUN-1001 : Starting of IO setups legality check.
+RUN-1001 : Starting of IO setups legality check.
+RUN-1001 : Starting of IO vref setups legality check.
+USR-6010 WARNING: ADC constraints: top model pin noise_suppress_en has no constraint.
+USR-6010 WARNING: ADC constraints: top model pin sys_rst_n_1 has no constraint.
+USR-6010 WARNING: ADC constraints: top model pin sys_rst_n_2 has no constraint.
+USR-6010 WARNING: ADC constraints: top model pin sys_rst_n_3 has no constraint.
+USR-6010 WARNING: ADC constraints: top model pin volume[1] has no constraint.
+USR-6010 WARNING: ADC constraints: top model pin volume[0] has no constraint.
+RUN-1002 : start command "optimize_rtl"
+RUN-1001 : Open license file D:/TD/license/Anlogic.lic
+RUN-1001 : Print Global Property
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  |  Note  
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     |        
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        |        
+RUN-1001 :        qor_monitor       |    off     |       off        |        
+RUN-1001 :        syn_ip_flow       |    off     |       off        |        
+RUN-1001 :          thread          |    auto    |       auto       |        
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 : Print Rtl Property
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :        Parameters       |  Settings  |  Default Values  |  Note  
+RUN-1001 : --------------------------------------------------------------
+RUN-1001 :       compress_add      |   ripple   |      ripple      |        
+RUN-1001 :        elf_sload        |    off     |       off        |        
+RUN-1001 :       fix_undriven      |     0      |        0         |        
+RUN-1001 :         flatten         |    off     |       off        |        
+RUN-1001 :       gate_sharing      |     on     |        on        |        
+RUN-1001 :    hdl_warning_level    |   normal   |      normal      |        
+RUN-1001 :   impl_internal_tribuf  |     on     |        on        |        
+RUN-1001 :      impl_set_reset     |     on     |        on        |        
+RUN-1001 :        infer_gsr        |    off     |       off        |        
+RUN-1001 :      keep_hierarchy     |    auto    |       auto       |        
+RUN-1001 :        max_fanout       |    9999    |       9999       |        
+RUN-1001 :      max_oh2bin_len     |     10     |        10        |        
+RUN-1001 :       merge_equal       |     on     |        on        |        
+RUN-1001 :       merge_equiv       |     on     |        on        |        
+RUN-1001 :        merge_mux        |    off     |       off        |        
+RUN-1001 :     min_control_set     |     8      |        8         |        
+RUN-1001 :      min_ripple_len     |    auto    |       auto       |        
+RUN-1001 :       oh2bin_ratio      |    0.08    |       0.08       |        
+RUN-1001 :     opt_adder_fanout    |     on     |        on        |        
+RUN-1001 :        opt_arith        |     on     |        on        |        
+RUN-1001 :       opt_big_gate      |    off     |       off        |        
+RUN-1001 :        opt_const        |     on     |        on        |        
+RUN-1001 :      opt_const_mult     |     on     |        on        |        
+RUN-1001 :       opt_lessthan      |     on     |        on        |        
+RUN-1001 :         opt_mux         |    off     |       off        |        
+RUN-1001 :         opt_ram         |    high    |       high       |        
+RUN-1001 :      rtl_sim_model      |    off     |       off        |        
+RUN-1001 :         seq_syn         |     on     |        on        |        
+RUN-1001 : --------------------------------------------------------------
+SYN-1012 : SanityCheck: Model "audio_speak"
+SYN-1012 : SanityCheck: Model "pitch_shift"
+SYN-1012 : SanityCheck: Model "es8388_ctrl"
+SYN-1012 : SanityCheck: Model "audio_receive(WL=6'b011000)"
+SYN-1012 : SanityCheck: Model "audio_send(WL=6'b011000)"
+SYN-1012 : SanityCheck: Model "es8388_config(WL=6'b011000)"
+SYN-1012 : SanityCheck: Model "i2c_dri"
+SYN-1012 : SanityCheck: Model "i2c_reg_cfg(WL=6'b011000)"
+SYN-1012 : SanityCheck: Model "clk_wiz_0"
+SYN-1012 : SanityCheck: Model "noise_suppress(THRESHOLD=32'b0111111111111)"
+SYN-1012 : SanityCheck: Model "simple_denoise"
+SYN-1012 : SanityCheck: Model "spar_4mic_localization"
+SYN-1043 : Mark clk_wiz_0 as IO macro for instance bufg_feedback
+SYN-1043 : Mark i2c_dri as IO macro for instance sda_i
+SYN-1043 : Mark es8388_config(WL=6'b011000) as IO macro for instance u_i2c_dri
+SYN-1043 : Mark es8388_ctrl as IO macro for instance u_es8388_config
+SYN-1011 : Flatten model audio_speak
+SYN-1032 : 172554/620 useful/useless nets, 3817/164 useful/useless insts
+SYN-1001 : Bypass 1 mux instances
+SYN-1016 : Merged 31360 instances.
+SYN-1025 : Merged 113 RAM ports.
+SYN-1027 : Infer Logic DRAM(u_spar_4mic_localization/ramread0_syn_6) read 64x24, write 64x24
+SYN-1027 : Infer Logic DRAM(u_spar_4mic_localization/ramread1_syn_6) read 64x24, write 64x24
+SYN-1027 : Infer Logic DRAM(u_spar_4mic_localization/ramread2_syn_6) read 64x24, write 64x24
+SYN-1027 : Infer Logic DRAM(u_spar_4mic_localization/ramread3_syn_6) read 64x24, write 64x24
+SYN-1023 : Infer 4 Logic DRAMs, 0 Logic BRAMs.
+SYN-1032 : 173385/3610 useful/useless nets, 5702/1859 useful/useless insts
+SYN-1016 : Merged 37164 instances.
+SYN-5013 WARNING: Undriven net: model "audio_speak" / net "pitch_shifter/audio_valid" in ../../../RTL/pitch_shift.v(7)
+SYN-5014 WARNING: the net's pin: pin "sel" in ../../../RTL/pitch_shift.v(178)
+SYN-5014 WARNING: the net's pin: pin "sel" in ../../../RTL/pitch_shift.v(178)
+SYN-5014 WARNING: the net's pin: pin "sel" in ../../../RTL/pitch_shift.v(186)
+SYN-5014 WARNING: the net's pin: pin "sel" in ../../../RTL/pitch_shift.v(178)
+SYN-5014 WARNING: the net's pin: pin "I[0]" in ../../../RTL/pitch_shift.v(237)
+SYN-5014 WARNING: the net's pin: pin "sel" in ../../../RTL/pitch_shift.v(178)
+SYN-5014 WARNING: the net's pin: pin "sel" in ../../../RTL/pitch_shift.v(186)
+SYN-5014 WARNING: the net's pin: pin "sel" in ../../../RTL/pitch_shift.v(186)
+SYN-5014 WARNING: the net's pin: pin "sel" in ../../../RTL/pitch_shift.v(186)
+SYN-5014 WARNING: the net's pin: pin "sel" in ../../../RTL/pitch_shift.v(186)
+SYN-5014 Similar messages will be suppressed.
+SYN-5025 WARNING: Using 0 for all undriven pins and nets
+SYN-1032 : 136376/16 useful/useless nets, 134243/177 useful/useless insts
+SYN-1014 : Optimize round 1
+SYN-1017 : Remove 2 const input seq instances
+SYN-1002 :     pitch_shifter/reg6_syn_10
+SYN-1002 :     u_simple_denoise/reg1_syn_30
+SYN-1018 : Transformed 100 mux instances.
+SYN-1019 : Optimized 72355 mux instances.
+SYN-1021 : Optimized 25651 onehot mux instances.
+SYN-1020 : Optimized 191 distributor mux.
+SYN-1001 : Optimize 6 less-than instances
+SYN-1019 : Optimized 12 mux instances.
+SYN-1016 : Merged 446 instances.
+SYN-1015 : Optimize round 1, 126099 better
+SYN-1014 : Optimize round 2
+SYN-1044 : Optimized 5 inv instances.
+SYN-1032 : 31963/331 useful/useless nets, 30862/5026 useful/useless insts
+SYN-1017 : Remove 12 const input seq instances
+SYN-1002 :     pitch_shifter/reg1_syn_18
+SYN-1002 :     pitch_shifter/reg11_syn_4
+SYN-1002 :     u1_es8388_ctrl/u_audio_receive/reg0_syn_26
+SYN-1002 :     u1_es8388_ctrl/u_es8388_config/u_i2c_dri/wr_flag_reg
+SYN-1002 :     u2_es8388_ctrl/u_es8388_config/u_i2c_dri/wr_flag_reg
+SYN-1002 :     u3_es8388_ctrl/u_audio_receive/reg0_syn_26
+SYN-1002 :     u3_es8388_ctrl/u_es8388_config/u_i2c_dri/wr_flag_reg
+SYN-1002 :     u_es8388_ctrl/u_audio_receive/reg0_syn_26
+SYN-1002 :     u_es8388_ctrl/u_es8388_config/u_i2c_dri/wr_flag_reg
+SYN-1002 :     u_es8388_ctrl/u_audio_send/reg0_syn_18
+SYN-1002 :     u3_es8388_ctrl/u_audio_send/reg0_syn_26
+SYN-1002 :     u_simple_denoise/reg2_syn_26
+SYN-1019 : Optimized 56 mux instances.
+SYN-1020 : Optimized 7 distributor mux.
+SYN-1016 : Merged 82 instances.
+SYN-1015 : Optimize round 2, 31181 better
+SYN-1032 : 6067/139 useful/useless nets, 5002/121 useful/useless insts
+SYN-3004 : Optimized 7 const0 DFF(s)
+SYN-3004 : Optimized 24 const0 DFF(s)
+SYN-3004 : Optimized 6 const0 DFF(s)
+SYN-3004 : Optimized 6 const0 DFF(s)
+SYN-3004 : Optimized 6 const0 DFF(s)
+SYN-3004 : Optimized 6 const0 DFF(s)
+SYN-1032 : 5743/324 useful/useless nets, 4760/187 useful/useless insts
+SYN-1014 : Optimize round 1
+SYN-1032 : 4794/264 useful/useless nets, 3811/288 useful/useless insts
+SYN-1017 : Remove 16 const input seq instances
+SYN-1002 :     u_es8388_ctrl/u_audio_send/reg0_syn_2
+SYN-1002 :     u_es8388_ctrl/u_audio_send/reg0_syn_3
+SYN-1002 :     u_es8388_ctrl/u_audio_send/reg0_syn_4
+SYN-1002 :     u_es8388_ctrl/u_audio_send/reg0_syn_5
+SYN-1002 :     u_es8388_ctrl/u_audio_send/reg0_syn_6
+SYN-1002 :     u_es8388_ctrl/u_audio_send/reg0_syn_7
+SYN-1002 :     u_es8388_ctrl/u_audio_send/reg0_syn_8
+SYN-1002 :     u_es8388_ctrl/u_audio_send/reg0_syn_9
+SYN-1002 :     u_es8388_ctrl/u_audio_send/reg0_syn_10
+SYN-1002 :     u_es8388_ctrl/u_audio_send/reg0_syn_11
+SYN-1002 :     u_es8388_ctrl/u_audio_send/reg0_syn_12
+SYN-1002 :     u_es8388_ctrl/u_audio_send/reg0_syn_13
+SYN-1002 :     u_es8388_ctrl/u_audio_send/reg0_syn_14
+SYN-1002 :     u_es8388_ctrl/u_audio_send/reg0_syn_15
+SYN-1002 :     u_es8388_ctrl/u_audio_send/reg0_syn_16
+SYN-1002 :     u_es8388_ctrl/u_audio_send/reg0_syn_17
+SYN-1019 : Optimized 1 mux instances.
+SYN-1016 : Merged 7 instances.
+SYN-1015 : Optimize round 1, 1282 better
+SYN-1014 : Optimize round 2
+SYN-1032 : 4715/12 useful/useless nets, 3732/1 useful/useless insts
+SYN-1017 : Remove 1 const input seq instances
+SYN-1002 :     u_es8388_ctrl/u_audio_send/aud_dacdat_reg
+SYN-1015 : Optimize round 2, 44 better
+SYN-1014 : Optimize round 3
+SYN-1015 : Optimize round 3, 0 better
+RUN-1003 : finish command "optimize_rtl" in  821.500399s wall, 775.265625s user + 6.906250s system = 782.171875s CPU (95.2%)
+
+RUN-1004 : used memory is 550 MB, reserved memory is 545 MB, peak memory is 952 MB
+RUN-1002 : start command "report_area -file ES8388_rtl.area"
+RUN-1001 : standard
+***Report Model: audio_speak Device: EG4S20BG256***
+
+IO Statistics
+#IO                        59
+  #input                   29
+  #output                  26
+  #inout                    4
+
+Gate Statistics
+#Basic gates             3151
+  #and                    759
+  #nand                     0
+  #or                    1076
+  #nor                      0
+  #xor                      4
+  #xnor                     0
+  #buf                      0
+  #not                    171
+  #bufif1                   4
+  #MX21                   104
+  #FADD                     0
+  #DFF                   1033
+  #LATCH                    0
+#MACRO_ADD                 90
+#MACRO_EQ                 164
+#MACRO_MULT                 1
+#MACRO_MUX                307
+#MACRO_OTHERS               8
+
+Report Hierarchy Area:
++---------------------------------------------------------------------------+
+|Instance                   |Module                 |gates  |seq    |macros |
++---------------------------------------------------------------------------+
+|top                        |audio_speak            |2118   |1033   |263    |
+|  pitch_shifter            |pitch_shift            |2      |6      |0      |
+|  u1_es8388_ctrl           |es8388_ctrl            |482    |151    |50     |
+|    u_audio_receive        |audio_receive          |26     |55     |5      |
+|    u_audio_send           |audio_send             |1      |28     |0      |
+|    u_es8388_config        |es8388_config          |455    |68     |45     |
+|      u_i2c_dri            |i2c_dri                |453    |41     |40     |
+|      u_i2c_reg_cfg        |i2c_reg_cfg            |2      |27     |5      |
+|  u1_pll_clk               |clk_wiz_0              |0      |0      |1      |
+|  u2_es8388_ctrl           |es8388_ctrl            |482    |151    |50     |
+|    u_audio_receive        |audio_receive          |26     |55     |5      |
+|    u_audio_send           |audio_send             |1      |28     |0      |
+|    u_es8388_config        |es8388_config          |455    |68     |45     |
+|      u_i2c_dri            |i2c_dri                |453    |41     |40     |
+|      u_i2c_reg_cfg        |i2c_reg_cfg            |2      |27     |5      |
+|  u2_pll_clk               |clk_wiz_0              |0      |0      |1      |
+|  u3_es8388_ctrl           |es8388_ctrl            |482    |148    |50     |
+|    u_audio_receive        |audio_receive          |26     |55     |5      |
+|    u_audio_send           |audio_send             |1      |25     |0      |
+|    u_es8388_config        |es8388_config          |455    |68     |45     |
+|      u_i2c_dri            |i2c_dri                |453    |41     |40     |
+|      u_i2c_reg_cfg        |i2c_reg_cfg            |2      |27     |5      |
+|  u3_pll_clk               |clk_wiz_0              |0      |0      |1      |
+|  u_es8388_ctrl            |es8388_ctrl            |481    |123    |49     |
+|    u_audio_receive        |audio_receive          |26     |55     |4      |
+|    u_es8388_config        |es8388_config          |455    |68     |45     |
+|      u_i2c_dri            |i2c_dri                |453    |41     |40     |
+|      u_i2c_reg_cfg        |i2c_reg_cfg            |2      |27     |5      |
+|  u_pll_clk                |clk_wiz_0              |0      |0      |1      |
+|  u_simple_denoise         |simple_denoise         |0      |79     |4      |
+|  u_spar_4mic_localization |spar_4mic_localization |184    |343    |52     |
++---------------------------------------------------------------------------+
+
+RUN-1002 : start command "export_db ES8388_rtl.db"
+RUN-1001 : Exported /
+RUN-1001 : Exported flow parameters
+RUN-1001 : Exported libs
+RUN-1001 : Exported entities
+RUN-1001 : Exported ports
+RUN-1001 : Exported pins
+RUN-1001 : Exported instances
+RUN-1001 : Exported nets
+RUN-1001 : Exported buses
+RUN-1001 : Exported models
+RUN-1001 : Exported congestions
+RUN-1001 : Exported violations
+RUN-1001 : Exported IO constraints
+RUN-1001 : Exported Inst constraints
+RUN-1003 : finish command "export_db ES8388_rtl.db" in  1.480995s wall, 2.328125s user + 0.046875s system = 2.375000s CPU (160.4%)
+
+RUN-1004 : used memory is 542 MB, reserved memory is 530 MB, peak memory is 952 MB
+RUN-1002 : start command "optimize_gate -maparea ES8388_gate.area"
+RUN-1001 : Open license file D:/TD/license/Anlogic.lic
+RUN-1001 : Print Global Property
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :        Parameters        |  Settings  |  Default Values  |  Note  
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 :          message         |  standard  |     standard     |        
+RUN-1001 :   mixed_pack_place_flow  |     on     |        on        |        
+RUN-1001 :        qor_monitor       |    off     |       off        |        
+RUN-1001 :        syn_ip_flow       |    off     |       off        |        
+RUN-1001 :          thread          |    auto    |       auto       |        
+RUN-1001 : ---------------------------------------------------------------
+RUN-1001 : Print Gate Property
+RUN-1001 : ------------------------------------------------------------------
+RUN-1001 :          Parameters         |  Settings  |  Default Values  |  Note  
+RUN-1001 : ------------------------------------------------------------------
+RUN-1001 :         cascade_dsp         |    off     |       off        |        
+RUN-1001 :         cascade_eram        |    off     |       off        |        
+RUN-1001 :        gate_sim_model       |    off     |       off        |        
+RUN-1001 :        map_sim_model        |    off     |       off        |        
+RUN-1001 :         map_strategy        |     1      |        1         |        
+RUN-1001 :           opt_area          |   medium   |      medium      |        
+RUN-1001 :          opt_timing         |    auto    |       auto       |        
+RUN-1001 :         pack_effort         |   medium   |      medium      |        
+RUN-1001 :      pack_lslice_ripple     |     on     |        on        |        
+RUN-1001 :   pack_lslice_ripple_ratio  |    0.5     |       0.5        |        
+RUN-1001 :        pack_seq_in_io       |    auto    |       auto       |        
+RUN-1001 :        ph1_mux_ratio        |    1.0     |       1.0        |        
+RUN-1001 :            report           |  standard  |     standard     |        
+RUN-1001 :           retiming          |    off     |       off        |        
+RUN-1001 : ------------------------------------------------------------------
+SYN-2001 : Map 59 IOs to PADs
+SYN-1032 : 4753/17 useful/useless nets, 3761/26 useful/useless insts
+RUN-1002 : start command "update_pll_param -module audio_speak"
+SYN-2501 : Processed 0 LOGIC_BUF instances.
+SYN-2501 : 4 BUFG to GCLK
+SYN-2531 : Dram(u_spar_4mic_localization/ramread0_syn_6) write 64x24, read 64x24
+SYN-2531 : Dram(u_spar_4mic_localization/ramread1_syn_6) write 64x24, read 64x24
+SYN-2531 : Dram(u_spar_4mic_localization/ramread2_syn_6) write 64x24, read 64x24
+SYN-2531 : Dram(u_spar_4mic_localization/ramread3_syn_6) write 64x24, read 64x24
+SYN-2571 : Map 1 macro multiplier
+SYN-2571 : Optimize after map_dsp, round 1
+SYN-1016 : Merged 28 instances.
+SYN-2571 : Optimize after map_dsp, round 1, 28 better
+SYN-2571 : Optimize after map_dsp, round 2
+SYN-2571 : Optimize after map_dsp, round 2, 0 better
+SYN-1001 : Throwback 118 control mux instances
+SYN-1001 : Convert 4 adder
+SYN-2501 : Optimize round 1
+SYN-1032 : 6495/0 useful/useless nets, 5314/96 useful/useless insts
+SYN-1016 : Merged 888 instances.
+SYN-2501 : Optimize round 1, 2096 better
+SYN-2501 : Optimize round 2
+SYN-2501 : Optimize round 2, 0 better
+SYN-2501 : Map 91 macro adder
+SYN-3001 : Mapper mapped 3 instances into 1 LUTs, name keeping = 100%.
+SYN-3001 : Mapper mapped 3 instances into 1 LUTs, name keeping = 100%.
+SYN-3001 : Mapper mapped 3 instances into 1 LUTs, name keeping = 100%.
+SYN-2501 : Inferred 1 ROM instances
+SYN-1019 : Optimized 620 mux instances.
+SYN-1016 : Merged 931 instances.
+SYN-1032 : 7702/176 useful/useless nets, 6613/32 useful/useless insts
+SYN-3001 : Running gate level optimization.
+SYN-2581 : Mapping with K=5, #lut = 1290 (3.72), #lev = 6 (2.36)
+SYN-2551 : Post LUT mapping optimization.
+SYN-2581 : Mapping with K=5, #lut = 1132 (3.67), #lev = 6 (2.21)
+SYN-3001 : Logic optimization runtime opt =   0.11 sec, map =   0.00 sec
+SYN-3001 : Mapper mapped 3960 instances into 1137 LUTs, name keeping = 58%.
+RUN-1002 : start command "report_area -file ES8388_gate.area"
+RUN-1001 : standard
+***Report Model: audio_speak Device: EG4S20BG256***
+
+IO Statistics
+#IO                        59
+  #input                   29
+  #output                  26
+  #inout                    4
+
+LUT Statistics
+#Total_luts              2614
+  #lut4                  1000
+  #lut5                   138
+  #lut6                     0
+  #lut5_mx41                0
+  #lut4_alu1b            1476
+
+Utilization Statistics
+#lut                     2614   out of  19600   13.34%
+#reg                     1011   out of  19600    5.16%
+#le                         0
+#dsp                        2   out of     29    6.90%
+#bram                       0   out of     64    0.00%
+  #bram9k                   0
+  #fifo9k                   0
+#bram32k                    0   out of     16    0.00%
+#dram                      96
+#pad                       56   out of    188   29.79%
+  #ireg                     9
+  #oreg                    21
+  #treg                     4
+#pll                        4   out of      4  100.00%
+
+Report Hierarchy Area:
++------------------------------------------------------------------------------------------------+
+|Instance                   |Module                 |lut     |ripple  |seq     |bram    |dsp     |
++------------------------------------------------------------------------------------------------+
+|top                        |audio_speak            |1138    |1476    |1045    |0       |2       |
+|  pitch_shifter            |pitch_shift            |5       |0       |3       |0       |0       |
+|  u1_es8388_ctrl           |es8388_ctrl            |194     |60      |148     |0       |0       |
+|    u_audio_receive        |audio_receive          |44      |22      |53      |0       |0       |
+|    u_audio_send           |audio_send             |20      |0       |27      |0       |0       |
+|    u_es8388_config        |es8388_config          |130     |38      |68      |0       |0       |
+|      u_i2c_dri            |i2c_dri                |91      |19      |41      |0       |0       |
+|      u_i2c_reg_cfg        |i2c_reg_cfg            |39      |19      |27      |0       |0       |
+|  u1_pll_clk               |clk_wiz_0              |1       |0       |0       |0       |0       |
+|  u2_es8388_ctrl           |es8388_ctrl            |204     |60      |148     |0       |0       |
+|    u_audio_receive        |audio_receive          |43      |22      |53      |0       |0       |
+|    u_audio_send           |audio_send             |21      |0       |27      |0       |0       |
+|    u_es8388_config        |es8388_config          |140     |38      |68      |0       |0       |
+|      u_i2c_dri            |i2c_dri                |101     |19      |41      |0       |0       |
+|      u_i2c_reg_cfg        |i2c_reg_cfg            |39      |19      |27      |0       |0       |
+|  u2_pll_clk               |clk_wiz_0              |1       |0       |0       |0       |0       |
+|  u3_es8388_ctrl           |es8388_ctrl            |198     |60      |145     |0       |0       |
+|    u_audio_receive        |audio_receive          |44      |22      |53      |0       |0       |
+|    u_audio_send           |audio_send             |17      |0       |24      |0       |0       |
+|    u_es8388_config        |es8388_config          |137     |38      |68      |0       |0       |
+|      u_i2c_dri            |i2c_dri                |98      |19      |41      |0       |0       |
+|      u_i2c_reg_cfg        |i2c_reg_cfg            |39      |19      |27      |0       |0       |
+|  u3_pll_clk               |clk_wiz_0              |1       |0       |0       |0       |0       |
+|  u_es8388_ctrl            |es8388_ctrl            |181     |128     |121     |0       |0       |
+|    u_audio_receive        |audio_receive          |44      |22      |53      |0       |0       |
+|    u_es8388_config        |es8388_config          |137     |106     |68      |0       |0       |
+|      u_i2c_dri            |i2c_dri                |97      |19      |41      |0       |0       |
+|      u_i2c_reg_cfg        |i2c_reg_cfg            |40      |87      |27      |0       |0       |
+|  u_pll_clk                |clk_wiz_0              |1       |0       |0       |0       |0       |
+|  u_simple_denoise         |simple_denoise         |1       |105     |79      |0       |2       |
+|  u_spar_4mic_localization |spar_4mic_localization |320     |927     |335     |0       |0       |
++------------------------------------------------------------------------------------------------+
+
+SYN-1001 : Packing model "audio_speak" ...
+SYN-4010 : Pack lib has 58 rtl pack models with 25 top pack blocks
+SYN-1014 : Optimize round 1
+SYN-1015 : Optimize round 1, 0 better
+SYN-4002 : Packing 1011 DFF/LATCH to SEQ ...
+SYN-4009 : Pack 40 carry chain into lslice
+SYN-4007 : Packing 735 adder to BLE ...
+SYN-4008 : Packed 735 adder and 6 SEQ to BLE.
+SYN-4007 : Packing 0 gate4 to BLE ...
+SYN-4008 : Packed 0 gate4 and 0 SEQ to BLE.
+SYN-4012 : Packed 0 FxMUX
+SYN-4013 : Packed 96 DRAM and 0 SEQ.
+RUN-1003 : finish command "optimize_gate -maparea ES8388_gate.area" in  1.216706s wall, 1.187500s user + 0.000000s system = 1.187500s CPU (97.6%)
+
+RUN-1004 : used memory is 559 MB, reserved memory is 554 MB, peak memory is 952 MB
+RUN-1002 : start command "legalize_phy_inst"
+SYN-1011 : Flatten model audio_speak
+RUN-1002 : start command "export_db ES8388_gate.db"
+RUN-1001 : Exported /
+RUN-1001 : Exported flow parameters
+RUN-1001 : Exported libs
+RUN-1001 : Exported entities
+RUN-1001 : Exported ports
+RUN-1001 : Exported pins
+RUN-1001 : Exported instances
+RUN-1001 : Exported nets
+RUN-1001 : Exported buses
+RUN-1001 : Exported models
+RUN-1001 : Exported congestions
+RUN-1001 : Exported violations
+RUN-1001 : Exported IO constraints
+RUN-1001 : Exported Inst constraints
+RUN-1003 : finish command "export_db ES8388_gate.db" in  1.632591s wall, 2.515625s user + 0.046875s system = 2.562500s CPU (157.0%)
+
+RUN-1004 : used memory is 538 MB, reserved memory is 520 MB, peak memory is 952 MB
+RUN-1002 : start command "backup_run_log run.log ../.logs/syn_1/td_20251103_201741.log"

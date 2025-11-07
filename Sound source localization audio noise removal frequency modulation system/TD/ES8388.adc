@@ -1,0 +1,64 @@
+set_pin_assignment	{ aud_adcdat }	{ LOCATION = R14; }
+set_pin_assignment	{ aud_bclk }	{ LOCATION = M6; }
+set_pin_assignment	{ aud_dacdat }	{ LOCATION = P6; }
+set_pin_assignment	{ aud_lrc }	{ LOCATION = M7; }
+set_pin_assignment	{ aud_mclk }	{ LOCATION = N5; }
+set_pin_assignment	{ aud_scl }	{ LOCATION = R12; }
+set_pin_assignment	{ aud_sda }	{ LOCATION = R9; }
+set_pin_assignment	{ ilaclk }	{ LOCATION = M9; }
+set_pin_assignment	{ sys_clk }	{ LOCATION = R7; }
+set_pin_assignment	{ sys_rst_n }	{ LOCATION = E3; }
+
+
+
+set_pin_assignment	{ aud_sda_2 }	{ LOCATION = C3; }
+set_pin_assignment	{ aud_scl_2 }	{ LOCATION = A2; }
+set_pin_assignment	{ aud_mclk_2 }	{ LOCATION = F6; }
+set_pin_assignment	{ aud_bclk_2 }	{ LOCATION = D5; }
+set_pin_assignment	{ aud_dacdat_2 }	{ LOCATION = E6; }
+set_pin_assignment	{ aud_lrc_2 }	{ LOCATION = C6; }
+set_pin_assignment	{ aud_adcdat_2 }	{ LOCATION = E7; }
+set_pin_assignment	{ ilaclk_2 }	{ LOCATION = D3; }
+
+
+
+
+set_pin_assignment	{ aud_adcdat_3 }	{ LOCATION = L4; }
+set_pin_assignment	{ aud_lrc_3 }	{ LOCATION = K6; }
+set_pin_assignment	{ aud_dacdat_3 }	{ LOCATION = K3; }
+set_pin_assignment	{ aud_bclk_3 }	{ LOCATION = H5; }
+set_pin_assignment	{ aud_mclk_3 }	{ LOCATION = H4; }
+set_pin_assignment	{ aud_scl_3 }	{ LOCATION = G3; }
+set_pin_assignment	{ aud_sda_3 }	{ LOCATION = F3; }
+set_pin_assignment	{ ilaclk_3 }	{ LOCATION = K15; }
+
+
+set_pin_assignment	{ aud_sda_1 }	{ LOCATION = E15; }
+set_pin_assignment	{ aud_scl_1 }	{ LOCATION = D14; }
+set_pin_assignment	{ aud_mclk_1 }	{ LOCATION = F14; }
+set_pin_assignment	{ aud_bclk_1 }	{ LOCATION = G14; }
+set_pin_assignment	{ aud_dacdat_1 }	{ LOCATION =H14; }
+set_pin_assignment	{ aud_lrc_1 }	{ LOCATION =H16; }
+set_pin_assignment	{ aud_adcdat_1 }	{ LOCATION = G16; }
+set_pin_assignment	{ ilaclk_1 }	{ LOCATION = L16; }
+ 
+
+set_pin_assignment	{ led_one }	{ LOCATION = P9; }
+set_pin_assignment	{ led_two }	{ LOCATION = P12; }
+set_pin_assignment	{ led_tree }	{ LOCATION = R16; }
+set_pin_assignment	{ led_four }	{ LOCATION = P11; }
+
+set_pin_assignment	{ led_five }	{ LOCATION = M10; }
+set_pin_assignment	{ led_six }	{ LOCATION = L10; }
+set_pin_assignment	{ led_seven }	{ LOCATION = N12; }
+set_pin_assignment	{ led_eight }	{ LOCATION = M12; }
+
+
+set_pin_assignment	{ pitch_control[0] } { LOCATION = A9; }
+set_pin_assignment	{ pitch_control[1] } { LOCATION = A10; }
+set_pin_assignment	{ pitch_control[2] } { LOCATION = B10; }
+
+set_pin_assignment	{ denoise_en }	{ LOCATION = A11; }
+set_pin_assignment	{ pitch_en[0] }	{ LOCATION = A14; }
+set_pin_assignment	{ pitch_en[1] }	{ LOCATION = A13; }
+
