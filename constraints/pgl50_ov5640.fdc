@@ -1,0 +1,85 @@
+# PGL50H6FB484 约束文件（Pango Design Suite FDC 格式）
+# OV5640 + 视觉处理系统
+# 请根据实际板子原理图核对引脚编号
+
+# ============================================================
+# 系统时钟（50MHz 晶振）
+# ============================================================
+create_clock -period 20.000 [get_ports sys_clk]
+set_input_delay  2.0 -clock sys_clk [get_ports sys_rst_n]
+
+# ============================================================
+# OV5640 DVP 接口（pclk 最高约 96MHz @ 1080p, 640x480时约42MHz）
+# ============================================================
+create_clock -period 23.810 [get_ports cam_pclk]  ;# ~42 MHz
+
+set_input_delay  3.0 -clock cam_pclk [get_ports cam_href]
+set_input_delay  3.0 -clock cam_pclk [get_ports cam_vsync]
+set_input_delay  3.0 -clock cam_pclk [get_ports {cam_data[*]}]
+
+# ============================================================
+# UART 输出（异步输出，放宽约束）
+# ============================================================
+set_output_delay 5.0 -clock sys_clk [get_ports uart_tx]
+
+# ============================================================
+# LED 输出
+# ============================================================
+set_output_delay 5.0 -clock sys_clk [get_ports {led[*]}]
+
+# ============================================================
+# OV5640 控制信号
+# ============================================================
+set_output_delay 5.0 -clock sys_clk [get_ports cam_pwdn]
+set_output_delay 5.0 -clock sys_clk [get_ports cam_rst_n]
+
+# ============================================================
+# 跨时钟域声明（sys_clk ↔ cam_pclk）
+# ============================================================
+set_clock_groups -asynchronous \
+    -group [get_clocks sys_clk] \
+    -group [get_clocks cam_pclk]
+
+# ============================================================
+# 物理引脚分配（请根据原理图修改！下面仅为示例占位）
+# PDS FDC 语法：define_attribute {p:<端口名>} {PAD} {<引脚号>}
+#               define_attribute {p:<端口名>} {IOSTANDARD} {LVCMOS33}
+# ============================================================
+# define_attribute {p:sys_clk}    {PAD} {E1}
+# define_attribute {p:sys_clk}    {IOSTANDARD} {LVCMOS33}
+# define_attribute {p:sys_rst_n}  {PAD} {M1}
+# define_attribute {p:sys_rst_n}  {IOSTANDARD} {LVCMOS33}
+# define_attribute {p:cam_pclk}   {PAD} {F14}
+# define_attribute {p:cam_pclk}   {IOSTANDARD} {LVCMOS33}
+# define_attribute {p:cam_href}   {PAD} {G14}
+# define_attribute {p:cam_href}   {IOSTANDARD} {LVCMOS33}
+# define_attribute {p:cam_vsync}  {PAD} {H14}
+# define_attribute {p:cam_vsync}  {IOSTANDARD} {LVCMOS33}
+# define_attribute {p:cam_data[0]} {PAD} {A14}
+# define_attribute {p:cam_data[0]} {IOSTANDARD} {LVCMOS33}
+# define_attribute {p:cam_data[1]} {PAD} {B14}
+# define_attribute {p:cam_data[1]} {IOSTANDARD} {LVCMOS33}
+# define_attribute {p:cam_data[2]} {PAD} {C14}
+# define_attribute {p:cam_data[2]} {IOSTANDARD} {LVCMOS33}
+# define_attribute {p:cam_data[3]} {PAD} {D14}
+# define_attribute {p:cam_data[3]} {IOSTANDARD} {LVCMOS33}
+# define_attribute {p:cam_data[4]} {PAD} {A15}
+# define_attribute {p:cam_data[4]} {IOSTANDARD} {LVCMOS33}
+# define_attribute {p:cam_data[5]} {PAD} {B15}
+# define_attribute {p:cam_data[5]} {IOSTANDARD} {LVCMOS33}
+# define_attribute {p:cam_data[6]} {PAD} {C15}
+# define_attribute {p:cam_data[6]} {IOSTANDARD} {LVCMOS33}
+# define_attribute {p:cam_data[7]} {PAD} {D15}
+# define_attribute {p:cam_data[7]} {IOSTANDARD} {LVCMOS33}
+# define_attribute {p:uart_tx}    {PAD} {K2}
+# define_attribute {p:uart_tx}    {IOSTANDARD} {LVCMOS33}
+# define_attribute {p:led[0]}     {PAD} {L1}
+# define_attribute {p:led[0]}     {IOSTANDARD} {LVCMOS33}
+# define_attribute {p:led[1]}     {PAD} {L2}
+# define_attribute {p:led[1]}     {IOSTANDARD} {LVCMOS33}
+# define_attribute {p:led[2]}     {PAD} {M2}
+# define_attribute {p:led[2]}     {IOSTANDARD} {LVCMOS33}
+# define_attribute {p:cam_pwdn}   {PAD} {N1}
+# define_attribute {p:cam_pwdn}   {IOSTANDARD} {LVCMOS33}
+# define_attribute {p:cam_rst_n}  {PAD} {N2}
+# define_attribute {p:cam_rst_n}  {IOSTANDARD} {LVCMOS33}
